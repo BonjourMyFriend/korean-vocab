@@ -597,9 +597,10 @@ function saveSettings() {
 async function syncFromCloud() {
   if (!syncToken) return;
   const { owner, repo, path } = SYNC_CONFIG;
+  const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
   try {
-    const resp = await fetch(, {
-      headers: { 'Authorization': , 'Accept': 'application/vnd.github+json' }
+    const resp = await fetch(url, {
+      headers: { 'Authorization': 'token ' + syncToken, 'Accept': 'application/vnd.github+json' }
     });
     if (!resp.ok) return;
     const data = await resp.json();
@@ -631,12 +632,13 @@ function scheduleCloudSync() {
 async function syncToCloud() {
   if (!syncToken) return;
   const { owner, repo, path } = SYNC_CONFIG;
+  const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
   const content = JSON.stringify({ progress, history: sessionHistory }, null, 2);
   try {
-    const resp = await fetch(, {
+    const resp = await fetch(url, {
       method: 'PUT',
       headers: {
-        'Authorization': ,
+        'Authorization': 'token ' + syncToken,
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github+json'
       },

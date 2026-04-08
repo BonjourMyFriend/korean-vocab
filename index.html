@@ -471,6 +471,7 @@ body {
 <div class="header">
   <h1 id="headerTitle">韩语单词记忆</h1>
   <div class="header-actions">
+    <span id="syncIndicator" style="font-size:14px;margin-right:4px;transition:opacity 0.3s;opacity:0.6;">☁️</span>
     <button class="btn-icon" onclick="openHistory()">📊 历史</button>
     <button class="btn-icon" onclick="openSettings()">⚙ 设置</button>
   </div>
@@ -594,15 +595,34 @@ function saveSettings() {
 }
 
 // ===== Cloud Sync =====
+function showSyncStatus(status) {
+  const el = document.getElementById('syncIndicator');
+  if (!el) return;
+  if (status === 'syncing') { el.textContent = '☁️↑'; el.style.opacity = '1'; el.style.color = '#faad14'; }
+  else if (status === 'synced') { el.textContent = '☁️✓'; el.style.opacity = '1'; el.style.color = '#52c41a'; setTimeout(() => { el.textContent = '☁️'; el.style.opacity = '0.6'; el.style.color = ''; }, 2000); }
+  else if (status === 'error') { el.textContent = '☁️✗'; el.style.opacity = '1'; el.style.color = '#ff4d4f'; setTimeout(() => { el.textContent = '☁️'; el.style.opacity = '0.6'; el.style.color = ''; }, 3000); }
+}
+
 async function syncFromCloud() {
   if (!syncToken) return;
+  showSyncStatus('syncing');
   const { owner, repo, path } = SYNC_CONFIG;
   const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
   try {
     const resp = await fetch(url, {
       headers: { 'Authorization': 'token ' + syncToken, 'Accept': 'application/vnd.github+json' }
     });
-    if (!resp.ok) return;
+    if (resp.status === 404) {
+      // File doesn't exist yet on cloud, that's fine
+      syncSha = null;
+      showSyncStatus('synced');
+      return;
+    }
+    if (!resp.ok) {
+      console.warn('Cloud download failed, status:', resp.status);
+      showSyncStatus('error');
+      return;
+    }
     const data = await resp.json();
     syncSha = data.sha;
     const cloud = JSON.parse(atob(data.content));
@@ -619,8 +639,10 @@ async function syncFromCloud() {
     }
     localStorage.setItem('korean_vocab_progress', JSON.stringify(progress));
     localStorage.setItem('korean_vocab_history', JSON.stringify(sessionHistory));
+    showSyncStatus('synced');
   } catch (e) {
     console.warn('Cloud sync failed:', e);
+    showSyncStatus('error');
   }
 }
 
@@ -631,10 +653,31 @@ function scheduleCloudSync() {
 
 async function syncToCloud() {
   if (!syncToken) return;
+  showSyncStatus('syncing');
   const { owner, repo, path } = SYNC_CONFIG;
   const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
   const content = JSON.stringify({ progress, history: sessionHistory }, null, 2);
+
+  // If syncSha is null, we need to fetch it first (file may exist from another device)
+  if (!syncSha) {
+    try {
+      const checkResp = await fetch(url, {
+        headers: { 'Authorization': 'token ' + syncToken, 'Accept': 'application/vnd.github+json' }
+      });
+      if (checkResp.ok) {
+        const checkData = await checkResp.json();
+        syncSha = checkData.sha;
+      }
+    } catch (e) { /* file doesn't exist, that's fine */ }
+  }
+
   try {
+    const body = {
+      message: 'update progress',
+      content: btoa(unescape(encodeURIComponent(content)))
+    };
+    if (syncSha) body.sha = syncSha;
+
     const resp = await fetch(url, {
       method: 'PUT',
       headers: {
@@ -642,18 +685,20 @@ async function syncToCloud() {
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github+json'
       },
-      body: JSON.stringify({
-        message: 'update progress',
-        content: btoa(unescape(encodeURIComponent(content))),
-        sha: syncSha
-      })
+      body: JSON.stringify(body)
     });
     if (resp.ok) {
       const result = await resp.json();
       syncSha = result.content.sha;
+      showSyncStatus('synced');
+    } else {
+      const errText = await resp.text();
+      console.warn('Cloud upload failed:', resp.status, errText);
+      showSyncStatus('error');
     }
   } catch (e) {
     console.warn('Cloud save failed:', e);
+    showSyncStatus('error');
   }
 }
 

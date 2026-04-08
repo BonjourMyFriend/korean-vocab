@@ -155,6 +155,12 @@
       "correctCount": 1,
       "nextReview": 1775634898926,
       "lastReview": 1775634838926
+    },
+    "그렇습니까?": {
+      "status": "learning",
+      "correctCount": 0,
+      "nextReview": 1775634907005,
+      "lastReview": 1775634847005
     }
   },
   "history": [

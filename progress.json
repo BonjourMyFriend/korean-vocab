@@ -227,6 +227,12 @@
       "correctCount": 1,
       "nextReview": 1775635012025,
       "lastReview": 1775634952025
+    },
+    "변호사": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775635016376,
+      "lastReview": 1775634956376
     }
   },
   "history": [

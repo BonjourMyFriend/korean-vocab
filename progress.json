@@ -239,6 +239,12 @@
       "correctCount": 1,
       "nextReview": 1775635021078,
       "lastReview": 1775634961078
+    },
+    "기자": {
+      "status": "learning",
+      "correctCount": 0,
+      "nextReview": 1775635032056,
+      "lastReview": 1775634972056
     }
   },
   "history": [

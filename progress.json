@@ -245,6 +245,12 @@
       "correctCount": 0,
       "nextReview": 1775635032056,
       "lastReview": 1775634972056
+    },
+    "나라": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775635075309,
+      "lastReview": 1775635015309
     }
   },
   "history": [

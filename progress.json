@@ -132,13 +132,13 @@
     },
     "안녕하세요?": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635426417,
-      "lastReview": 1775634826417,
-      "reps": 2,
+      "stability": 0.07261718748009417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775649758678.9983,
+      "lastReview": 1775643484554,
+      "reps": 4,
       "lapses": 0,
-      "streak": 2
+      "streak": 4
     },
     "선생님": {
       "status": "reviewing",
@@ -321,14 +321,14 @@
       "streak": 1
     },
     "누구": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634943959,
-      "lastReview": 1775634883959,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643977223.8682,
+      "lastReview": 1775643482525,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "한국": {
       "status": "learning",
@@ -341,14 +341,14 @@
       "streak": 1
     },
     "가수": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635207142,
-      "lastReview": 1775635147142,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643974672.8682,
+      "lastReview": 1775643479974,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "처음 뵙겠습니다": {
       "status": "learning",
@@ -371,14 +371,14 @@
       "streak": 2
     },
     "회사원": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635012025,
-      "lastReview": 1775634952025,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643973586.8682,
+      "lastReview": 1775643478888,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "변호사": {
       "status": "learning",
@@ -431,14 +431,14 @@
       "streak": 3
     },
     "네": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635122890,
-      "lastReview": 1775635062890,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643981025.8682,
+      "lastReview": 1775643486327,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "경찰": {
       "status": "learning",

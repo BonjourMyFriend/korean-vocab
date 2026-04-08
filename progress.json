@@ -231,24 +231,24 @@
       "streak": 2
     },
     "제": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634894968,
-      "lastReview": 1775634834968,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "이다/입니다": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
-      "nextReview": 1775643923078.8682,
-      "lastReview": 1775643428380,
+      "nextReview": 1775643945822.8682,
+      "lastReview": 1775643451124,
       "reps": 2,
       "lapses": 0,
       "streak": 2
+    },
+    "이다/입니다": {
+      "status": "reviewing",
+      "stability": 0.007566520704259415,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775644103254.389,
+      "lastReview": 1775643449507,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
     },
     "미국": {
       "status": "learning",

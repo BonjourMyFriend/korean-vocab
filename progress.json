@@ -191,6 +191,18 @@
       "correctCount": 0,
       "nextReview": 1775634939988,
       "lastReview": 1775634879988
+    },
+    "누구": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634943959,
+      "lastReview": 1775634883959
+    },
+    "한국": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634946213,
+      "lastReview": 1775634886213
     }
   },
   "history": [

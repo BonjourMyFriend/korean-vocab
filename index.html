@@ -453,6 +453,30 @@ body {
   font-weight: 600;
 }
 
+/* ===== Leech Banner ===== */
+.leech-banner {
+  margin: 0 24px 8px;
+  background: linear-gradient(13deg, #f6d365 0%, #fda085 100%);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.leech-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253,160,133,0.3);
+}
+.leech-banner-title { font-size: 13px; opacity: 0.85; margin-bottom: 4px; }
+.leech-banner-count { font-size: 18px; font-weight: 600; }
+.leech-banner-count strong { font-size: 24px; }
+.leech-banner-go { font-size: 14px; font-weight: 600; background: rgba(255,255,255,0.25); padding: 8px 16px; border-radius: 8px; flex-shrink: 0; }
+
+.tag-leech { background: #fff1f0; color: #ff4d4f; }
+
 /* ===== Responsive ===== */
 @media (max-width: 480px) {
   .card-korean { font-size: 36px; }
@@ -536,21 +560,29 @@ const CHAPTERS = [{"chapter": 1, "count": 44, "words": [{"korean": "안녕하십
 let progress = {};
 let sessionHistory = [];
 let sessionQueue = [];
+let sessionCorrect = 0;
+let sessionTotal = 0;
 let currentIndex = 0;
 let isFlipped = false;
 let dailyNewLimit = 10;
 let currentChapter = null; // null = chapter list, number = learning that chapter
 
-// ===== Review Intervals (ms) =====
-// 6 levels to mastered (not 9), so progress is visible faster
-const INTERVALS = [
-  60 * 1000,               // 1: 1 min (immediate re-check)
-  10 * 60 * 1000,          // 2: 10 min
-  60 * 60 * 1000,          // 3: 1 hour
-  24 * 60 * 60 * 1000,     // 4: 1 day
-  3 * 24 * 60 * 60 * 1000, // 5: 3 days
-  7 * 24 * 60 * 60 * 1000  // 6: 7 days → mastered
-];
+// ===== SRS Constants (simplified FSRS) =====
+const DAY = 86400 * 1000;
+const MINUTE = 60 * 1000;
+const S0_AGAIN = 1 / (24 * 60);        // ~1 min in days
+const S0_FIRST_OK = 0.4;               // ~10 hours in days
+const STABILITY_GROWTH = 1.35;
+const STABILITY_SHRINK = 0.25;
+const STABILITY_MAX = 365 * 5;
+const DIFFICULTY_DECAY = 0.1;
+const DIFFICULTY_BOOST = 0.15;
+const DIFFICULTY_WEIGHT = 0.4;
+const TARGET_RETENTION = 0.9;
+const MASTERED_INTERVAL_DAYS = 21;
+const LEECH_THRESHOLD = 5;
+const LEECH_REHAB_STREAK = 3;
+const RETENTION_FACTOR = Math.log(TARGET_RETENTION) / Math.log(0.9); // ≈0.105
 
 // ===== Init =====
 async function init() {
@@ -566,6 +598,47 @@ async function init() {
 function loadProgress() {
   try { progress = JSON.parse(localStorage.getItem('korean_vocab_progress') || '{}'); }
   catch { progress = {}; }
+
+  // Auto-migrate old format (correctCount → stability/difficulty)
+  let needsMigration = false;
+  for (const [key, val] of Object.entries(progress)) {
+    if (key.startsWith('_ch')) continue;
+    if (val && val.correctCount !== undefined && val.stability === undefined) {
+      needsMigration = true;
+      break;
+    }
+  }
+  if (needsMigration) {
+    migrateProgress();
+    saveProgress();
+  }
+}
+
+function migrateProgress() {
+  const OLD_INTERVALS = [60*1000, 10*60*1000, 60*60*1000, 24*60*60*1000, 3*24*60*60*1000, 7*24*60*60*1000];
+  for (const [key, val] of Object.entries(progress)) {
+    if (key.startsWith('_ch')) continue;
+    if (!val || val.correctCount === undefined || val.stability !== undefined) continue;
+
+    const oldCount = val.correctCount || 0;
+    const oldIntervalDays = oldCount > 0
+      ? OLD_INTERVALS[Math.min(oldCount - 1, OLD_INTERVALS.length - 1)] / DAY
+      : S0_AGAIN;
+    const approxStability = Math.max(S0_AGAIN, oldIntervalDays * 1.2);
+
+    progress[key] = {
+      status: val.status === 'mastered' ? 'mastered'
+            : val.status === 'reviewing' ? 'reviewing'
+            : 'learning',
+      stability: approxStability,
+      difficulty: 0.3,
+      nextReview: val.nextReview || 0,
+      lastReview: val.lastReview || 0,
+      reps: oldCount,
+      lapses: 0,
+      streak: oldCount,
+    };
+  }
 }
 
 function saveProgress() {
@@ -628,6 +701,14 @@ async function syncFromCloud() {
     const cloud = JSON.parse(atob(data.content));
     if (cloud.progress) {
       for (const [key, val] of Object.entries(cloud.progress)) {
+        // Chapter metadata (_chN): take the higher newIndex
+        if (key.startsWith('_ch')) {
+          const local = progress[key];
+          if (!local || (val.newIndex || 0) > (local.newIndex || 0)) {
+            progress[key] = val;
+          }
+          continue;
+        }
         const local = progress[key];
         if (!local || (val.lastReview || 0) > (local.lastReview || 0)) {
           progress[key] = val;
@@ -705,11 +786,12 @@ async function syncToCloud() {
 // ===== Chapter Stats =====
 function getChapterStats(chapterIdx) {
   const words = CHAPTERS[chapterIdx].words;
-  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0, total: words.length };
+  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0, leech: 0, total: words.length };
   for (const w of words) {
     const p = progress[w.korean];
     if (!p) { s.newCount++; continue; }
     if (p.status === 'mastered') s.mastered++;
+    else if (p.status === 'leech') s.leech++;
     else if (p.status === 'reviewing') s.reviewing++;
     else s.learning++;
   }
@@ -717,12 +799,13 @@ function getChapterStats(chapterIdx) {
 }
 
 function getOverallStats() {
-  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0 };
+  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0, leech: 0 };
   for (const ch of CHAPTERS) {
     for (const w of ch.words) {
       const p = progress[w.korean];
       if (!p) { s.newCount++; continue; }
       if (p.status === 'mastered') s.mastered++;
+      else if (p.status === 'leech') s.leech++;
       else if (p.status === 'reviewing') s.reviewing++;
       else s.learning++;
     }
@@ -739,7 +822,7 @@ function getDueCounts() {
     let due = 0;
     for (const w of CHAPTERS[i].words) {
       const p = progress[w.korean];
-      if (!p || p.status === 'mastered') continue;
+      if (!p || p.status === 'mastered' || p.status === 'leech') continue;
       if (p.nextReview && p.nextReview <= now) due++;
     }
     result.push(due);
@@ -798,6 +881,19 @@ function showChapterList() {
     `;
   }
 
+  // Leech banner
+  if (overall.leech > 0) {
+    html += `
+      <div class="leech-banner" onclick="startLeechSession()">
+        <div class="leech-banner-left">
+          <div class="leech-banner-title">困难单词</div>
+          <div class="leech-banner-count"><strong>${overall.leech}</strong> 个单词需要加强练习</div>
+        </div>
+        <div class="leech-banner-go">开始练习 →</div>
+      </div>
+    `;
+  }
+
   html += '<div class="chapter-list">';
 
   for (let i = 0; i < CHAPTERS.length; i++) {
@@ -830,15 +926,13 @@ function showChapterList() {
   document.getElementById('app').innerHTML = html;
 }
 
-// Start all due reviews across all chapters
-function startAllDue() {
-  const now = Date.now();
+// Leech session
+function startLeechSession() {
   const queue = [];
   for (const ch of CHAPTERS) {
     for (const w of ch.words) {
       const p = progress[w.korean];
-      if (!p || p.status === 'mastered') continue;
-      if (p.nextReview && p.nextReview <= now) queue.push(w);
+      if (p && p.status === 'leech') queue.push(w);
     }
   }
   shuffle(queue);
@@ -847,46 +941,101 @@ function startAllDue() {
   sessionQueue = queue;
   currentIndex = 0;
   isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
+  currentChapter = -2; // special: leech session
+
+  document.getElementById('headerTitle').textContent = '困难单词';
+  renderCard();
+}
+
+// Start all due reviews across all chapters
+function startAllDue() {
+  sessionQueue = buildSessionQueue(-1);
+  currentIndex = 0;
+  isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
   currentChapter = -1; // special: mixed review
 
   document.getElementById('headerTitle').textContent = '今日复习';
+  if (sessionQueue.length === 0) { showChapterComplete(); return; }
   renderCard();
 }
 
 // ===== Start Chapter Session =====
 function startChapter(chapterIdx) {
   currentChapter = chapterIdx;
-  const now = Date.now();
-  const words = CHAPTERS[chapterIdx].words;
-  const queue = [];
-
-  // Due reviews for this chapter
-  const dueReviews = [];
-  for (const w of words) {
-    const p = progress[w.korean];
-    if (!p || p.status === 'mastered') continue;
-    if (p.nextReview && p.nextReview <= now) {
-      dueReviews.push(w);
-    }
-  }
-  shuffle(dueReviews);
-  queue.push(...dueReviews);
-
-  // New words for this chapter
-  const newWords = words.filter(w => !progress[w.korean]);
-  shuffle(newWords);
-  queue.push(...newWords.slice(0, dailyNewLimit));
-
-  sessionQueue = queue;
+  sessionQueue = buildSessionQueue(chapterIdx);
   currentIndex = 0;
   isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
 
   document.getElementById('headerTitle').textContent = `第 ${chapterIdx + 1} 章`;
-  if (sessionQueue.length === 0) {
-    showChapterComplete();
-  } else {
-    renderCard();
+  if (sessionQueue.length === 0) { showChapterComplete(); return; }
+  renderCard();
+}
+
+// ===== Build Session Queue (interleaving + adaptive new word rate) =====
+function buildSessionQueue(chapterIdx) {
+  const now = Date.now();
+  const words = chapterIdx === -1
+    ? CHAPTERS.flatMap(ch => ch.words)
+    : CHAPTERS[chapterIdx].words;
+
+  // 1) Due reviews (exclude mastered and leech)
+  const due = [];
+  for (const w of words) {
+    const p = progress[w.korean];
+    if (!p || p.status === 'mastered' || p.status === 'leech') continue;
+    if (p.nextReview && p.nextReview <= now) due.push(w);
   }
+
+  // 2) New words with adaptive count
+  let maxNew = dailyNewLimit;
+  if (due.length > 30) maxNew = Math.max(3, Math.floor(dailyNewLimit * 0.5));
+  if (due.length > 60) maxNew = 1;
+  if (due.length > 100) maxNew = 0;
+
+  let newBatch = [];
+  if (chapterIdx === -1) {
+    // All-chapter mode: collect new words across chapters
+    const allNew = words.filter(w => !progress[w.korean]);
+    newBatch = allNew.slice(0, maxNew);
+  } else {
+    // Single chapter: find the first unlearned word from pointer onward,
+    // then collect maxNew unlearned words sequentially
+    const chapterKey = '_ch' + chapterIdx;
+    const chMeta = progress[chapterKey] || { newIndex: 0 };
+    // Advance pointer past any already-learned words (e.g. from old version migration)
+    let ptr = chMeta.newIndex;
+    while (ptr < words.length && progress[words[ptr].korean]) ptr++;
+    // Collect the next batch of unlearned words
+    for (let i = ptr; i < words.length && newBatch.length < maxNew; i++) {
+      if (!progress[words[i].korean]) {
+        newBatch.push(words[i]);
+        ptr = i + 1; // advance pointer to just past this word
+      }
+    }
+    progress[chapterKey] = { newIndex: ptr };
+  }
+
+  // 3) Interleave: ~2 reviews : 1 new word
+  return interleave(due, newBatch);
+}
+
+function interleave(reviews, newWords) {
+  shuffle(reviews);
+  shuffle(newWords);
+  const queue = [];
+  let ri = 0, ni = 0;
+  while (ri < reviews.length || ni < newWords.length) {
+    if (ri < reviews.length) queue.push(reviews[ri++]);
+    if (ri < reviews.length) queue.push(reviews[ri++]);
+    if (ni < newWords.length) queue.push(newWords[ni++]);
+  }
+  return queue;
 }
 
 // ===== Render Card =====
@@ -899,8 +1048,8 @@ function renderCard() {
   const p = progress[word.korean];
   const isNew = !p;
 
-  const backLabel = currentChapter === -1 ? '← 返回首页' : '← 返回章节列表';
-  const masteredCount = currentChapter === -1 ? getOverallStats().mastered : getChapterStats(currentChapter).mastered;
+  const backLabel = currentChapter === -1 || currentChapter === -2 ? '← 返回首页' : '← 返回章节列表';
+  const masteredCount = currentChapter === -1 || currentChapter === -2 ? getOverallStats().mastered : getChapterStats(currentChapter).mastered;
 
   document.getElementById('app').innerHTML = `
     <div class="stats-bar">
@@ -912,7 +1061,7 @@ function renderCard() {
       <div class="card-container" onclick="flipCard()">
         <div class="card" id="flashcard">
           <div class="card-face card-front">
-            <span class="card-status ${isNew ? 'tag-new' : 'tag-review'}">${isNew ? '新词' : `复习 (${p ? p.correctCount : 0}/${INTERVALS.length})`}</span>
+            <span class="card-status ${p && p.status === 'leech' ? 'tag-leech' : isNew ? 'tag-new' : 'tag-review'}">${p && p.status === 'leech' ? '困难' : isNew ? '新词' : '复习 · ' + formatInterval(p.stability)}</span>
             <div class="card-korean">${word.korean}</div>
             <div class="card-hint">点击卡片查看释义</div>
           </div>
@@ -949,28 +1098,17 @@ function answer(known) {
   let p = progress[word.korean];
 
   if (!p) {
-    p = { status: 'learning', correctCount: 0, nextReview: 0, lastReview: 0 };
+    p = { status: 'learning', stability: S0_AGAIN, difficulty: 0.3,
+          nextReview: 0, lastReview: 0, reps: 0, lapses: 0, streak: 0 };
     progress[word.korean] = p;
   }
 
+  sessionTotal++;
   if (known) {
-    p.correctCount = (p.correctCount || 0) + 1;
-    const intervalIdx = Math.min(p.correctCount - 1, INTERVALS.length - 1);
-    p.nextReview = now + INTERVALS[intervalIdx];
-    p.lastReview = now;
-    if (p.correctCount >= INTERVALS.length) {
-      p.status = 'mastered';
-    } else if (p.correctCount >= 2) {
-      p.status = 'reviewing';
-    } else {
-      p.status = 'learning';
-    }
+    sessionCorrect++;
+    onKnown(p, now);
   } else {
-    p.correctCount = 0;
-    p.nextReview = now + INTERVALS[0];
-    p.lastReview = now;
-    p.status = 'learning';
-    sessionQueue.push(word);
+    onForgotten(p, now, word);
   }
 
   saveProgress();
@@ -979,16 +1117,87 @@ function answer(known) {
   renderCard();
 }
 
+function onKnown(p, now) {
+  const elapsedDays = p.lastReview > 0 ? (now - p.lastReview) / DAY : 0;
+
+  if (p.reps === 0) {
+    p.stability = S0_FIRST_OK;
+    p.difficulty = 0.3;
+  } else {
+    p.difficulty = clamp(p.difficulty - DIFFICULTY_DECAY * (1 - p.difficulty), 0.1, 1);
+    const df = 1 - DIFFICULTY_WEIGHT * p.difficulty;
+    // retrievability: how much you remember based on forgetting curve
+    const r = p.stability > 0 ? Math.exp(-elapsedDays / p.stability) : 0.5;
+    const rSafe = clamp(r, 0.01, 1);
+    // spacing effect: lower r at review time → larger stability growth
+    // growth >= STABILITY_GROWTH when r is high (frequent reviews)
+    // growth > STABILITY_GROWTH when r is low (long gap survived)
+    const spacingBonus = 1 + Math.max(0, -Math.log(rSafe));
+    p.stability = clamp(
+      p.stability * STABILITY_GROWTH * df * spacingBonus,
+      S0_AGAIN,
+      STABILITY_MAX
+    );
+  }
+
+  p.streak++;
+  p.reps++;
+  p.lastReview = now;
+
+  const intervalDays = p.stability * RETENTION_FACTOR;
+  p.nextReview = now + Math.max(MINUTE, intervalDays * DAY);
+
+  // Leech rehabilitation
+  if (p.status === 'leech' && p.streak >= LEECH_REHAB_STREAK) {
+    p.status = 'learning';
+    p.lapses = Math.max(0, p.lapses - 2);
+  } else if (intervalDays >= MASTERED_INTERVAL_DAYS) {
+    p.status = 'mastered';
+  } else if (p.streak >= 2) {
+    p.status = 'reviewing';
+  } else {
+    p.status = 'learning';
+  }
+}
+
+function onForgotten(p, now, word) {
+  p.stability = Math.max(S0_AGAIN, p.stability * STABILITY_SHRINK);
+  p.difficulty = clamp(p.difficulty + DIFFICULTY_BOOST * (1 - p.difficulty), 0, 1);
+  p.streak = 0;
+  p.lapses++;
+  p.lastReview = now;
+  p.nextReview = now + MINUTE;
+  p.status = p.lapses >= LEECH_THRESHOLD ? 'leech' : 'learning';
+
+  // Re-append to current session for immediate re-practice
+  sessionQueue.push(word);
+}
+
+function formatInterval(days) {
+  if (!days || days <= 0 || isNaN(days)) return '刚学';
+  if (days < 1/24) return Math.round(days * 24 * 60) + '分钟';
+  if (days < 1) return Math.round(days * 24) + '小时';
+  return Math.round(days) + '天';
+}
+
+function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
 function showChapterComplete() {
   const isMixed = currentChapter === -1;
-  const s = isMixed ? getOverallStats() : getChapterStats(currentChapter);
-  const totalWords = isMixed ? CHAPTERS.reduce((sum, c) => sum + c.words.length, 0) : s.total;
-  const title = isMixed ? '今日复习完成!' : `第 ${currentChapter + 1} 章学习完成!`;
-  const subtitle = isMixed
+  const isLeech = currentChapter === -2;
+  const s = isMixed || isLeech ? getOverallStats() : getChapterStats(currentChapter);
+  const totalWords = isMixed || isLeech ? CHAPTERS.reduce((sum, c) => sum + c.words.length, 0) : s.total;
+  const title = isLeech ? '困难单词练习完成!'
+    : isMixed ? '今日复习完成!'
+    : `第 ${currentChapter + 1} 章学习完成!`;
+  const subtitle = isLeech
+    ? `剩余困难词: ${s.leech} 个`
+    : isMixed
     ? `总进度: 已掌握 ${s.mastered}/${totalWords}`
     : `第 ${currentChapter + 1} 章已掌握 ${s.mastered}/${totalWords} 个单词`;
-  const btnAction = isMixed ? 'showChapterList()' : `startChapter(${currentChapter})`;
-  const btnText = isMixed ? '返回首页' : '继续学习';
+  const btnText = isLeech ? '返回首页' : isMixed ? '返回首页' : '继续学习';
+  const btnAction = isLeech || isMixed ? 'showChapterList()' : `startChapter(${currentChapter})`;
+  const accuracy = sessionTotal > 0 ? Math.round(sessionCorrect / sessionTotal * 100) : 0;
 
   document.getElementById('app').innerHTML = `
     <div class="main">
@@ -996,6 +1205,7 @@ function showChapterComplete() {
       <div class="session-complete">
         <h2>${title}</h2>
         <p>${subtitle}</p>
+        <p style="margin-bottom:12px;">本次正确率: <strong>${accuracy}%</strong> (${sessionCorrect}/${sessionTotal})</p>
         <p style="margin-bottom:24px;">继续加油!</p>
         <button class="btn-primary" onclick="${btnAction}">${btnText}</button>
       </div>
@@ -1006,7 +1216,7 @@ function showChapterComplete() {
   const today = new Date().toISOString().slice(0, 10);
   sessionHistory.push({
     date: today,
-    chapter: currentChapter + 1,
+    chapter: isLeech ? 0 : currentChapter + 1,
     total: sessionQueue.length,
     timestamp: now()
   });

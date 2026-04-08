@@ -167,6 +167,18 @@
       "correctCount": 1,
       "nextReview": 1775634913542,
       "lastReview": 1775634853542
+    },
+    "성": {
+      "status": "learning",
+      "correctCount": 0,
+      "nextReview": 1775634918312,
+      "lastReview": 1775634858312
+    },
+    "의사": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634920342,
+      "lastReview": 1775634860342
     }
   },
   "history": [

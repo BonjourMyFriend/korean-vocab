@@ -121,10 +121,10 @@
       "lastReview": 1775634819083
     },
     "중국": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775634888145,
-      "lastReview": 1775634828145
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635776660,
+      "lastReview": 1775635176660
     },
     "일본": {
       "status": "learning",
@@ -181,10 +181,10 @@
       "lastReview": 1775634860342
     },
     "태국": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775634925848,
-      "lastReview": 1775634865848
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635773272,
+      "lastReview": 1775635173272
     },
     "독일": {
       "status": "learning",
@@ -217,10 +217,10 @@
       "lastReview": 1775635156831
     },
     "대학생": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775635009231,
-      "lastReview": 1775634949231
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635775071,
+      "lastReview": 1775635175071
     },
     "회사원": {
       "status": "learning",

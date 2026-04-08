@@ -422,13 +422,13 @@
     },
     "안녕하십니까?": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643905638.8682,
-      "lastReview": 1775643410940,
-      "reps": 2,
+      "stability": 0.008177151429259415,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775644180200.8835,
+      "lastReview": 1775643473695,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "네": {
       "status": "learning",

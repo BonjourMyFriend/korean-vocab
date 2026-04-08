@@ -158,9 +158,9 @@
     },
     "그렇습니까?": {
       "status": "learning",
-      "correctCount": 0,
-      "nextReview": 1775634907005,
-      "lastReview": 1775634847005
+      "correctCount": 1,
+      "nextReview": 1775635136059,
+      "lastReview": 1775635076059
     },
     "캐나다": {
       "status": "learning",

@@ -266,9 +266,9 @@
     },
     "경찰": {
       "status": "learning",
-      "correctCount": 0,
-      "nextReview": 1775635127631,
-      "lastReview": 1775635067631
+      "correctCount": 1,
+      "nextReview": 1775635203889,
+      "lastReview": 1775635143889
     }
   },
   "history": [

@@ -2,13 +2,13 @@
   "progress": {
     "있다": {
       "status": "reviewing",
-      "stability": 0.049999999999999996,
-      "difficulty": 0.3,
-      "nextReview": 1775637208114,
-      "lastReview": 1775633608114,
-      "reps": 3,
+      "stability": 0.20247252231250001,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775661052930.9277,
+      "lastReview": 1775643559305,
+      "reps": 4,
       "lapses": 0,
-      "streak": 3
+      "streak": 4
     },
     "수첩": {
       "status": "reviewing",
@@ -62,13 +62,13 @@
     },
     "크다": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634216975,
-      "lastReview": 1775633616975,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648508607.6821,
+      "lastReview": 1775643561619,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "자": {
       "status": "reviewing",
@@ -725,6 +725,16 @@
     },
     "_ch1": {
       "newIndex": 15
+    },
+    "점원": {
+      "status": "learning",
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775643617784,
+      "lastReview": 1775643557784,
+      "reps": 0,
+      "lapses": 1,
+      "streak": 0
     }
   },
   "history": [

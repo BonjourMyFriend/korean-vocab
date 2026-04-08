@@ -232,13 +232,13 @@
     },
     "제": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643945822.8682,
-      "lastReview": 1775643451124,
-      "reps": 2,
+      "stability": 0.024372008841759416,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775646723658.564,
+      "lastReview": 1775644617917,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "이다/입니다": {
       "status": "reviewing",
@@ -351,14 +351,14 @@
       "streak": 2
     },
     "처음 뵙겠습니다": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635216831,
-      "lastReview": 1775635156831,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775645110901.8682,
+      "lastReview": 1775644616203,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "대학생": {
       "status": "reviewing",
@@ -901,7 +901,7 @@
       "streak": 1
     },
     "_ch0": {
-      "newIndex": 12
+      "newIndex": 38
     },
     "_ch1": {
       "newIndex": 15

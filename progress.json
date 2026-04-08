@@ -215,6 +215,18 @@
       "correctCount": 0,
       "nextReview": 1775635005356,
       "lastReview": 1775634945356
+    },
+    "대학생": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775635009231,
+      "lastReview": 1775634949231
+    },
+    "회사원": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775635012025,
+      "lastReview": 1775634952025
     }
   },
   "history": [

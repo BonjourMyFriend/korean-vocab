@@ -92,13 +92,13 @@
     },
     "의자": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634223479,
-      "lastReview": 1775633623479,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648493795.6821,
+      "lastReview": 1775643546807,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "어느": {
       "status": "reviewing",
@@ -722,6 +722,9 @@
     },
     "_ch0": {
       "newIndex": 12
+    },
+    "_ch1": {
+      "newIndex": 15
     }
   },
   "history": [

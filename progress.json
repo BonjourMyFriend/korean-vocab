@@ -182,13 +182,13 @@
     },
     "은행원": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635416687,
-      "lastReview": 1775634816687,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648417336.6821,
+      "lastReview": 1775643470348,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "학생": {
       "status": "reviewing",

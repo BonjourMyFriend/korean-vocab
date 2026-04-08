@@ -152,13 +152,13 @@
     },
     "영국": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635423958,
-      "lastReview": 1775634823958,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648365613.6821,
+      "lastReview": 1775643418625,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "러시아": {
       "status": "reviewing",
@@ -172,13 +172,13 @@
     },
     "~씨": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635422209,
-      "lastReview": 1775634822209,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648368614.6821,
+      "lastReview": 1775643421626,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "은행원": {
       "status": "reviewing",
@@ -221,14 +221,14 @@
       "streak": 2
     },
     "사람": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634892442,
-      "lastReview": 1775634832442,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643917506.8682,
+      "lastReview": 1775643422808,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "제": {
       "status": "learning",
@@ -391,24 +391,24 @@
       "streak": 1
     },
     "반갑다": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635021078,
-      "lastReview": 1775634961078,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643919807.8682,
+      "lastReview": 1775643425109,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "기자": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635223049,
-      "lastReview": 1775635163049,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643911374.8682,
+      "lastReview": 1775643416676,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "나라": {
       "status": "learning",

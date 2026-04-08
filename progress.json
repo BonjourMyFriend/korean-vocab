@@ -79,46 +79,82 @@
       "lastReview": 1775634810610
     },
     "안녕하세요?": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633640396,
-      "lastReview": 1775633580396
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635426417,
+      "lastReview": 1775634826417
     },
     "선생님": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633643593,
-      "lastReview": 1775633583593
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635423210,
+      "lastReview": 1775634823210
     },
     "영국": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633647678,
-      "lastReview": 1775633587678
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635423958,
+      "lastReview": 1775634823958
     },
     "러시아": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633650565,
-      "lastReview": 1775633590565
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635421483,
+      "lastReview": 1775634821483
     },
     "~씨": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633652096,
-      "lastReview": 1775633592096
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635422209,
+      "lastReview": 1775634822209
     },
     "은행원": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633657802,
-      "lastReview": 1775633597802
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635416687,
+      "lastReview": 1775634816687
     },
     "학생": {
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635419083,
+      "lastReview": 1775634819083
+    },
+    "중국": {
       "status": "learning",
       "correctCount": 1,
-      "nextReview": 1775633659895,
-      "lastReview": 1775633599895
+      "nextReview": 1775634888145,
+      "lastReview": 1775634828145
+    },
+    "일본": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634890811,
+      "lastReview": 1775634830811
+    },
+    "사람": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634892442,
+      "lastReview": 1775634832442
+    },
+    "제": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634894968,
+      "lastReview": 1775634834968
+    },
+    "이다/입니다": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634897403,
+      "lastReview": 1775634837403
+    },
+    "미국": {
+      "status": "learning",
+      "correctCount": 1,
+      "nextReview": 1775634898926,
+      "lastReview": 1775634838926
     }
   },
   "history": [

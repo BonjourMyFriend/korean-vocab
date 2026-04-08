@@ -67,16 +67,16 @@
       "lastReview": 1775634807149
     },
     "안녕~": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633637079,
-      "lastReview": 1775633577079
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635412460,
+      "lastReview": 1775634812460
     },
     "저": {
-      "status": "learning",
-      "correctCount": 1,
-      "nextReview": 1775633639234,
-      "lastReview": 1775633579234
+      "status": "reviewing",
+      "correctCount": 2,
+      "nextReview": 1775635410610,
+      "lastReview": 1775634810610
     },
     "안녕하세요?": {
       "status": "learning",

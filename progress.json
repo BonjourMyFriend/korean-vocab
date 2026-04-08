@@ -51,14 +51,14 @@
       "streak": 2
     },
     "옆": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634222257,
-      "lastReview": 1775633622257,
+      "status": "learning",
+      "stability": 0.0020833333333333333,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775643611895,
+      "lastReview": 1775643551895,
       "reps": 2,
-      "lapses": 0,
-      "streak": 2
+      "lapses": 1,
+      "streak": 0
     },
     "크다": {
       "status": "reviewing",

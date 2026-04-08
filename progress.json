@@ -242,9 +242,9 @@
     },
     "기자": {
       "status": "learning",
-      "correctCount": 0,
-      "nextReview": 1775635198889,
-      "lastReview": 1775635138889
+      "correctCount": 1,
+      "nextReview": 1775635223049,
+      "lastReview": 1775635163049
     },
     "나라": {
       "status": "learning",
@@ -289,6 +289,12 @@
       "chapter": 0,
       "total": 11,
       "timestamp": 1775633625328
+    },
+    {
+      "date": "2026-04-08",
+      "chapter": 1,
+      "total": 45,
+      "timestamp": 1775635163050
     }
   ]
 }

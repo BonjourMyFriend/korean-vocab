@@ -209,6 +209,12 @@
       "correctCount": 0,
       "nextReview": 1775634951828,
       "lastReview": 1775634891828
+    },
+    "처음 뵙겠습니다": {
+      "status": "learning",
+      "correctCount": 0,
+      "nextReview": 1775635005356,
+      "lastReview": 1775634945356
     }
   },
   "history": [

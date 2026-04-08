@@ -212,9 +212,9 @@
     },
     "처음 뵙겠습니다": {
       "status": "learning",
-      "correctCount": 0,
-      "nextReview": 1775635186362,
-      "lastReview": 1775635126362
+      "correctCount": 1,
+      "nextReview": 1775635216831,
+      "lastReview": 1775635156831
     },
     "대학생": {
       "status": "learning",

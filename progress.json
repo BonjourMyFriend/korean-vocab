@@ -2335,6 +2335,16 @@
       "reps": 1,
       "lapses": 0,
       "streak": 1
+    },
+    "신문": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783815418,
+      "lastReview": 1775749255418,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
     }
   },
   "history": [

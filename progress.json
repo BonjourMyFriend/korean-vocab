@@ -122,13 +122,13 @@
     },
     "회사원": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579219319,
-      "lastReview": 1775577419319,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754148289.6821,
+      "lastReview": 1775749201301,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "영국": {
       "status": "reviewing",
@@ -162,13 +162,13 @@
     },
     "비서": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749254546,
-      "lastReview": 1775749194546,
-      "reps": 1,
+      "stability": 0.0009226511593750001,
+      "difficulty": 0.3455,
+      "nextReview": 1775749282782.06,
+      "lastReview": 1775749203065,
+      "reps": 2,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "러시아": {
       "status": "learning",
@@ -2307,6 +2307,18 @@
       "chapter": 2,
       "total": 41,
       "timestamp": 1775653725623
+    },
+    {
+      "date": "2026-04-09",
+      "chapter": 1,
+      "total": 17,
+      "timestamp": 1775749203066
+    },
+    {
+      "date": "2026-04-09",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775749204288
     }
   ]
 }

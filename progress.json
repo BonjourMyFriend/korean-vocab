@@ -22,13 +22,13 @@
     },
     "적다": {
       "status": "learning",
-      "stability": 0.0008333333333333334,
+      "stability": 0.4,
       "difficulty": 0.3,
-      "nextReview": 1775576951936,
-      "lastReview": 1775576891936,
-      "reps": 0,
+      "nextReview": 1775783777775,
+      "lastReview": 1775749217775,
+      "reps": 1,
       "lapses": 0,
-      "streak": 0
+      "streak": 1
     },
     "피다": {
       "status": "learning",
@@ -1164,7 +1164,7 @@
       "newIndex": 44
     },
     "_ch1": {
-      "newIndex": 52
+      "newIndex": 62
     },
     "ì ì": {
       "status": "learning",

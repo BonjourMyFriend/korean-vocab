@@ -191,14 +191,14 @@
       "streak": 2
     },
     "그렇습니까?": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775577577346,
-      "lastReview": 1775577517346,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775749679780.8682,
+      "lastReview": 1775749185082,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "경찰": {
       "status": "reviewing",

@@ -2525,6 +2525,36 @@
       "reps": 1,
       "lapses": 0,
       "streak": 1
+    },
+    "안녕하십니까?": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784114066,
+      "lastReview": 1775749554066,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "~씨": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784115758,
+      "lastReview": 1775749555758,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "네": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784117083,
+      "lastReview": 1775749557083,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
     }
   },
   "history": [

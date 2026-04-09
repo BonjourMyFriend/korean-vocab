@@ -61,14 +61,14 @@
       "streak": 0
     },
     "어느": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775749299531.8682,
-      "lastReview": 1775748804833,
+      "status": "learning",
+      "stability": 0.0014314203362467087,
+      "difficulty": 0.3455,
+      "nextReview": 1775749576430,
+      "lastReview": 1775749516430,
       "reps": 2,
-      "lapses": 0,
-      "streak": 2
+      "lapses": 1,
+      "streak": 0
     },
     "직업": {
       "status": "reviewing",

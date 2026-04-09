@@ -71,14 +71,14 @@
       "streak": 2
     },
     "직업": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775577448214,
-      "lastReview": 1775577388214,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775749652073.8682,
+      "lastReview": 1775749157375,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "미국": {
       "status": "reviewing",
@@ -211,14 +211,14 @@
       "streak": 2
     },
     "반갑다": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775577546893,
-      "lastReview": 1775577486893,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775749649135.8682,
+      "lastReview": 1775749154437,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "학생": {
       "status": "reviewing",

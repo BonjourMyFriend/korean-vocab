@@ -252,13 +252,13 @@
     },
     "누구": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775749331614.8682,
-      "lastReview": 1775748836916,
-      "reps": 2,
+      "stability": 0.017163198341759417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775750995169.3367,
+      "lastReview": 1775749512269,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ìë¤": {
       "status": "reviewing",
@@ -2495,6 +2495,16 @@
       "reps": 1,
       "lapses": 0,
       "streak": 1
+    },
+    "성": {
+      "status": "learning",
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775749569939,
+      "lastReview": 1775749509939,
+      "reps": 0,
+      "lapses": 1,
+      "streak": 0
     }
   },
   "history": [

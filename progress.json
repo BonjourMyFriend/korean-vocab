@@ -2425,6 +2425,16 @@
       "reps": 0,
       "lapses": 1,
       "streak": 0
+    },
+    "근처": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783926389,
+      "lastReview": 1775749366389,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
     }
   },
   "history": [

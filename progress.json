@@ -42,12 +42,12 @@
     },
     "칠": {
       "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775576958126,
-      "lastReview": 1775576898126,
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775749604840,
+      "lastReview": 1775749544840,
       "reps": 0,
-      "lapses": 0,
+      "lapses": 1,
       "streak": 0
     },
     "요즘": {

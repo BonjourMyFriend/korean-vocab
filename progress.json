@@ -232,13 +232,13 @@
     },
     "안녕하세요?": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775749327394.8682,
-      "lastReview": 1775748832696,
-      "reps": 2,
+      "stability": 0.017098817198009417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775750980997.806,
+      "lastReview": 1775749503660,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "몽골": {
       "status": "reviewing",

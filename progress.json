@@ -92,13 +92,13 @@
     },
     "대학생": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579212586,
-      "lastReview": 1775577412586,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754078119.6821,
+      "lastReview": 1775749131131,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "은행원": {
       "status": "reviewing",
@@ -112,13 +112,13 @@
     },
     "인도 사람": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579215669,
-      "lastReview": 1775577415669,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754075827.6821,
+      "lastReview": 1775749128839,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "회사원": {
       "status": "reviewing",
@@ -172,13 +172,13 @@
     },
     "러시아": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775748876099,
-      "lastReview": 1775748816099,
-      "reps": 1,
+      "stability": 0.004528627187141754,
+      "difficulty": 0.3455,
+      "nextReview": 1775749525367.389,
+      "lastReview": 1775749134094,
+      "reps": 2,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "에서 왔습니다": {
       "status": "learning",

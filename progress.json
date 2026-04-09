@@ -2415,6 +2415,16 @@
       "reps": 0,
       "lapses": 1,
       "streak": 0
+    },
+    "옆": {
+      "status": "learning",
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775749422828,
+      "lastReview": 1775749362828,
+      "reps": 0,
+      "lapses": 1,
+      "streak": 0
     }
   },
   "history": [

@@ -2498,13 +2498,13 @@
     },
     "성": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.49424999999999997,
-      "nextReview": 1775749653028,
-      "lastReview": 1775749593028,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784183078,
+      "lastReview": 1775749623078,
+      "reps": 1,
       "lapses": 2,
-      "streak": 0
+      "streak": 1
     },
     "중국": {
       "status": "learning",
@@ -2558,13 +2558,13 @@
     },
     "나라": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.49424999999999997,
-      "nextReview": 1775749667369,
-      "lastReview": 1775749607369,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784185336,
+      "lastReview": 1775749625336,
+      "reps": 1,
       "lapses": 2,
-      "streak": 0
+      "streak": 1
     },
     "제": {
       "status": "learning",
@@ -2637,6 +2637,12 @@
       "chapter": 2,
       "total": 18,
       "timestamp": 1775749443466
+    },
+    {
+      "date": "2026-04-09",
+      "chapter": 0,
+      "total": 32,
+      "timestamp": 1775749625337
     }
   ]
 }

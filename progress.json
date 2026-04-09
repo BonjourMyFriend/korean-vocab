@@ -2385,6 +2385,16 @@
       "reps": 1,
       "lapses": 0,
       "streak": 1
+    },
+    "지하철": {
+      "status": "learning",
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775749390028,
+      "lastReview": 1775749330028,
+      "reps": 0,
+      "lapses": 1,
+      "streak": 0
     }
   },
   "history": [

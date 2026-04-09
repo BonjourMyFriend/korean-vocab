@@ -2388,13 +2388,13 @@
     },
     "지하철": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749390028,
-      "lastReview": 1775749330028,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783974180,
+      "lastReview": 1775749414180,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "우체국": {
       "status": "learning",

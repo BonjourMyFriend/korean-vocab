@@ -2278,13 +2278,13 @@
     },
     "밖": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749288339,
-      "lastReview": 1775749228339,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783845224,
+      "lastReview": 1775749285224,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "하고": {
       "status": "learning",
@@ -2308,23 +2308,23 @@
     },
     "안": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749301818,
-      "lastReview": 1775749241818,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783847754,
+      "lastReview": 1775749287754,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "옷": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749308845,
-      "lastReview": 1775749248845,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783850708,
+      "lastReview": 1775749290708,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "우유": {
       "status": "learning",

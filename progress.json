@@ -82,13 +82,13 @@
     },
     "미국": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579229081,
-      "lastReview": 1775577429081,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754069072.6821,
+      "lastReview": 1775749122084,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "대학생": {
       "status": "reviewing",
@@ -142,13 +142,13 @@
     },
     "저": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579338865,
-      "lastReview": 1775577538865,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754066099.6821,
+      "lastReview": 1775749119111,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "태국": {
       "status": "reviewing",

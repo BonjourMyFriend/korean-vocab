@@ -52,13 +52,13 @@
     },
     "요즘": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.49424999999999997,
-      "nextReview": 1775749647881,
-      "lastReview": 1775749587881,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784179831,
+      "lastReview": 1775749619831,
+      "reps": 1,
       "lapses": 2,
-      "streak": 0
+      "streak": 1
     },
     "어느": {
       "status": "learning",

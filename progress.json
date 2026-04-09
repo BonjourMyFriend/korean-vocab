@@ -62,13 +62,13 @@
     },
     "어느": {
       "status": "learning",
-      "stability": 0.0014314203362467087,
-      "difficulty": 0.3455,
-      "nextReview": 1775749576430,
-      "lastReview": 1775749516430,
-      "reps": 2,
+      "stability": 0.0028235643538684764,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1775749840215.9602,
+      "lastReview": 1775749596260,
+      "reps": 3,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "직업": {
       "status": "reviewing",

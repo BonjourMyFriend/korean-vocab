@@ -2559,11 +2559,11 @@
     "나라": {
       "status": "learning",
       "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749623562,
-      "lastReview": 1775749563562,
+      "difficulty": 0.49424999999999997,
+      "nextReview": 1775749667369,
+      "lastReview": 1775749607369,
       "reps": 0,
-      "lapses": 1,
+      "lapses": 2,
       "streak": 0
     },
     "제": {

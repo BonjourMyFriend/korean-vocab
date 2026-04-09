@@ -1164,7 +1164,7 @@
       "newIndex": 44
     },
     "_ch1": {
-      "newIndex": 72
+      "newIndex": 82
     },
     "ì ì": {
       "status": "learning",
@@ -2372,6 +2372,16 @@
       "difficulty": 0.3,
       "nextReview": 1775783838613,
       "lastReview": 1775749278613,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "집": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783881335,
+      "lastReview": 1775749321335,
       "reps": 1,
       "lapses": 0,
       "streak": 1

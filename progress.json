@@ -2418,13 +2418,13 @@
     },
     "옆": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749422828,
-      "lastReview": 1775749362828,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783987172,
+      "lastReview": 1775749427172,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "근처": {
       "status": "learning",
@@ -2438,33 +2438,33 @@
     },
     "위": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749436009,
-      "lastReview": 1775749376009,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783989957,
+      "lastReview": 1775749429957,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "뒤": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749444434,
-      "lastReview": 1775749384434,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783992901,
+      "lastReview": 1775749432901,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "역": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749449968,
-      "lastReview": 1775749389968,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783994728,
+      "lastReview": 1775749434728,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "사무실": {
       "status": "learning",

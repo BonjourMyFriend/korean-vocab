@@ -32,13 +32,13 @@
     },
     "피다": {
       "status": "learning",
-      "stability": 0.0008333333333333334,
+      "stability": 0.4,
       "difficulty": 0.3,
-      "nextReview": 1775576954060,
-      "lastReview": 1775576894060,
-      "reps": 0,
+      "nextReview": 1775784058887,
+      "lastReview": 1775749498887,
+      "reps": 1,
       "lapses": 0,
-      "streak": 0
+      "streak": 1
     },
     "칠": {
       "status": "learning",

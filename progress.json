@@ -1164,7 +1164,7 @@
       "newIndex": 44
     },
     "_ch1": {
-      "newIndex": 62
+      "newIndex": 72
     },
     "ì ì": {
       "status": "learning",
@@ -2348,23 +2348,23 @@
     },
     "주머니": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749327907,
-      "lastReview": 1775749267907,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783854955,
+      "lastReview": 1775749294955,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "컵": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749333792,
-      "lastReview": 1775749273792,
-      "reps": 0,
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783857446,
+      "lastReview": 1775749297446,
+      "reps": 1,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "맥주": {
       "status": "learning",
@@ -2425,6 +2425,12 @@
       "chapter": 1,
       "total": 0,
       "timestamp": 1775749207745
+    },
+    {
+      "date": "2026-04-09",
+      "chapter": 2,
+      "total": 16,
+      "timestamp": 1775749297447
     }
   ]
 }

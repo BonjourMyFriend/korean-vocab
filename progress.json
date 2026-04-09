@@ -2475,6 +2475,16 @@
       "reps": 1,
       "lapses": 2,
       "streak": 1
+    },
+    "이다/입니다": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784026029,
+      "lastReview": 1775749466029,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
     }
   },
   "history": [

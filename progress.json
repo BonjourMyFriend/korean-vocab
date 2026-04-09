@@ -2468,13 +2468,13 @@
     },
     "사무실": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775749469695,
-      "lastReview": 1775749409695,
-      "reps": 0,
-      "lapses": 1,
-      "streak": 0
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784003466,
+      "lastReview": 1775749443466,
+      "reps": 1,
+      "lapses": 2,
+      "streak": 1
     }
   },
   "history": [
@@ -2531,6 +2531,12 @@
       "chapter": 2,
       "total": 16,
       "timestamp": 1775749297447
+    },
+    {
+      "date": "2026-04-09",
+      "chapter": 2,
+      "total": 18,
+      "timestamp": 1775749443466
     }
   ]
 }

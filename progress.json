@@ -2295,6 +2295,16 @@
       "reps": 1,
       "lapses": 0,
       "streak": 1
+    },
+    "컴퓨터": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775783794887,
+      "lastReview": 1775749234887,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
     }
   },
   "history": [

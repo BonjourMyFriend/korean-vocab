@@ -52,12 +52,12 @@
     },
     "요즘": {
       "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775576965050,
-      "lastReview": 1775576905050,
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775749545869,
+      "lastReview": 1775749485869,
       "reps": 0,
-      "lapses": 0,
+      "lapses": 1,
       "streak": 0
     },
     "어느": {
@@ -2482,6 +2482,16 @@
       "difficulty": 0.3,
       "nextReview": 1775784026029,
       "lastReview": 1775749466029,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "안녕~": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784048080,
+      "lastReview": 1775749488080,
       "reps": 1,
       "lapses": 0,
       "streak": 1

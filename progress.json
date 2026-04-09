@@ -132,13 +132,13 @@
     },
     "영국": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775749334298.8682,
-      "lastReview": 1775748839600,
-      "reps": 2,
+      "stability": 0.017684731079259417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775751078467.7651,
+      "lastReview": 1775749550507,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "저": {
       "status": "reviewing",
@@ -2512,6 +2512,16 @@
       "difficulty": 0.3,
       "nextReview": 1775784084081,
       "lastReview": 1775749524081,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "사람": {
+      "status": "learning",
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775784107985,
+      "lastReview": 1775749547985,
       "reps": 1,
       "lapses": 0,
       "streak": 1

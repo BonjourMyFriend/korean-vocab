@@ -152,13 +152,13 @@
     },
     "태국": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775579340614,
-      "lastReview": 1775577540614,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775754115806.6821,
+      "lastReview": 1775749168818,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "비서": {
       "status": "learning",

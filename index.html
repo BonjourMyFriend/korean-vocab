@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>延世韩国语单词记忆</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary: #4a90d9;
+  --primary-dark: #357abd;
+  --success: #52c41a;
+  --danger: #ff4d4f;
+  --text: #333;
+  --text-light: #888;
+  --border: #e8e8e8;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.header {
+  background: var(--card-bg);
+  padding: 16px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header h1 { font-size: 20px; font-weight: 600; }
+
+.header-actions { display: flex; gap: 8px; }
+
+.btn-icon {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background: var(--bg);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ===== Chapter List ===== */
+.chapter-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 24px 100px;
+}
+
+.chapter-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.chapter-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+.chapter-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.chapter-info { flex: 1; }
+
+.chapter-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.chapter-meta {
+  font-size: 13px;
+  color: var(--text-light);
+  display: flex;
+  gap: 12px;
+}
+
+.chapter-progress-bar {
+  height: 4px;
+  background: #e9ecef;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+  display: flex;
+}
+
+.chapter-progress-fill {
+  height: 100%;
+  background: var(--success);
+  border-radius: 2px;
+  transition: width 0.4s;
+}
+
+.chapter-arrow {
+  font-size: 18px;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  overflow-x: auto;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 100px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.stat-card .number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+.stat-card .label { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+.stat-new .number { color: var(--primary); }
+.stat-learning .number { color: #faad14; }
+.stat-reviewing .number { color: #722ed1; }
+.stat-mastered .number { color: var(--success); }
+
+/* ===== Progress Bar ===== */
+.progress-wrap { padding: 0 24px 16px; }
+
+.progress-bar-bg {
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+}
+
+.progress-segment { height: 100%; transition: width 0.5s ease; }
+.seg-mastered { background: var(--success); }
+.seg-reviewing { background: #722ed1; }
+.seg-learning { background: #faad14; }
+
+/* ===== Main Content ===== */
+.main { max-width: 520px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* ===== Card ===== */
+.card-container { perspective: 1000px; margin: 20px 0; }
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  min-height: 280px;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.flipped { transform: rotateY(180deg); }
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  border-radius: 16px;
+}
+
+.card-front { background: var(--card-bg); }
+
+.card-back {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-korean {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.card-hint { margin-top: 16px; font-size: 14px; color: var(--text-light); }
+.card-chinese { font-size: 32px; font-weight: 600; text-align: center; line-height: 1.4; }
+.card-chinese-label { font-size: 14px; opacity: 0.7; margin-bottom: 12px; }
+
+/* ===== Buttons ===== */
+.action-buttons { display: flex; gap: 12px; margin-top: 20px; }
+
+.btn {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-show { background: var(--primary); color: white; }
+.btn-show:hover { background: var(--primary-dark); }
+.btn-know { background: var(--success); color: white; }
+.btn-know:hover { background: #45a816; }
+.btn-unknow { background: var(--danger); color: white; }
+.btn-unknow:hover { background: #e04040; }
+.btn:active { transform: scale(0.97); }
+
+/* ===== Session Complete ===== */
+.session-complete { text-align: center; padding: 60px 24px; }
+.session-complete h2 { font-size: 24px; margin-bottom: 12px; }
+.session-complete p { color: var(--text-light); margin-bottom: 24px; }
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover { background: var(--primary-dark); }
+
+/* ===== Settings Modal ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 28px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.modal h2 { font-size: 20px; margin-bottom: 20px; }
+.setting-group { margin-bottom: 20px; }
+.setting-group label { display: block; font-size: 14px; color: var(--text-light); margin-bottom: 8px; }
+.setting-group input[type="range"] { width: 100%; }
+.range-value { text-align: center; font-size: 20px; font-weight: 700; color: var(--primary); margin-top: 4px; }
+
+.modal-actions { display: flex; gap: 12px; margin-top: 24px; }
+
+.btn-secondary {
+  background: var(--bg); color: var(--text);
+  border: 1px solid var(--border);
+  padding: 12px 20px; border-radius: 10px;
+  font-size: 14px; cursor: pointer; flex: 1;
+}
+
+.btn-danger {
+  background: var(--danger); color: white;
+  border: none; padding: 12px 20px;
+  border-radius: 10px; font-size: 14px; cursor: pointer; flex: 1;
+}
+
+/* ===== History Modal ===== */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.history-table th, .history-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table th {
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+}
+
+.history-table tr:hover { background: #f8f9ff; }
+
+.rate-good { color: var(--success); font-weight: 600; }
+.rate-ok { color: #faad14; font-weight: 600; }
+.rate-bad { color: var(--danger); font-weight: 600; }
+
+.no-history {
+  text-align: center;
+  color: var(--text-light);
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primary);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.back-btn:hover { text-decoration: underline; }
+
+/* ===== Keyboard Hints ===== */
+.keyboard-hints { text-align: center; padding: 12px; font-size: 12px; color: var(--text-light); }
+.keyboard-hints kbd {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 4px; padding: 2px 6px; font-family: inherit; font-size: 11px;
+}
+
+/* ===== Status Tag ===== */
+.card-status {
+  position: absolute; top: 16px; right: 16px;
+  font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 500;
+}
+
+.tag-new { background: #e6f7ff; color: #1890ff; }
+.tag-review { background: #f9f0ff; color: #722ed1; }
+
+/* ===== Chapter Header ===== */
+.chapter-header {
+  text-align: center;
+  padding: 16px 0 8px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.chapter-header strong { color: var(--primary); }
+
+/* ===== Today Review Banner ===== */
+.today-review-banner {
+  margin: 0 24px 8px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.today-review-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.3);
+}
+
+.today-review-banner.today-done {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  cursor: default;
+}
+
+.today-review-banner.today-done:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.streak-banner {
+  text-align: center;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff7e6 0%, #ffe7ba 100%);
+  color: #d46b08;
+  font-size: 15px;
+}
+
+.today-review-title {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.today-review-count {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.today-review-count strong {
+  font-size: 24px;
+}
+
+.today-review-sub {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+.today-review-overflow {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.today-review-est {
+  font-size: 13px;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.today-review-go {
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.25);
+  padding: 8px 16px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ===== Due Badge ===== */
+.due-badge {
+  background: #fff1f0;
+  color: #ff4d4f;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===== Leech Banner ===== */
+.leech-banner {
+  margin: 0 24px 8px;
+  background: linear-gradient(13deg, #f6d365 0%, #fda085 100%);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.leech-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253,160,133,0.3);
+}
+.leech-banner-title { font-size: 13px; opacity: 0.85; margin-bottom: 4px; }
+.leech-banner-count { font-size: 18px; font-weight: 600; }
+.leech-banner-count strong { font-size: 24px; }
+.leech-banner-go { font-size: 14px; font-weight: 600; background: rgba(255,255,255,0.25); padding: 8px 16px; border-radius: 8px; flex-shrink: 0; }
+
+.tag-leech { background: #fff1f0; color: #ff4d4f; }
+.tag-mastered { background: #f6ffed; color: #52c41a; }
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .card-korean { font-size: 36px; }
+  .card-chinese { font-size: 24px; }
+  .stats-bar { padding: 12px 16px; gap: 8px; }
+  .stat-card { padding: 10px 12px; }
+  .stat-card .number { font-size: 22px; }
+  .main { padding: 0 16px 100px; }
+  .chapter-list { padding: 16px 16px 100px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1 id="headerTitle">韩语单词记忆</h1>
+  <div class="header-actions">
+    <span id="syncIndicator" style="font-size:14px;margin-right:4px;transition:opacity 0.3s;opacity:0.6;">☁️</span>
+    <button class="btn-icon" onclick="openHistory()">📊 历史</button>
+    <button class="btn-icon" onclick="openSettings()">⚙ 设置</button>
+  </div>
+</div>
+
+<!-- App Container -->
+<div id="app"></div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <h2>学习设置</h2>
+    <div class="setting-group">
+      <label>每日新词数量</label>
+      <input type="range" id="newWordCount" min="5" max="50" step="5" value="10" oninput="updateRangeDisplay()">
+      <div class="range-value" id="rangeValue">10 个</div>
+    </div>
+    <div class="setting-group">
+      <label>云同步 Token（填一次即可自动同步）</label>
+      <input type="text" id="syncTokenInput" placeholder="ghp_开头的 Personal Access Token" style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:13px;">
+      <div style="margin-top:6px;font-size:12px;color:var(--text-light);" id="syncStatus"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeSettings()">关闭</button>
+      <button class="btn-danger" onclick="resetProgress()">重置全部进度</button>
+    </div>
+    <div class="modal-actions" style="margin-top:8px;">
+      <button class="btn-secondary" onclick="exportProgress()">导出进度</button>
+      <button class="btn-secondary" onclick="document.getElementById('importFile').click()">导入进度</button>
+      <input type="file" id="importFile" accept=".json" style="display:none" onchange="importProgress(event)">
+    </div>
+  </div>
+</div>
+
+<!-- History Modal -->
+<div class="modal-overlay" id="historyModal">
+  <div class="modal">
+    <h2>学习历史</h2>
+    <div id="historyContent"></div>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeHistory()">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== Cloud Sync Config =====
+const SYNC_CONFIG = {
+  owner: 'BonjourMyFriend',
+  repo: 'korean-vocab',
+  path: 'progress.json'
+};
+let syncToken = localStorage.getItem('korean_vocab_sync_token') || '';
+let syncSha = null;
+let syncTimer = null;
+let syncInFlight = false;
+
+// ===== Chapter Data (inline) =====
+const CHAPTERS = [{"chapter": 1, "count": 44, "words": [{"korean": "안녕하십니까?", "chinese": "您好!"}, {"korean": "안녕하세요?", "chinese": "你好!"}, {"korean": "안녕~", "chinese": "你好;再见!(非敬语)"}, {"korean": "네", "chinese": "是的"}, {"korean": "저", "chinese": "我（“나”的谦称）"}, {"korean": "제", "chinese": "我的（“내”的谦称）"}, {"korean": "이다/입니다", "chinese": "是"}, {"korean": "~씨", "chinese": "先生, 小姐"}, {"korean": "중국", "chinese": "中国"}, {"korean": "사람", "chinese": "人"}, {"korean": "인도 사람", "chinese": "印度人"}, {"korean": "성", "chinese": "姓"}, {"korean": "어느", "chinese": "哪个"}, {"korean": "나라", "chinese": "国家"}, {"korean": "미국", "chinese": "美国"}, {"korean": "아니요", "chinese": "不"}, {"korean": "일본", "chinese": "日本"}, {"korean": "그렇습니까?", "chinese": "是吗?"}, {"korean": "영국", "chinese": "英国"}, {"korean": "독일", "chinese": "德国"}, {"korean": "러시아", "chinese": "俄罗斯"}, {"korean": "몽골", "chinese": "蒙古"}, {"korean": "인도", "chinese": "印度"}, {"korean": "태국", "chinese": "泰国"}, {"korean": "한국", "chinese": "韩国"}, {"korean": "국적", "chinese": "国籍"}, {"korean": "캐나다", "chinese": "加拿大"}, {"korean": "에서 왔습니다", "chinese": "来自"}, {"korean": "선생님", "chinese": "老师"}, {"korean": "회사원", "chinese": "公司职员"}, {"korean": "학생", "chinese": "学生"}, {"korean": "대학생", "chinese": "大学生"}, {"korean": "직업", "chinese": "职业"}, {"korean": "가수", "chinese": "歌手"}, {"korean": "의사", "chinese": "医生"}, {"korean": "간호사", "chinese": "护士"}, {"korean": "은행원", "chinese": "银行职员"}, {"korean": "비서", "chinese": "秘书"}, {"korean": "변호사", "chinese": "律师"}, {"korean": "경찰", "chinese": "警察"}, {"korean": "기자", "chinese": "记者"}, {"korean": "누구", "chinese": "谁"}, {"korean": "처음 뵙겠습니다", "chinese": "初次见面"}, {"korean": "반갑다", "chinese": "开心, 喜悦"}]}, {"chapter": 2, "count": 88, "words": [{"korean": "점원", "chinese": "店员"}, {"korean": "이것", "chinese": "这个(东西)"}, {"korean": "그것", "chinese": "那个(东西)"}, {"korean": "저것", "chinese": "那个(东西)"}, {"korean": "교과서", "chinese": "课本"}, {"korean": "사전", "chinese": "词典"}, {"korean": "그렇다", "chinese": "是的"}, {"korean": "잡지", "chinese": "杂志"}, {"korean": "책상", "chinese": "书桌"}, {"korean": "지갑", "chinese": "钱包"}, {"korean": "연필", "chinese": "铅笔"}, {"korean": "자", "chinese": "尺子"}, {"korean": "지우개", "chinese": "橡皮"}, {"korean": "볼펜", "chinese": "圆珠笔"}, {"korean": "돈", "chinese": "钱"}, {"korean": "카드", "chinese": "卡"}, {"korean": "신분증", "chinese": "身份证"}, {"korean": "가방", "chinese": "包"}, {"korean": "손수건", "chinese": "手绢"}, {"korean": "모자", "chinese": "帽子"}, {"korean": "거울", "chinese": "镜子"}, {"korean": "휴지", "chinese": "手纸"}, {"korean": "공책", "chinese": "笔记本"}, {"korean": "읽기책", "chinese": "读物"}, {"korean": "열쇠", "chinese": "钥匙"}, {"korean": "수첩", "chinese": "手册"}, {"korean": "과자", "chinese": "饼干"}, {"korean": "종이", "chinese": "纸"}, {"korean": "필통", "chinese": "铅笔盒, 笔筒"}, {"korean": "저건", "chinese": "那个(缩)"}, {"korean": "~은/는", "chinese": "添意助词"}, {"korean": "그리고", "chinese": "还有"}, {"korean": "여기", "chinese": "这儿"}, {"korean": "있다", "chinese": "有, 在"}, {"korean": "여권", "chinese": "护照"}, {"korean": "이름", "chinese": "姓名"}, {"korean": "친구", "chinese": "朋友"}, {"korean": "옷걸이", "chinese": "衣挂"}, {"korean": "문", "chinese": "门"}, {"korean": "텔레비전", "chinese": "电视"}, {"korean": "그럼", "chinese": "那么"}, {"korean": "의자", "chinese": "椅子"}, {"korean": "많다", "chinese": "多"}, {"korean": "적다", "chinese": "少"}, {"korean": "크다", "chinese": "大"}, {"korean": "작다", "chinese": "小"}, {"korean": "날씨", "chinese": "天气"}, {"korean": "좋다", "chinese": "好"}, {"korean": "나쁘다", "chinese": "不好"}, {"korean": "주스", "chinese": "果汁"}, {"korean": "도", "chinese": "也"}, {"korean": "물건", "chinese": "东西"}, {"korean": "하고", "chinese": "和, 跟"}, {"korean": "주머니", "chinese": "口袋"}, {"korean": "안", "chinese": "里面"}, {"korean": "밖", "chinese": "外面"}, {"korean": "컴퓨터", "chinese": "电脑"}, {"korean": "컵", "chinese": "杯子"}, {"korean": "우유", "chinese": "牛奶"}, {"korean": "신문", "chinese": "报纸"}, {"korean": "맥주", "chinese": "啤酒"}, {"korean": "옷", "chinese": "衣服"}, {"korean": "침대", "chinese": "床"}, {"korean": "냉장고", "chinese": "冰箱"}, {"korean": "1층", "chinese": "1楼"}, {"korean": "은행", "chinese": "银行"}, {"korean": "어디", "chinese": "哪儿"}, {"korean": "학생회관", "chinese": "学生会馆"}, {"korean": "도서관", "chinese": "图书馆"}, {"korean": "앞", "chinese": "前面"}, {"korean": "화장실", "chinese": "卫生间"}, {"korean": "서점", "chinese": "书店"}, {"korean": "우체국", "chinese": "邮局"}, {"korean": "사무실", "chinese": "办公室"}, {"korean": "뒤", "chinese": "后面"}, {"korean": "옆", "chinese": "旁边"}, {"korean": "위", "chinese": "上面"}, {"korean": "집", "chinese": "家"}, {"korean": "근처", "chinese": "附近"}, {"korean": "백화점", "chinese": "百货商店"}, {"korean": "지하철", "chinese": "地铁"}, {"korean": "역", "chinese": "站"}, {"korean": "극장", "chinese": "剧场"}, {"korean": "약국", "chinese": "药店"}, {"korean": "회사", "chinese": "公司"}, {"korean": "가게", "chinese": "店"}, {"korean": "공원", "chinese": "公园"}, {"korean": "시장", "chinese": "市场"}]}, {"chapter": 3, "count": 106, "words": [{"korean": "하다", "chinese": "做"}, {"korean": "가족", "chinese": "家人"}, {"korean": "사진", "chinese": "照片"}, {"korean": "보다", "chinese": "看"}, {"korean": "자주", "chinese": "经常"}, {"korean": "일하다", "chinese": "工作, 干活儿"}, {"korean": "이야기하다", "chinese": "讲故事, 说"}, {"korean": "김치", "chinese": "泡菜"}, {"korean": "영화", "chinese": "电影"}, {"korean": "밥", "chinese": "饭"}, {"korean": "사다", "chinese": "买"}, {"korean": "날마다", "chinese": "每天"}, {"korean": "산책하다", "chinese": "去散步"}, {"korean": "가끔", "chinese": "偶尔, 有时"}, {"korean": "공부하다", "chinese": "学习"}, {"korean": "숙제하다", "chinese": "做作业"}, {"korean": "노래하다", "chinese": "唱歌"}, {"korean": "운동하다", "chinese": "锻炼, 运动"}, {"korean": "부르다", "chinese": "唱, 叫"}, {"korean": "할아버지", "chinese": "爷爷"}, {"korean": "할머니", "chinese": "奶奶"}, {"korean": "외할아버지", "chinese": "外公"}, {"korean": "외할머니", "chinese": "外婆"}, {"korean": "부모", "chinese": "父母"}, {"korean": "아버지", "chinese": "爸爸"}, {"korean": "우리", "chinese": "我们"}, {"korean": "주부", "chinese": "家庭主妇"}, {"korean": "안", "chinese": "不, 没"}, {"korean": "고등학생", "chinese": "高中生"}, {"korean": "서울", "chinese": "首尔"}, {"korean": "아주", "chinese": "非常"}, {"korean": "어머니", "chinese": "妈妈"}, {"korean": "형제", "chinese": "兄弟"}, {"korean": "형/오빠", "chinese": "哥"}, {"korean": "재미있다", "chinese": "有意思"}, {"korean": "같이", "chinese": "一起"}, {"korean": "살다", "chinese": "居住、度过"}, {"korean": "말하다", "chinese": "说"}, {"korean": "말씀하시다", "chinese": "说话(敬语)"}, {"korean": "몇", "chinese": "几, 多少"}, {"korean": "명", "chinese": "名, 个(单位名词)"}, {"korean": "개", "chinese": "个"}, {"korean": "권", "chinese": "本"}, {"korean": "자다", "chinese": "睡觉"}, {"korean": "주무시다", "chinese": "睡觉(敬语)"}, {"korean": "하나", "chinese": "一"}, {"korean": "둘", "chinese": "二"}, {"korean": "셋", "chinese": "三"}, {"korean": "넷", "chinese": "四"}, {"korean": "다섯", "chinese": "五"}, {"korean": "여섯", "chinese": "六"}, {"korean": "일곱", "chinese": "七"}, {"korean": "여덟", "chinese": "八"}, {"korean": "아홉", "chinese": "九"}, {"korean": "열", "chinese": "十"}, {"korean": "모두", "chinese": "都, 一共"}, {"korean": "고향", "chinese": "家乡"}, {"korean": "좋아하다", "chinese": "喜欢"}, {"korean": "누나", "chinese": "姐姐(男生叫的)"}, {"korean": "언니", "chinese": "姐姐(女生叫的)"}, {"korean": "남동생", "chinese": "弟弟"}, {"korean": "여동생", "chinese": "妹妹"}, {"korean": "남자", "chinese": "男"}, {"korean": "여자", "chinese": "女"}, {"korean": "에서", "chinese": "在"}, {"korean": "있다", "chinese": "在, 有"}, {"korean": "계시다", "chinese": "在(敬语)"}, {"korean": "있으시다", "chinese": "有(敬语)"}, {"korean": "먹다", "chinese": "吃"}, {"korean": "잡수시다", "chinese": "吃(敬语)"}, {"korean": "드시다", "chinese": "吃(敬语)"}, {"korean": "산", "chinese": "山"}, {"korean": "공기", "chinese": "空气"}, {"korean": "조용하다", "chinese": "安静"}, {"korean": "깨끗하다", "chinese": "干净"}, {"korean": "더럽다", "chinese": "脏"}, {"korean": "시끄럽다", "chinese": "喧哗"}, {"korean": "복잡하다", "chinese": "复杂, 乱"}, {"korean": "들", "chinese": "们(复数形式)"}, {"korean": "바다", "chinese": "海"}, {"korean": "생선", "chinese": "鱼"}, {"korean": "겨울", "chinese": "冬天"}, {"korean": "넓다", "chinese": "宽"}, {"korean": "좁다", "chinese": "窄"}, {"korean": "여름", "chinese": "夏天"}, {"korean": "어떻다", "chinese": "怎么样"}, {"korean": "친절하다", "chinese": "亲切"}, {"korean": "춥다", "chinese": "冷"}, {"korean": "덥다", "chinese": "热"}, {"korean": "시원하다", "chinese": "凉快"}, {"korean": "따뜻하다", "chinese": "温暖, 暖和"}, {"korean": "예쁘다", "chinese": "漂亮"}, {"korean": "사랑하다", "chinese": "爱"}, {"korean": "대학교", "chinese": "大学"}, {"korean": "전공", "chinese": "专业"}, {"korean": "경제학", "chinese": "经济学"}, {"korean": "역사학", "chinese": "历史学"}, {"korean": "컴퓨터 공학", "chinese": "计算机工学"}, {"korean": "정치학", "chinese": "政治学"}, {"korean": "법학", "chinese": "法学"}, {"korean": "경영학", "chinese": "经营学"}, {"korean": "의학", "chinese": "医学"}, {"korean": "영문학", "chinese": "英国文学"}, {"korean": "생물학", "chinese": "生物学"}, {"korean": "프로그래머", "chinese": "程序设计员"}, {"korean": "일어", "chinese": "日语"}]}, {"chapter": 4, "count": 120, "words": [{"korean": "하고", "chinese": "跟, 和"}, {"korean": "혼자", "chinese": "一个人, 独自"}, {"korean": "같이", "chinese": "一起"}, {"korean": "그럽시다", "chinese": "那样做吧"}, {"korean": "나가다", "chinese": "出去"}, {"korean": "들어오다", "chinese": "进来"}, {"korean": "올라가다", "chinese": "上去, 爬上"}, {"korean": "내려오다", "chinese": "下来, 搬下来"}, {"korean": "음악", "chinese": "音乐"}, {"korean": "한식집", "chinese": "韩餐馆"}, {"korean": "중국집", "chinese": "中餐厅"}, {"korean": "일식집", "chinese": "日本料理店"}, {"korean": "양식집", "chinese": "西餐厅"}, {"korean": "비빔밥", "chinese": "拌饭"}, {"korean": "싸다", "chinese": "便宜"}, {"korean": "값", "chinese": "价格"}, {"korean": "카레", "chinese": "咖喱"}, {"korean": "살다", "chinese": "住, 生活, 过...生活"}, {"korean": "알다", "chinese": "知道"}, {"korean": "불고기", "chinese": "烤肉"}, {"korean": "열다", "chinese": "开"}, {"korean": "내일", "chinese": "明天"}, {"korean": "정문", "chinese": "正门"}, {"korean": "학생식당", "chinese": "学生食堂"}, {"korean": "가깝다", "chinese": "近"}, {"korean": "그래요?", "chinese": "是吗"}, {"korean": "음식", "chinese": "食物"}, {"korean": "오늘", "chinese": "今天"}, {"korean": "달다", "chinese": "甜"}, {"korean": "쓰다", "chinese": "苦"}, {"korean": "시다", "chinese": "酸"}, {"korean": "짜다", "chinese": "咸"}, {"korean": "싱겁다", "chinese": "淡"}, {"korean": "크리스마스", "chinese": "圣诞节"}, {"korean": "놀다", "chinese": "玩"}, {"korean": "만들다", "chinese": "做"}, {"korean": "아이스크림", "chinese": "冰淇淋"}, {"korean": "좀", "chinese": "一点"}, {"korean": "간장", "chinese": "酱油"}, {"korean": "고추", "chinese": "辣椒"}, {"korean": "식혜", "chinese": "酒酿"}, {"korean": "무슨", "chinese": "什么"}, {"korean": "맛", "chinese": "味道"}, {"korean": "맛있다", "chinese": "好吃"}, {"korean": "맵다", "chinese": "辣"}, {"korean": "외국인", "chinese": "外国人"}, {"korean": "잘", "chinese": "好"}, {"korean": "한식", "chinese": "韩餐"}, {"korean": "중국 음식", "chinese": "中餐"}, {"korean": "일식", "chinese": "日餐"}, {"korean": "양식", "chinese": "西餐"}, {"korean": "자장면", "chinese": "炸酱面"}, {"korean": "초밥", "chinese": "寿司"}, {"korean": "스테이크", "chinese": "牛排"}, {"korean": "맛없다", "chinese": "不好吃"}, {"korean": "갈비", "chinese": "排骨"}, {"korean": "삼겹살", "chinese": "五花肉"}, {"korean": "김치찌개", "chinese": "泡菜汤"}, {"korean": "된장찌개", "chinese": "大酱汤"}, {"korean": "순두부찌개", "chinese": "嫩豆腐汤"}, {"korean": "닭갈비", "chinese": "铁板鸡(鸡排)"}, {"korean": "상추", "chinese": "生菜"}, {"korean": "삼계탕", "chinese": "参鸡汤"}, {"korean": "갈비탕", "chinese": "排骨汤"}, {"korean": "냉면", "chinese": "冷面"}, {"korean": "칼국수", "chinese": "刀削面"}, {"korean": "라면", "chinese": "泡面, 拉面"}, {"korean": "김밥", "chinese": "紫菜包饭"}, {"korean": "외국", "chinese": "外国"}, {"korean": "일", "chinese": "1"}, {"korean": "이", "chinese": "2"}, {"korean": "삼", "chinese": "3"}, {"korean": "사", "chinese": "4"}, {"korean": "오", "chinese": "5"}, {"korean": "육", "chinese": "6"}, {"korean": "칠", "chinese": "7"}, {"korean": "팔", "chinese": "8"}, {"korean": "구", "chinese": "9"}, {"korean": "십", "chinese": "10"}, {"korean": "떡볶이", "chinese": "炒年糕"}, {"korean": "설악산", "chinese": "雪岳山"}, {"korean": "그래서", "chinese": "所以"}, {"korean": "중에서", "chinese": "当中"}, {"korean": "인분", "chinese": "份"}, {"korean": "보통", "chinese": "一般"}, {"korean": "초콜릿", "chinese": "巧克力"}, {"korean": "커피", "chinese": "咖啡"}, {"korean": "소주", "chinese": "烧酒"}, {"korean": "사과", "chinese": "苹果"}, {"korean": "종업원", "chinese": "服务员"}, {"korean": "뭘", "chinese": "什么"}, {"korean": "잔", "chinese": "杯"}, {"korean": "병", "chinese": "瓶"}, {"korean": "그릇", "chinese": "碗"}, {"korean": "사탕", "chinese": "糖"}, {"korean": "물", "chinese": "水"}, {"korean": "아프다", "chinese": "疼"}, {"korean": "오렌지", "chinese": "橙子"}, {"korean": "케이크", "chinese": "蛋糕"}, {"korean": "생일", "chinese": "生日"}, {"korean": "영어", "chinese": "英语"}, {"korean": "콤비네이션", "chinese": "结合"}, {"korean": "알겠습니다", "chinese": "好的, 知道了"}, {"korean": "술집", "chinese": "酒馆"}, {"korean": "시키다", "chinese": "点(菜), 使"}, {"korean": "마시다", "chinese": "喝"}, {"korean": "모르다", "chinese": "不知道"}, {"korean": "피자", "chinese": "披萨"}, {"korean": "스파게티", "chinese": "意大利面"}, {"korean": "라자냐", "chinese": "烤宽面条"}, {"korean": "짬뽕", "chinese": "中式面条"}, {"korean": "볶음밥", "chinese": "炒饭"}, {"korean": "탕수육", "chinese": "糖醋肉"}, {"korean": "배", "chinese": "肚子"}, {"korean": "단어", "chinese": "单词"}, {"korean": "고프다", "chinese": "饿"}, {"korean": "다리", "chinese": "腿"}, {"korean": "손님", "chinese": "客人"}, {"korean": "주다", "chinese": "给"}, {"korean": "드리다", "chinese": "给(敬语)"}]}, {"chapter": 5, "count": 95, "words": [{"korean": "십", "chinese": "十"}, {"korean": "이십", "chinese": "二十"}, {"korean": "삼십", "chinese": "三十"}, {"korean": "사십", "chinese": "四十"}, {"korean": "오십", "chinese": "五十"}, {"korean": "육십", "chinese": "六十"}, {"korean": "칠십", "chinese": "七十"}, {"korean": "팔십", "chinese": "八十"}, {"korean": "구십", "chinese": "九十"}, {"korean": "백", "chinese": "百"}, {"korean": "천", "chinese": "千"}, {"korean": "만", "chinese": "万"}, {"korean": "원", "chinese": "元"}, {"korean": "시간", "chinese": "时间"}, {"korean": "반", "chinese": "半"}, {"korean": "회의", "chinese": "会议"}, {"korean": "잠깐", "chinese": "一会儿, 稍微"}, {"korean": "와/과", "chinese": "跟, 和"}, {"korean": "이야기하다", "chinese": "说话, 说明"}, {"korean": "고맙다", "chinese": "谢谢"}, {"korean": "싶어하다", "chinese": "想(第三人称)"}, {"korean": "이야기할", "chinese": "说话(将来时)"}, {"korean": "오전", "chinese": "上午"}, {"korean": "오후", "chinese": "下午"}, {"korean": "지금", "chinese": "现在"}, {"korean": "시", "chinese": "点, 时"}, {"korean": "분", "chinese": "分"}, {"korean": "쯤", "chinese": "左右"}, {"korean": "시계", "chinese": "表"}, {"korean": "날짜", "chinese": "日期"}, {"korean": "월", "chinese": "月"}, {"korean": "일", "chinese": "日, 天"}, {"korean": "며칠", "chinese": "几号, 几天"}, {"korean": "요일", "chinese": "星期"}, {"korean": "월요일", "chinese": "星期一"}, {"korean": "화요일", "chinese": "星期二"}, {"korean": "수요일", "chinese": "星期三"}, {"korean": "목요일", "chinese": "星期四"}, {"korean": "금요일", "chinese": "星期五"}, {"korean": "토요일", "chinese": "星期六"}, {"korean": "일요일", "chinese": "星期天"}, {"korean": "내일", "chinese": "明天"}, {"korean": "뭐", "chinese": "什么"}, {"korean": "제주도", "chinese": "济州岛"}, {"korean": "방학", "chinese": "假期, 放假"}, {"korean": "언제", "chinese": "什么时候"}, {"korean": "날", "chinese": "天"}, {"korean": "시험", "chinese": "考试"}, {"korean": "졸업식", "chinese": "毕业典礼"}, {"korean": "파티", "chinese": "宴会, 聚会"}, {"korean": "글쎄요", "chinese": "嗯(表示不确定的语气)"}, {"korean": "쉬다", "chinese": "休息"}, {"korean": "하숙집", "chinese": "寄宿房, 家庭旅馆"}, {"korean": "어서", "chinese": "快"}, {"korean": "이번", "chinese": "这次"}, {"korean": "여행", "chinese": "旅行"}, {"korean": "거기", "chinese": "那里"}, {"korean": "아침", "chinese": "早上(早饭)"}, {"korean": "점심", "chinese": "中午(午饭)"}, {"korean": "저녁", "chinese": "晚上(晚饭)"}, {"korean": "일어나다", "chinese": "起床"}, {"korean": "세수하다", "chinese": "洗脸"}, {"korean": "이를 닦다", "chinese": "刷牙"}, {"korean": "타다", "chinese": "乘坐"}, {"korean": "내리다", "chinese": "下来"}, {"korean": "술", "chinese": "酒"}, {"korean": "마시다", "chinese": "喝"}, {"korean": "잠", "chinese": "觉, 睡眠"}, {"korean": "수업", "chinese": "课"}, {"korean": "식사", "chinese": "吃饭"}, {"korean": "오늘", "chinese": "今天"}, {"korean": "내일", "chinese": "明天"}, {"korean": "모레", "chinese": "后天"}, {"korean": "지난", "chinese": "上一个"}, {"korean": "지난 주", "chinese": "上周"}, {"korean": "지난 달", "chinese": "上个月"}, {"korean": "이번", "chinese": "这次, 这个"}, {"korean": "이번 주", "chinese": "这周"}, {"korean": "이번 달", "chinese": "这个月"}, {"korean": "다음", "chinese": "下次, 下一个"}, {"korean": "다음 주", "chinese": "下周"}, {"korean": "다음 달", "chinese": "下个月"}, {"korean": "쉽다", "chinese": "简单"}, {"korean": "기분", "chinese": "心情"}, {"korean": "어렵다", "chinese": "难"}, {"korean": "구두", "chinese": "皮鞋"}, {"korean": "쇼핑", "chinese": "购物"}, {"korean": "어제/어저께", "chinese": "昨天"}, {"korean": "그제/그저께", "chinese": "前天"}, {"korean": "작년", "chinese": "去年"}, {"korean": "올해", "chinese": "今年"}, {"korean": "내년", "chinese": "明年"}, {"korean": "아름답다", "chinese": "漂亮、好看"}, {"korean": "기다리다", "chinese": "等待"}, {"korean": "운동장", "chinese": "运动场"}]}, {"chapter": 6, "count": 49, "words": [{"korean": "선물", "chinese": "礼物"}, {"korean": "꽃", "chinese": "花"}, {"korean": "장미꽃", "chinese": "玫瑰花"}, {"korean": "케이크", "chinese": "蛋糕"}, {"korean": "꽃가게", "chinese": "花店"}, {"korean": "빵집", "chinese": "面包房"}, {"korean": "빵가게", "chinese": "面包店"}, {"korean": "옷가게", "chinese": "服装店"}, {"korean": "과일", "chinese": "水果"}, {"korean": "과일 가게", "chinese": "水果店"}, {"korean": "문방구", "chinese": "文具店"}, {"korean": "편의점", "chinese": "便利店"}, {"korean": "슈퍼마켓", "chinese": "超市"}, {"korean": "바지", "chinese": "裤子"}, {"korean": "동대문시장", "chinese": "东大门市场"}, {"korean": "비싸다", "chinese": "贵"}, {"korean": "그렇지만", "chinese": "但是"}, {"korean": "아줌마", "chinese": "婶婶"}, {"korean": "주인", "chinese": "主人"}, {"korean": "치즈", "chinese": "奶酪, 芝士"}, {"korean": "색", "chinese": "颜色"}, {"korean": "빨간색", "chinese": "红色"}, {"korean": "노란색", "chinese": "黄色"}, {"korean": "파란색", "chinese": "蓝色"}, {"korean": "하얀색", "chinese": "白色"}, {"korean": "검은색", "chinese": "黑色"}, {"korean": "길다", "chinese": "长"}, {"korean": "짧다", "chinese": "短"}, {"korean": "튼튼하다", "chinese": "结实"}, {"korean": "약하다", "chinese": "弱, 瘦弱"}, {"korean": "두껍다", "chinese": "厚"}, {"korean": "얇다", "chinese": "薄"}, {"korean": "무겁다", "chinese": "重"}, {"korean": "가볍다", "chinese": "轻"}, {"korean": "싸다", "chinese": "便宜"}, {"korean": "가깝다", "chinese": "近"}, {"korean": "멀다", "chinese": "远"}, {"korean": "이유", "chinese": "理由"}, {"korean": "코트", "chinese": "大衣"}, {"korean": "까만색", "chinese": "黑色"}, {"korean": "시장", "chinese": "市场"}, {"korean": "또", "chinese": "又"}, {"korean": "장소", "chinese": "场所"}, {"korean": "보여 주다", "chinese": "给……看"}, {"korean": "다르다", "chinese": "不同"}, {"korean": "죄송하다", "chinese": "对不起"}, {"korean": "다시", "chinese": "再, 重新"}, {"korean": "한국말", "chinese": "韩国语"}, {"korean": "자동차", "chinese": "汽车"}]}, {"chapter": 7, "count": 106, "words": [{"korean": "남자", "chinese": "男, 男人"}, {"korean": "실례", "chinese": "打扰一下, 劳驾"}, {"korean": "길", "chinese": "路, 街"}, {"korean": "묻다", "chinese": "询问"}, {"korean": "찾다", "chinese": "找"}, {"korean": "아파트", "chinese": "公寓"}, {"korean": "번", "chinese": "号"}, {"korean": "출구", "chinese": "出口"}, {"korean": "이쪽", "chinese": "这边"}, {"korean": "그쪽", "chinese": "那边"}, {"korean": "저쪽", "chinese": "那边"}, {"korean": "왼쪽", "chinese": "左边"}, {"korean": "오른쪽", "chinese": "右边"}, {"korean": "건너다", "chinese": "过"}, {"korean": "횡단보도", "chinese": "人行横道"}, {"korean": "육교", "chinese": "天桥"}, {"korean": "지하도", "chinese": "地下通道"}, {"korean": "층", "chinese": "层"}, {"korean": "샌드위치", "chinese": "三明治"}, {"korean": "호텔", "chinese": "饭店, 宾馆"}, {"korean": "신문사", "chinese": "报社"}, {"korean": "대사관", "chinese": "大使馆"}, {"korean": "똑바로", "chinese": "直"}, {"korean": "나오다", "chinese": "出来"}, {"korean": "동문", "chinese": "东门"}, {"korean": "북문", "chinese": "北门"}, {"korean": "서문", "chinese": "西门"}, {"korean": "기숙사", "chinese": "宿舍"}, {"korean": "오피스텔", "chinese": "商务楼"}, {"korean": "원룸", "chinese": "套房, 一居室住宅"}, {"korean": "교통수단", "chinese": "交通工具"}, {"korean": "지하철", "chinese": "地铁"}, {"korean": "버스", "chinese": "巴士, 公交"}, {"korean": "시내버스", "chinese": "市内巴士"}, {"korean": "비행기", "chinese": "飞机"}, {"korean": "배", "chinese": "船"}, {"korean": "고속버스", "chinese": "高速巴士"}, {"korean": "마을버스", "chinese": "乡村巴士"}, {"korean": "택시", "chinese": "出租车"}, {"korean": "일반택시", "chinese": "普通出租车"}, {"korean": "모범택시", "chinese": "模范出租车"}, {"korean": "자동차", "chinese": "汽车"}, {"korean": "비디오", "chinese": "视频、录像机"}, {"korean": "이메일", "chinese": "电子邮件"}, {"korean": "연락", "chinese": "联系"}, {"korean": "젓가락", "chinese": "筷子"}, {"korean": "늦다", "chinese": "晚"}, {"korean": "밀리다", "chinese": "堵(车), 堆积"}, {"korean": "오래", "chinese": "久"}, {"korean": "부산", "chinese": "釜山"}, {"korean": "호선", "chinese": "线路"}, {"korean": "동대문 운동장", "chinese": "东大门运动场"}, {"korean": "바쁘다", "chinese": "忙"}, {"korean": "곳", "chinese": "地方"}, {"korean": "베트남", "chinese": "越南"}, {"korean": "기차", "chinese": "火车"}, {"korean": "얼마나", "chinese": "多少, 多久"}, {"korean": "걸리다", "chinese": "需要, 消耗"}, {"korean": "떠나다", "chinese": "离去"}, {"korean": "앉다", "chinese": "坐"}, {"korean": "담배", "chinese": "烟"}, {"korean": "피우다", "chinese": "抽"}, {"korean": "주차하다", "chinese": "停车"}, {"korean": "떠들다", "chinese": "吵闹"}, {"korean": "지각하다", "chinese": "迟到"}, {"korean": "게임", "chinese": "游戏"}, {"korean": "모르다", "chinese": "不知道"}, {"korean": "도착하다", "chinese": "到达"}, {"korean": "교통편", "chinese": "交通工具"}, {"korean": "여관", "chinese": "旅馆"}, {"korean": "민박", "chinese": "民宿"}, {"korean": "펜션", "chinese": "简易旅馆、食宿公寓"}, {"korean": "콘도", "chinese": "共管式公寓"}, {"korean": "회", "chinese": "生鱼片"}, {"korean": "만지다", "chinese": "摸"}, {"korean": "가르치다", "chinese": "教"}, {"korean": "안내 방송", "chinese": "广播"}, {"korean": "걱정하다", "chinese": "担心"}, {"korean": "실례하다", "chinese": "劳驾"}, {"korean": "비용", "chinese": "费用"}, {"korean": "기타", "chinese": "其他"}, {"korean": "정류장", "chinese": "车站, 站"}, {"korean": "찍다", "chinese": "拍(照)"}, {"korean": "비키다", "chinese": "让开"}, {"korean": "조심하다", "chinese": "小心"}, {"korean": "역", "chinese": "站"}, {"korean": "공항", "chinese": "机场"}, {"korean": "고속버스 터미널", "chinese": "高速巴士客运站"}, {"korean": "타다", "chinese": "乘、坐"}, {"korean": "내리다", "chinese": "下来"}, {"korean": "갈아타다", "chinese": "换乘"}, {"korean": "기사", "chinese": "司机"}, {"korean": "걷다", "chinese": "走"}, {"korean": "세우다", "chinese": "停"}, {"korean": "들어가다", "chinese": "进去"}, {"korean": "출발하다", "chinese": "出发"}, {"korean": "사거리", "chinese": "十字路口"}, {"korean": "신호등", "chinese": "红绿灯"}, {"korean": "직진", "chinese": "直走"}, {"korean": "좌회전", "chinese": "左转弯"}, {"korean": "우회전", "chinese": "右转弯"}, {"korean": "고르다", "chinese": "选"}, {"korean": "빠르다", "chinese": "快"}, {"korean": "모시다", "chinese": "陪"}, {"korean": "다 왔습니다", "chinese": "快到了"}, {"korean": "동", "chinese": "栋、座、幢"}]}, {"chapter": 8, "count": 75, "words": [{"korean": "이따가", "chinese": "一会儿"}, {"korean": "전화번호", "chinese": "电话号码"}, {"korean": "국제전화", "chinese": "国际电话"}, {"korean": "시외전화", "chinese": "长途电话"}, {"korean": "휴대전화", "chinese": "手机"}, {"korean": "범죄", "chinese": "罪, 犯罪"}, {"korean": "신고", "chinese": "举报、申报"}, {"korean": "불이 나다", "chinese": "着火"}, {"korean": "나중", "chinese": "以后、后来"}, {"korean": "경주", "chinese": "庆州"}, {"korean": "주말", "chinese": "周末"}, {"korean": "고속전철", "chinese": "高铁"}, {"korean": "열쇠고리", "chinese": "钥匙链"}, {"korean": "기다리다", "chinese": "等"}, {"korean": "바꾸다", "chinese": "换"}, {"korean": "때르릉", "chinese": "丁零零"}, {"korean": "주소", "chinese": "地址"}, {"korean": "호", "chinese": "号"}, {"korean": "주문하다", "chinese": "预定、预约"}, {"korean": "오래", "chinese": "久, 长期"}, {"korean": "미술관", "chinese": "美术馆"}, {"korean": "배달", "chinese": "送, 投递"}, {"korean": "부탁", "chinese": "拜托, 请求"}, {"korean": "전화벨이 울리다", "chinese": "电话铃响"}, {"korean": "신호가 가다", "chinese": "有信号, 打通"}, {"korean": "잘못", "chinese": "错误"}, {"korean": "잘못 걸다", "chinese": "打错电话"}, {"korean": "휴대전화를 켜다", "chinese": "开手机"}, {"korean": "휴대전화를 끄다", "chinese": "关手机"}, {"korean": "문자메시지를 보내다", "chinese": "发送文字信息"}, {"korean": "문자메시지를 확인하다", "chinese": "确认文字信息"}, {"korean": "음성메시지를 남기다", "chinese": "留言"}, {"korean": "음성메시지를 확인하다", "chinese": "确认留言"}, {"korean": "무역", "chinese": "贸易"}, {"korean": "웬일이세요?", "chinese": "有什么事?"}, {"korean": "잠깐만요", "chinese": "稍等"}, {"korean": "정말", "chinese": "真的"}, {"korean": "여보세요", "chinese": "喂"}, {"korean": "여행사", "chinese": "旅行社"}, {"korean": "바로", "chinese": "就, 马上"}, {"korean": "괜찮다", "chinese": "没关系, 可以"}, {"korean": "전화를 걸다", "chinese": "打电话"}, {"korean": "전화를 받다", "chinese": "接电话"}, {"korean": "전화번호를 누르다", "chinese": "按电话号码"}, {"korean": "늦다", "chinese": "晚, 迟到"}, {"korean": "약속하다", "chinese": "约定"}, {"korean": "약속 장소", "chinese": "约定场所"}, {"korean": "약속 시간", "chinese": "约定时间"}, {"korean": "약속 시간을 바꾸다", "chinese": "更改约定时间"}, {"korean": "아르바이트", "chinese": "打工, 兼职"}, {"korean": "머리", "chinese": "头"}, {"korean": "호수", "chinese": "湖水"}, {"korean": "빨리", "chinese": "快"}, {"korean": "자리", "chinese": "座位"}, {"korean": "약속을 어기다", "chinese": "毁约"}, {"korean": "약속을 지키다", "chinese": "守约"}, {"korean": "출구", "chinese": "出口"}, {"korean": "눈사람", "chinese": "雪人"}, {"korean": "세일", "chinese": "降价甩卖"}, {"korean": "수영장", "chinese": "游泳馆"}, {"korean": "왜", "chinese": "为什么怎么"}, {"korean": "일찍", "chinese": "早"}, {"korean": "언제나", "chinese": "总是"}, {"korean": "눈", "chinese": "雪"}, {"korean": "아직", "chinese": "还"}, {"korean": "아마", "chinese": "也许、可能, 恐怕"}, {"korean": "자전거", "chinese": "自行车"}, {"korean": "통화하다", "chinese": "通话"}, {"korean": "전화를 끊다", "chinese": "挂电话"}, {"korean": "통화 중이다", "chinese": "通话中"}, {"korean": "코미디", "chinese": "喜剧"}, {"korean": "포도", "chinese": "葡萄"}, {"korean": "출장", "chinese": "出差"}, {"korean": "다", "chinese": "都"}, {"korean": "심심하다", "chinese": "无聊, 闲"}]}, {"chapter": 9, "count": 136, "words": [{"korean": "계절", "chinese": "季节"}, {"korean": "봄", "chinese": "春天"}, {"korean": "여름", "chinese": "夏天"}, {"korean": "가을", "chinese": "秋天"}, {"korean": "겨울", "chinese": "冬天"}, {"korean": "딸기", "chinese": "草莓"}, {"korean": "귤", "chinese": "橘子"}, {"korean": "수박", "chinese": "西瓜"}, {"korean": "감", "chinese": "柿子"}, {"korean": "방학", "chinese": "放假"}, {"korean": "구경", "chinese": "观赏, 观看"}, {"korean": "비빔냉면", "chinese": "拌冷面"}, {"korean": "한가하다", "chinese": "闲"}, {"korean": "도시", "chinese": "城市"}, {"korean": "시골", "chinese": "乡下, 农村"}, {"korean": "생각", "chinese": "主意, 想法"}, {"korean": "휴가", "chinese": "假, 休假"}, {"korean": "태권도", "chinese": "跆拳道"}, {"korean": "피아노", "chinese": "钢琴"}, {"korean": "사계절", "chinese": "四季"}, {"korean": "등산하다", "chinese": "爬山"}, {"korean": "바람이 불다", "chinese": "刮风"}, {"korean": "취미", "chinese": "兴趣, 爱好"}, {"korean": "생활", "chinese": "生活"}, {"korean": "벚꽃", "chinese": "樱花"}, {"korean": "눈이 오다", "chinese": "下雪"}, {"korean": "개나리", "chinese": "迎春花"}, {"korean": "진달래", "chinese": "杜鹃花, 金达莱"}, {"korean": "피다", "chinese": "开, 绽放"}, {"korean": "단풍", "chinese": "红叶"}, {"korean": "스키", "chinese": "滑雪"}, {"korean": "스키장", "chinese": "滑雪场"}, {"korean": "스케이트", "chinese": "滑冰"}, {"korean": "되다", "chinese": "到(时间), 成为"}, {"korean": "날씨", "chinese": "天气"}, {"korean": "하늘", "chinese": "天空"}, {"korean": "흐리다", "chinese": "阴"}, {"korean": "개다", "chinese": "晴, 放晴"}, {"korean": "맑다", "chinese": "晴朗"}, {"korean": "구름이 끼다", "chinese": "多云"}, {"korean": "안개가 끼다", "chinese": "有雾"}, {"korean": "눈이 그치다", "chinese": "雪停"}, {"korean": "바람이 강하다", "chinese": "强风"}, {"korean": "바람이 약하다", "chinese": "微风"}, {"korean": "신혼여행", "chinese": "新婚旅行"}, {"korean": "낮", "chinese": "白天"}, {"korean": "아내", "chinese": "妻子"}, {"korean": "아들", "chinese": "儿子"}, {"korean": "딸", "chinese": "女儿"}, {"korean": "전남", "chinese": "全罗南道"}, {"korean": "우산", "chinese": "雨伞"}, {"korean": "준비하다", "chinese": "准备"}, {"korean": "매일", "chinese": "每天"}, {"korean": "노래방", "chinese": "练歌厅, KTV"}, {"korean": "주로", "chinese": "主要"}, {"korean": "중", "chinese": "中"}, {"korean": "제일", "chinese": "最"}, {"korean": "때", "chinese": "的时候"}, {"korean": "우울하다", "chinese": "忧郁"}, {"korean": "강", "chinese": "江"}, {"korean": "책방", "chinese": "书店"}, {"korean": "경치", "chinese": "景色, 风景"}, {"korean": "예매", "chinese": "预购"}, {"korean": "후", "chinese": "之后"}, {"korean": "양말", "chinese": "袜子"}, {"korean": "신다", "chinese": "穿(鞋子)"}, {"korean": "외출하다", "chinese": "外出, 出门"}, {"korean": "화장하다", "chinese": "化妆"}, {"korean": "잠옷", "chinese": "睡衣"}, {"korean": "비가 그치다", "chinese": "雨停"}, {"korean": "눈이 오다/내리다", "chinese": "下雪"}, {"korean": "비가 오다/내리다", "chinese": "下雨"}, {"korean": "빨래", "chinese": "洗衣, (要洗的)衣物"}, {"korean": "생활 날씨", "chinese": "有关天气的生活资讯"}, {"korean": "실내", "chinese": "室内"}, {"korean": "일기예보", "chinese": "天气预报"}, {"korean": "남쪽", "chinese": "南部, 南方"}, {"korean": "지방", "chinese": "地区, 地方"}, {"korean": "출근", "chinese": "上班"}, {"korean": "밤", "chinese": "夜"}, {"korean": "전국", "chinese": "全国"}, {"korean": "보다", "chinese": "比"}, {"korean": "도", "chinese": "度(温度单位)"}, {"korean": "덥다", "chinese": "热"}, {"korean": "따뜻하다", "chinese": "温暖, 暖和"}, {"korean": "선선하다", "chinese": "凉爽"}, {"korean": "쌀쌀하다", "chinese": "凉飕飕"}, {"korean": "춥다", "chinese": "冷"}, {"korean": "눈", "chinese": "眼睛"}, {"korean": "귀걸이", "chinese": "耳环, 耳饰"}, {"korean": "키", "chinese": "身高、个子"}, {"korean": "습하다", "chinese": "潮湿"}, {"korean": "바닷가", "chinese": "海边"}, {"korean": "더", "chinese": "更"}, {"korean": "장마철", "chinese": "梅雨季"}, {"korean": "눈싸움", "chinese": "雪仗"}, {"korean": "등산", "chinese": "登山"}, {"korean": "수영", "chinese": "游泳"}, {"korean": "소풍을 가다", "chinese": "去郊游"}, {"korean": "꽃구경을 가다", "chinese": "去赏花"}, {"korean": "피서를 가다", "chinese": "去避暑"}, {"korean": "해수욕장", "chinese": "海水浴场"}, {"korean": "보내다", "chinese": "过(时间)"}, {"korean": "모래", "chinese": "沙子"}, {"korean": "짓다", "chinese": "建造, 造"}, {"korean": "요즘", "chinese": "最近, 这几天"}, {"korean": "강릉", "chinese": "江陵"}, {"korean": "단풍 구경을 가다", "chinese": "去赏红叶"}, {"korean": "눈사람을 만들다", "chinese": "堆雪人"}, {"korean": "눈싸움을 하다", "chinese": "打雪仗"}, {"korean": "스키를 타다", "chinese": "滑雪"}, {"korean": "나이", "chinese": "年龄"}, {"korean": "무게", "chinese": "重量"}, {"korean": "목", "chinese": "脖子"}, {"korean": "길이", "chinese": "长度"}, {"korean": "야영을 하다", "chinese": "去野营"}, {"korean": "독서하다", "chinese": "阅读"}, {"korean": "샤워를 하다", "chinese": "洗澡"}, {"korean": "울다", "chinese": "哭"}, {"korean": "배우", "chinese": "演员"}, {"korean": "감독", "chinese": "导演"}, {"korean": "공", "chinese": "球"}, {"korean": "야구", "chinese": "棒球"}, {"korean": "농구", "chinese": "篮球"}, {"korean": "배구", "chinese": "排球"}, {"korean": "테니스", "chinese": "网球"}, {"korean": "당구", "chinese": "台球"}, {"korean": "배드민턴", "chinese": "羽毛球"}, {"korean": "자전거", "chinese": "自行车"}, {"korean": "스노보드", "chinese": "单板滑雪"}, {"korean": "집안일", "chinese": "家务"}, {"korean": "치다", "chinese": "打, 击"}, {"korean": "탁구", "chinese": "乒乓球"}, {"korean": "귀엽다", "chinese": "可爱"}, {"korean": "어렵다", "chinese": "难"}, {"korean": "경기", "chinese": "比赛"}]}, {"chapter": 10, "count": 98, "words": [{"korean": "초", "chinese": "初"}, {"korean": "끝나다", "chinese": "结束"}, {"korean": "찍다", "chinese": "拍(照片)"}, {"korean": "공휴일", "chinese": "公休日"}, {"korean": "휴일", "chinese": "假日, 休息日"}, {"korean": "연휴", "chinese": "连休"}, {"korean": "방학", "chinese": "放假, 假期"}, {"korean": "휴가", "chinese": "假, 休假"}, {"korean": "계획이 없다", "chinese": "没有计划"}, {"korean": "계획이 있다", "chinese": "有计划"}, {"korean": "계획을 세우다", "chinese": "定计划"}, {"korean": "이제", "chinese": "现在"}, {"korean": "설날", "chinese": "春节"}, {"korean": "중학교", "chinese": "中学"}, {"korean": "사귀다", "chinese": "结交, 交往"}, {"korean": "되다", "chinese": "成为"}, {"korean": "비자", "chinese": "签证"}, {"korean": "필요하다", "chinese": "需要"}, {"korean": "동안", "chinese": "期间"}, {"korean": "학기", "chinese": "学期"}, {"korean": "숙박", "chinese": "住宿"}, {"korean": "준비물", "chinese": "准备物品"}, {"korean": "등산화", "chinese": "登山鞋"}, {"korean": "이곳저곳", "chinese": "到处, 各处"}, {"korean": "틈틈이", "chinese": "一有空, 得空"}, {"korean": "휴가철", "chinese": "假期"}, {"korean": "방문", "chinese": "访问"}, {"korean": "그러니까", "chinese": "所以, 那么"}, {"korean": "아니면", "chinese": "或者"}, {"korean": "취미", "chinese": "兴趣爱好"}, {"korean": "영화 감상", "chinese": "电影欣赏"}, {"korean": "음악 듣기", "chinese": "听音乐"}, {"korean": "음악 감상", "chinese": "音乐欣赏"}, {"korean": "독서", "chinese": "阅读, 读书"}, {"korean": "책 읽기", "chinese": "读书"}, {"korean": "사진 찍기", "chinese": "拍照"}, {"korean": "그림 그리기", "chinese": "画画"}, {"korean": "춤추기", "chinese": "跳舞"}, {"korean": "여행", "chinese": "旅行"}, {"korean": "등산", "chinese": "爬山"}, {"korean": "낚시", "chinese": "钓鱼"}, {"korean": "운동", "chinese": "运动"}, {"korean": "바둑", "chinese": "围棋"}, {"korean": "인터넷", "chinese": "互联网, 网络"}, {"korean": "컴퓨터 게임", "chinese": "电脑游戏"}, {"korean": "요리", "chinese": "料理"}, {"korean": "노래 부르기", "chinese": "唱歌"}, {"korean": "영화 보기", "chinese": "看电影"}, {"korean": "밀리다", "chinese": "堆积"}, {"korean": "슬프다", "chinese": "悲伤"}, {"korean": "예매하다", "chinese": "预购"}, {"korean": "편하다", "chinese": "方便, 舒服"}, {"korean": "공포 영화", "chinese": "恐怖片"}, {"korean": "액션 영화", "chinese": "动作片"}, {"korean": "코미디 영화", "chinese": "喜剧片"}, {"korean": "세상", "chinese": "世上, 世界"}, {"korean": "총", "chinese": "枪"}, {"korean": "칼", "chinese": "刀"}, {"korean": "주인공", "chinese": "主人公"}, {"korean": "예약하다", "chinese": "预约, 预定"}, {"korean": "음악회", "chinese": "音乐会"}, {"korean": "축구", "chinese": "足球"}, {"korean": "꼭", "chinese": "一定"}, {"korean": "울다", "chinese": "哭"}, {"korean": "배우", "chinese": "演员"}, {"korean": "감독", "chinese": "导演"}, {"korean": "공", "chinese": "球"}, {"korean": "야구", "chinese": "棒球"}, {"korean": "농구", "chinese": "篮球"}, {"korean": "만화 영화", "chinese": "动画片"}, {"korean": "멜로 영화", "chinese": "爱情片"}, {"korean": "공상 과학 영화", "chinese": "科幻片"}, {"korean": "가족 영화", "chinese": "家庭电影"}, {"korean": "무섭다", "chinese": "害怕"}, {"korean": "너무", "chinese": "过于、太"}, {"korean": "머리를 감다", "chinese": "洗头发"}, {"korean": "모니터", "chinese": "显示器, 监视器"}, {"korean": "-거나", "chinese": "或者"}, {"korean": "조사", "chinese": "调查"}, {"korean": "활동", "chinese": "活动"}, {"korean": "편", "chinese": "篇, 部"}, {"korean": "출연료", "chinese": "片酬, 演出费"}, {"korean": "방법", "chinese": "方法"}, {"korean": "스포츠", "chinese": "运动"}, {"korean": "관광지", "chinese": "旅游胜地, 旅游区"}, {"korean": "놀이 공원", "chinese": "游乐园"}, {"korean": "온천", "chinese": "温泉"}, {"korean": "로봇", "chinese": "机器人"}, {"korean": "자전거", "chinese": "自行车"}, {"korean": "스노보드", "chinese": "单板滑雪"}, {"korean": "스케이트", "chinese": "滑冰"}, {"korean": "스키", "chinese": "滑雪"}, {"korean": "사용하다", "chinese": "使用"}, {"korean": "팀", "chinese": "组, 队"}, {"korean": "마다", "chinese": "每"}, {"korean": "배우다", "chinese": "学习"}, {"korean": "별로", "chinese": "不太, 不怎么"}, {"korean": "골프", "chinese": "高尔夫"}]}];
+
+
+// ===== Valid word keys set (for filtering corrupted cloud data) =====
+const VALID_WORD_KEYS = new Set();
+for (const ch of CHAPTERS) {
+  for (const w of ch.words) {
+    VALID_WORD_KEYS.add(w.korean);
+  }
+}
+
+// ===== State =====
+let progress = {};
+let sessionHistory = [];
+let sessionQueue = [];
+let sessionCorrect = 0;
+let sessionTotal = 0;
+let sessionOriginalLength = 0;
+let currentIndex = 0;
+let isFlipped = false;
+let dailyNewLimit = 10;
+let currentChapter = null; // null = chapter list, number = learning that chapter
+let sessionRetryCount = {}; // per-word retry count within a session
+
+// ===== SRS Constants (simplified FSRS) =====
+const DAY = 86400 * 1000;
+const MINUTE = 60 * 1000;
+const S0_AGAIN = 1 / (24 * 60);        // ~1 min in days
+const S0_FIRST_OK = 0.4;               // ~10 hours in days
+const STABILITY_GROWTH = 1.35;
+const STABILITY_SHRINK = 0.25;
+const STABILITY_MAX = 365 * 5;
+const DIFFICULTY_DECAY = 0.1;
+const DIFFICULTY_BOOST = 0.15;
+const DIFFICULTY_WEIGHT = 0.4;
+const TARGET_RETENTION = 0.9;
+const MASTERED_INTERVAL_DAYS = 21;
+const LEECH_THRESHOLD = 5;
+const LEECH_REHAB_STREAK = 3;
+const RETENTION_FACTOR = Math.log(TARGET_RETENTION) / Math.log(0.9); // ≈0.105
+const DAILY_REVIEW_CAP = 50;
+const MAX_RETRIES_PER_WORD = 3;   // max re-appends per word per session
+const SESSION_CARD_CAP = 200;     // hard cap on total cards per session
+
+// ===== Learning Streak =====
+function getStreak() {
+  // Count consecutive days with at least one session, ending at today or yesterday
+  if (sessionHistory.length === 0) return 0;
+  const days = new Set();
+  for (const h of sessionHistory) {
+    days.add(h.date);
+  }
+  const today = new Date();
+  let streak = 0;
+  // Check from today backwards
+  for (let d = 0; d < 365; d++) {
+    const check = new Date(today);
+    check.setDate(check.getDate() - d);
+    const key = check.toISOString().slice(0, 10);
+    if (days.has(key)) {
+      streak++;
+    } else if (d === 0) {
+      // Today not yet studied — streak still valid if yesterday was
+      continue;
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
+// ===== Init =====
+async function init() {
+  loadSettings();
+  loadProgress();
+  loadHistory();
+  showChapterList();
+  await syncFromCloud();
+  showChapterList();
+}
+
+// ===== Persistence =====
+function loadProgress() {
+  try { progress = JSON.parse(localStorage.getItem('korean_vocab_progress') || '{}'); }
+  catch { progress = {}; }
+
+  // Auto-migrate old format (correctCount → stability/difficulty)
+  let needsMigration = false;
+  for (const [key, val] of Object.entries(progress)) {
+    if (key.startsWith('_')) continue;
+    if (val && val.correctCount !== undefined && val.stability === undefined) {
+      needsMigration = true;
+      break;
+    }
+  }
+  if (needsMigration) {
+    migrateProgress();
+    saveProgress();
+  }
+}
+
+function migrateProgress() {
+  const OLD_INTERVALS = [60*1000, 10*60*1000, 60*60*1000, 24*60*60*1000, 3*24*60*60*1000, 7*24*60*60*1000];
+  for (const [key, val] of Object.entries(progress)) {
+    if (key.startsWith('_')) continue;
+    if (!val || val.correctCount === undefined || val.stability !== undefined) continue;
+
+    const oldCount = val.correctCount || 0;
+    const oldIntervalDays = oldCount > 0
+      ? OLD_INTERVALS[Math.min(oldCount - 1, OLD_INTERVALS.length - 1)] / DAY
+      : S0_AGAIN;
+    const approxStability = Math.max(S0_AGAIN, oldIntervalDays * 1.2);
+
+    progress[key] = {
+      status: val.status === 'mastered' ? 'mastered'
+            : val.status === 'reviewing' ? 'reviewing'
+            : 'learning',
+      stability: approxStability,
+      difficulty: 0.3,
+      nextReview: val.nextReview || 0,
+      lastReview: val.lastReview || 0,
+      reps: oldCount,
+      lapses: 0,
+      streak: oldCount,
+    };
+  }
+}
+
+function saveProgress(skipSync) {
+  localStorage.setItem('korean_vocab_progress', JSON.stringify(progress));
+  if (!skipSync) scheduleCloudSync();
+}
+
+function loadHistory() {
+  try { sessionHistory = JSON.parse(localStorage.getItem('korean_vocab_history') || '[]'); }
+  catch { sessionHistory = []; }
+}
+
+function saveHistory() {
+  localStorage.setItem('korean_vocab_history', JSON.stringify(sessionHistory));
+  scheduleCloudSync();
+}
+
+function loadSettings() {
+  dailyNewLimit = parseInt(localStorage.getItem('korean_vocab_daily') || '10');
+  document.getElementById('newWordCount').value = dailyNewLimit;
+  updateRangeDisplay();
+}
+
+function saveSettings() {
+  dailyNewLimit = parseInt(document.getElementById('newWordCount').value);
+  localStorage.setItem('korean_vocab_daily', dailyNewLimit);
+}
+
+// ===== Cloud Sync =====
+function showSyncStatus(status) {
+  const el = document.getElementById('syncIndicator');
+  if (!el) return;
+  if (status === 'syncing') { el.textContent = '☁️↑'; el.style.opacity = '1'; el.style.color = '#faad14'; }
+  else if (status === 'synced') { el.textContent = '☁️✓'; el.style.opacity = '1'; el.style.color = '#52c41a'; setTimeout(() => { el.textContent = '☁️'; el.style.opacity = '0.6'; el.style.color = ''; }, 2000); }
+  else if (status === 'error') { el.textContent = '☁️✗'; el.style.opacity = '1'; el.style.color = '#ff4d4f'; setTimeout(() => { el.textContent = '☁️'; el.style.opacity = '0.6'; el.style.color = ''; }, 3000); }
+}
+
+async function syncFromCloud() {
+  if (!syncToken) return;
+  showSyncStatus('syncing');
+  const { owner, repo, path } = SYNC_CONFIG;
+  const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
+  try {
+    const resp = await fetch(url, {
+      headers: { 'Authorization': 'token ' + syncToken, 'Accept': 'application/vnd.github+json' }
+    });
+    if (resp.status === 404) {
+      // File doesn't exist yet on cloud, that's fine
+      syncSha = null;
+      showSyncStatus('synced');
+      return;
+    }
+    if (!resp.ok) {
+      console.warn('Cloud download failed, status:', resp.status);
+      showSyncStatus('error');
+      return;
+    }
+    const data = await resp.json();
+    syncSha = data.sha;
+    const cloud = JSON.parse(atob(data.content));
+    if (cloud.progress) {
+      // Check if cloud has a reset timestamp that supersedes local data
+      const cloudResetTs = cloud.progress._resetTs || 0;
+      const localResetTs = progress._resetTs || 0;
+      if (cloudResetTs > localResetTs) {
+        // Cloud was reset more recently — adopt cloud's reset
+        progress = {};
+        progress._resetTs = cloudResetTs;
+      }
+      for (const [key, val] of Object.entries(cloud.progress)) {
+        // Skip corrupted keys that don't match any word in CHAPTERS
+        if (!key.startsWith('_') && !VALID_WORD_KEYS.has(key)) continue;
+        // Chapter metadata (_chN): take the higher newIndex
+        if (key.startsWith('_ch')) {
+          const local = progress[key];
+          if (!local || (val.newIndex || 0) > (local.newIndex || 0)) {
+            progress[key] = val;
+          }
+          continue;
+        }
+        const local = progress[key];
+        if (!local || (val.lastReview || 0) > (local.lastReview || 0)) {
+          progress[key] = val;
+        }
+      }
+    }
+    if (cloud.history && cloud.history.length > 0) {
+      // Merge by timestamp: keep all unique sessions from both local and cloud
+      const seen = new Set(sessionHistory.map(h => h.timestamp || `${h.date}|${h.chapter}|${h.total}`));
+      for (const h of cloud.history) {
+        const key = h.timestamp || `${h.date}|${h.chapter}|${h.total}`;
+        if (!seen.has(key)) {
+          sessionHistory.push(h);
+          seen.add(key);
+        }
+      }
+      // Sort by timestamp
+      sessionHistory.sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+    }
+    localStorage.setItem('korean_vocab_progress', JSON.stringify(progress));
+    localStorage.setItem('korean_vocab_history', JSON.stringify(sessionHistory));
+    showSyncStatus('synced');
+  } catch (e) {
+    console.warn('Cloud sync failed:', e);
+    showSyncStatus('error');
+  }
+}
+
+function scheduleCloudSync() {
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(syncToCloud, 3000);
+}
+
+async function syncToCloud() {
+  if (!syncToken || syncInFlight) return;
+  syncInFlight = true;
+  showSyncStatus('syncing');
+  const { owner, repo, path } = SYNC_CONFIG;
+  const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
+  const content = JSON.stringify({ progress, history: sessionHistory }, null, 2);
+
+  // If syncSha is null, we need to fetch it first (file may exist from another device)
+  if (!syncSha) {
+    try {
+      const checkResp = await fetch(url, {
+        headers: { 'Authorization': 'token ' + syncToken, 'Accept': 'application/vnd.github+json' }
+      });
+      if (checkResp.ok) {
+        const checkData = await checkResp.json();
+        syncSha = checkData.sha;
+      }
+    } catch (e) { /* file doesn't exist, that's fine */ }
+  }
+
+  try {
+    const body = {
+      message: 'update progress',
+      content: btoa(unescape(encodeURIComponent(content)))
+    };
+    if (syncSha) body.sha = syncSha;
+
+    const resp = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + syncToken,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github+json'
+      },
+      body: JSON.stringify(body)
+    });
+    if (resp.ok) {
+      const result = await resp.json();
+      syncSha = result.content.sha;
+      showSyncStatus('synced');
+    } else {
+      const errText = await resp.text();
+      console.warn('Cloud upload failed:', resp.status, errText);
+      // On 409 Conflict (stale sha), reset syncSha so next attempt re-fetches it
+      if (resp.status === 409) syncSha = null;
+      showSyncStatus('error');
+    }
+  } catch (e) {
+    console.warn('Cloud save failed:', e);
+    showSyncStatus('error');
+  } finally {
+    syncInFlight = false;
+  }
+}
+
+// ===== Chapter Stats =====
+function getChapterStats(chapterIdx) {
+  const words = CHAPTERS[chapterIdx].words;
+  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0, leech: 0, total: words.length };
+  for (const w of words) {
+    const p = progress[w.korean];
+    if (!p) { s.newCount++; continue; }
+    if (p.status === 'mastered') s.mastered++;
+    else if (p.status === 'leech') s.leech++;
+    else if (p.status === 'reviewing') s.reviewing++;
+    else s.learning++;
+  }
+  return s;
+}
+
+function getOverallStats() {
+  const s = { newCount: 0, learning: 0, reviewing: 0, mastered: 0, leech: 0 };
+  for (const ch of CHAPTERS) {
+    for (const w of ch.words) {
+      const p = progress[w.korean];
+      if (!p) { s.newCount++; continue; }
+      if (p.status === 'mastered') s.mastered++;
+      else if (p.status === 'leech') s.leech++;
+      else if (p.status === 'reviewing') s.reviewing++;
+      else s.learning++;
+    }
+  }
+  return s;
+}
+
+// ===== Get due review count per chapter =====
+function getDueCounts() {
+  const now = Date.now();
+  const URGENT_THRESHOLD = 3 * DAY; // overdue by more than 3 days = urgent
+  const result = [];
+  let totalDue = 0;
+  let urgent = 0;
+  let normal = 0;
+  for (let i = 0; i < CHAPTERS.length; i++) {
+    let due = 0;
+    for (const w of CHAPTERS[i].words) {
+      const p = progress[w.korean];
+      if (!p || p.status === 'leech') continue;
+      if (p.nextReview && p.nextReview <= now) {
+        due++;
+        if (now - p.nextReview > URGENT_THRESHOLD) urgent++;
+        else normal++;
+      }
+    }
+    result.push(due);
+    totalDue += due;
+  }
+  // Tomorrow's count: words whose nextReview is within the next 24h
+  let tomorrow = 0;
+  for (const ch of CHAPTERS) {
+    for (const w of ch.words) {
+      const p = progress[w.korean];
+      if (!p || p.status === 'leech') continue;
+      if (p.nextReview && p.nextReview > now && p.nextReview <= now + DAY) tomorrow++;
+    }
+  }
+  return { perChapter: result, total: totalDue, urgent, normal, tomorrow };
+}
+
+// ===== Chapter List View =====
+function showChapterList() {
+  currentChapter = null;
+  document.getElementById('headerTitle').textContent = '韩语单词记忆';
+
+  const totalWords = CHAPTERS.reduce((s, c) => s + c.words.length, 0);
+  const overall = getOverallStats();
+  const due = getDueCounts();
+  const streak = getStreak();
+
+  // Today's date string
+  const todayStr = new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric', weekday: 'long' });
+
+  let html = `
+    <div class="stats-bar">
+      <div class="stat-card stat-new"><div class="number">${overall.newCount}</div><div class="label">未学</div></div>
+      <div class="stat-card stat-learning"><div class="number">${overall.learning}</div><div class="label">学习中</div></div>
+      <div class="stat-card stat-reviewing"><div class="number">${overall.reviewing}</div><div class="label">复习中</div></div>
+      <div class="stat-card stat-mastered"><div class="number">${overall.mastered}</div><div class="label">已掌握</div></div>
+    </div>
+    ${streak > 0 ? `<div class="streak-banner">🔥 连续学习 <strong>${streak}</strong> 天</div>` : ''}
+    <div class="progress-wrap">
+      <div class="progress-bar-bg">
+        <div class="progress-segment seg-mastered" style="width:${overall.mastered/totalWords*100}%"></div>
+        <div class="progress-segment seg-reviewing" style="width:${overall.reviewing/totalWords*100}%"></div>
+        <div class="progress-segment seg-learning" style="width:${overall.learning/totalWords*100}%"></div>
+      </div>
+    </div>
+  `;
+
+  // Today's review banner
+  if (due.total > 0) {
+    const plannedCount = Math.min(due.total, DAILY_REVIEW_CAP);
+    const overflow = due.total - plannedCount;
+    const estMinutes = Math.ceil(plannedCount * 0.4); // ~24 sec per word
+
+    let subLine = '';
+    if (due.urgent > 0 && due.normal > 0) {
+      subLine = `<strong>${due.urgent}</strong> 个紧急 · <strong>${due.normal}</strong> 个正常到期`;
+    } else if (due.urgent > 0) {
+      subLine = `<strong>${due.urgent}</strong> 个紧急到期`;
+    } else {
+      subLine = `<strong>${due.normal}</strong> 个正常到期`;
+    }
+
+    let overflowLine = '';
+    if (overflow > 0) {
+      overflowLine = `<div class="today-review-overflow">另有 ${overflow} 个积压词，建议分批完成</div>`;
+    }
+
+    html += `
+      <div class="today-review-banner" onclick="startAllDue()">
+        <div class="today-review-left">
+          <div class="today-review-title">${todayStr}</div>
+          <div class="today-review-count">今日复习 <strong>${plannedCount}</strong> 个单词 <span class="today-review-est">约 ${estMinutes} 分钟</span></div>
+          <div class="today-review-sub">${subLine}</div>
+          ${overflowLine}
+        </div>
+        <div class="today-review-go">开始复习 →</div>
+      </div>
+    `;
+  } else if (overall.learning + overall.reviewing > 0) {
+    let tomorrowLine = due.tomorrow > 0 ? `明天有 <strong>${due.tomorrow}</strong> 个词待复习` : '暂无待复习的词';
+    html += `
+      <div class="today-review-banner today-done">
+        <div class="today-review-left">
+          <div class="today-review-title">${todayStr}</div>
+          <div class="today-review-count">今日复习已完成!</div>
+          <div class="today-review-sub">${tomorrowLine}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Leech banner
+  if (overall.leech > 0) {
+    html += `
+      <div class="leech-banner" onclick="startLeechSession()">
+        <div class="leech-banner-left">
+          <div class="leech-banner-title">困难单词</div>
+          <div class="leech-banner-count"><strong>${overall.leech}</strong> 个单词需要加强练习</div>
+        </div>
+        <div class="leech-banner-go">开始练习 →</div>
+      </div>
+    `;
+  }
+
+  html += '<div class="chapter-list">';
+
+  for (let i = 0; i < CHAPTERS.length; i++) {
+    const ch = CHAPTERS[i];
+    const s = getChapterStats(i);
+    const masteredPct = s.total > 0 ? Math.round(s.mastered / s.total * 100) : 0;
+    const reviewingPct = s.total > 0 ? Math.round(s.reviewing / s.total * 100) : 0;
+    const learningPct = s.total > 0 ? Math.round(s.learning / s.total * 100) : 0;
+    const dueCount = due.perChapter[i];
+
+    html += `
+      <div class="chapter-card" onclick="startChapter(${i})">
+        <div class="chapter-num">${i + 1}</div>
+        <div class="chapter-info">
+          <div class="chapter-title">第 ${i + 1} 章</div>
+          <div class="chapter-meta">
+            <span>${s.total} 词</span>
+            <span>已掌握 ${s.mastered}</span>
+            <span>${masteredPct}%</span>
+            ${dueCount > 0 ? `<span class="due-badge">${dueCount} 待复习</span>` : ''}
+          </div>
+          <div class="chapter-progress-bar">
+            <div class="progress-segment seg-mastered" style="width:${masteredPct}%"></div>
+            <div class="progress-segment seg-reviewing" style="width:${reviewingPct}%"></div>
+            <div class="progress-segment seg-learning" style="width:${learningPct}%"></div>
+          </div>
+        </div>
+        <div class="chapter-arrow">›</div>
+      </div>
+    `;
+  }
+
+  html += '</div>';
+  document.getElementById('app').innerHTML = html;
+}
+
+// Leech session
+function startLeechSession() {
+  const queue = [];
+  for (const ch of CHAPTERS) {
+    for (const w of ch.words) {
+      const p = progress[w.korean];
+      if (p && p.status === 'leech') queue.push(w);
+    }
+  }
+  shuffle(queue);
+  if (queue.length === 0) return;
+
+  sessionQueue = queue;
+  currentIndex = 0;
+  isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
+  sessionOriginalLength = queue.length;
+  sessionRetryCount = {};
+  currentChapter = -2; // special: leech session
+
+  document.getElementById('headerTitle').textContent = '困难单词';
+  renderCard();
+}
+
+// Start all due reviews across all chapters
+function startAllDue() {
+  sessionQueue = buildSessionQueue(-1);
+  currentIndex = 0;
+  isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
+  sessionOriginalLength = sessionQueue.length;
+  sessionRetryCount = {};
+  currentChapter = -1; // special: mixed review
+
+  document.getElementById('headerTitle').textContent = '今日复习';
+  if (sessionQueue.length === 0) { showChapterComplete(); return; }
+  renderCard();
+}
+
+// ===== Start Chapter Session =====
+function startChapter(chapterIdx) {
+  currentChapter = chapterIdx;
+  sessionQueue = buildSessionQueue(chapterIdx);
+  currentIndex = 0;
+  isFlipped = false;
+  sessionCorrect = 0;
+  sessionTotal = 0;
+  sessionOriginalLength = sessionQueue.length;
+  sessionRetryCount = {};
+
+  document.getElementById('headerTitle').textContent = `第 ${chapterIdx + 1} 章`;
+  if (sessionQueue.length === 0) { showChapterComplete(); return; }
+  renderCard();
+}
+
+// ===== Build Session Queue (interleaving + adaptive new word rate) =====
+function buildSessionQueue(chapterIdx) {
+  const now = Date.now();
+  const words = chapterIdx === -1
+    ? CHAPTERS.flatMap(ch => ch.words)
+    : CHAPTERS[chapterIdx].words;
+
+  // 1) Due reviews (exclude leech; include mastered if due for long-term review)
+  const URGENT_THRESHOLD = 3 * DAY;
+  const dueUrgent = [];
+  const dueNormal = [];
+  for (const w of words) {
+    const p = progress[w.korean];
+    if (!p || p.status === 'leech') continue;
+    if (p.nextReview && p.nextReview <= now) {
+      if (now - p.nextReview > URGENT_THRESHOLD) dueUrgent.push(w);
+      else dueNormal.push(w);
+    }
+  }
+  // Merge: urgent first, then normal; apply soft cap in all-chapter mode
+  let due = [...dueUrgent, ...dueNormal];
+  if (chapterIdx === -1) {
+    due = due.slice(0, DAILY_REVIEW_CAP);
+  }
+
+  // 2) New words with adaptive count
+  let maxNew = dailyNewLimit;
+  if (due.length > 30) maxNew = Math.max(3, Math.floor(dailyNewLimit * 0.5));
+  if (due.length > 60) maxNew = 1;
+  if (due.length > 100) maxNew = 0;
+
+  // In all-chapter mode, new words share the same daily cap as reviews
+  if (chapterIdx === -1) {
+    maxNew = Math.min(maxNew, Math.max(0, DAILY_REVIEW_CAP - due.length));
+  }
+
+  let newBatch = [];
+  if (chapterIdx === -1) {
+    // All-chapter mode: collect new words across chapters
+    const allNew = words.filter(w => !progress[w.korean]);
+    newBatch = allNew.slice(0, maxNew);
+  } else {
+    // Single chapter: find the first unlearned word from pointer onward,
+    // then collect maxNew unlearned words sequentially
+    const chapterKey = '_ch' + chapterIdx;
+    const chMeta = progress[chapterKey] || { newIndex: 0 };
+    let ptr = chMeta.newIndex;
+    // If pointer is out of range, reset it and re-scan for unlearned words
+    if (ptr >= words.length) {
+      ptr = 0;
+    }
+    // Advance pointer past any already-learned words (e.g. from old version migration)
+    while (ptr < words.length && progress[words[ptr].korean]) ptr++;
+    // Collect the next batch of unlearned words (only if maxNew > 0)
+    if (maxNew > 0) {
+      for (let i = ptr; i < words.length && newBatch.length < maxNew; i++) {
+        if (!progress[words[i].korean]) {
+          newBatch.push(words[i]);
+          ptr = i + 1; // advance pointer to just past this word
+        }
+      }
+      progress[chapterKey] = { newIndex: ptr };
+    }
+  }
+
+  // 3) Interleave: ~2 reviews : 1 new word
+  return interleave(due, newBatch);
+}
+
+function interleave(reviews, newWords) {
+  shuffle(reviews);
+  shuffle(newWords);
+  const queue = [];
+  let ri = 0, ni = 0;
+  while (ri < reviews.length || ni < newWords.length) {
+    if (ri < reviews.length) queue.push(reviews[ri++]);
+    if (ri < reviews.length) queue.push(reviews[ri++]);
+    if (ni < newWords.length) queue.push(newWords[ni++]);
+  }
+  return queue;
+}
+
+// ===== Render Card =====
+function renderCard() {
+  if (currentIndex >= sessionQueue.length) {
+    showChapterComplete();
+    return;
+  }
+  const word = sessionQueue[currentIndex];
+  const p = progress[word.korean];
+  const isNew = !p;
+
+  const backLabel = currentChapter === -1 || currentChapter === -2 ? '← 返回首页' : '← 返回章节列表';
+  const masteredCount = currentChapter === -1 || currentChapter === -2 ? getOverallStats().mastered : getChapterStats(currentChapter).mastered;
+
+  document.getElementById('app').innerHTML = `
+    <div class="stats-bar">
+      <div class="stat-card"><div class="number">${currentIndex + 1}</div><div class="label">当前 / ${sessionQueue.length}</div></div>
+      <div class="stat-card stat-mastered"><div class="number">${masteredCount}</div><div class="label">已掌握</div></div>
+    </div>
+    <div class="main">
+      <button class="back-btn" onclick="showChapterList()">${backLabel}</button>
+      <div class="card-container" onclick="flipCard()">
+        <div class="card" id="flashcard">
+          <div class="card-face card-front">
+            <span class="card-status ${p && p.status === 'leech' ? 'tag-leech' : p && p.status === 'mastered' ? 'tag-mastered' : isNew ? 'tag-new' : 'tag-review'}">${p && p.status === 'leech' ? '困难' : p && p.status === 'mastered' ? '已掌握 · 复习' : isNew ? '新词' : '复习 · ' + formatInterval(p.stability)}</span>
+            <div class="card-korean">${escapeHtml(word.korean)}</div>
+            <div class="card-hint">点击卡片查看释义</div>
+          </div>
+          <div class="card-face card-back">
+            <div class="card-korean" style="font-size:28px;margin-bottom:16px;opacity:0.85;">${escapeHtml(word.korean)}</div>
+            <div class="card-chinese-label">中文释义</div>
+            <div class="card-chinese">${escapeHtml(word.chinese)}</div>
+          </div>
+        </div>
+      </div>
+      <div class="action-buttons" id="actionBtns">
+        <button class="btn btn-show" onclick="flipCard()">显示答案 (空格)</button>
+      </div>
+      <div class="keyboard-hints">
+        <kbd>空格</kbd> 翻转 &nbsp; <kbd>&larr;</kbd> 不认识 &nbsp; <kbd>&rarr;</kbd> 认识
+      </div>
+    </div>
+  `;
+  isFlipped = false;
+}
+
+function flipCard() {
+  if (isFlipped) return;
+  isFlipped = true;
+  document.getElementById('flashcard').classList.add('flipped');
+  document.getElementById('actionBtns').innerHTML = `
+    <button class="btn btn-unknow" onclick="answer(false)">不认识 ✗</button>
+    <button class="btn btn-know" onclick="answer(true)">认识 ✓</button>
+  `;
+}
+
+function answer(known) {
+  const word = sessionQueue[currentIndex];
+  const now = Date.now();
+  let p = progress[word.korean];
+
+  if (!p) {
+    p = { status: 'learning', stability: S0_AGAIN, difficulty: 0.3,
+          nextReview: 0, lastReview: 0, reps: 0, lapses: 0, streak: 0 };
+    progress[word.korean] = p;
+  }
+
+  sessionTotal++;
+  const wasNew = p.reps === 0;
+  if (known) {
+    sessionCorrect++;
+    onKnown(p, now);
+    // New word consolidation: re-practice once more in this session
+    if (wasNew && sessionQueue.length < SESSION_CARD_CAP
+        && !sessionQueue.some((w, i) => i > currentIndex && w.korean === word.korean)) {
+      sessionQueue.push(word);
+    }
+  } else {
+    onForgotten(p, now, word);
+  }
+
+  saveProgress(true); // skip cloud sync during session; sync at session end
+  currentIndex++;
+  isFlipped = false;
+  renderCard();
+}
+
+function onKnown(p, now) {
+  const elapsedDays = p.lastReview > 0 ? (now - p.lastReview) / DAY : 0;
+
+  if (p.reps === 0) {
+    p.stability = S0_FIRST_OK;
+    p.difficulty = 0.3;
+  } else {
+    p.difficulty = clamp(p.difficulty - DIFFICULTY_DECAY * (1 - p.difficulty), 0.1, 1);
+    const df = 1 - DIFFICULTY_WEIGHT * p.difficulty;
+    // retrievability: how much you remember based on forgetting curve
+    const r = p.stability > 0 ? Math.exp(-elapsedDays / p.stability) : 0.5;
+    const rSafe = clamp(r, 0.01, 1);
+    // spacing effect: lower r at review time → larger stability growth
+    // growth >= STABILITY_GROWTH when r is high (frequent reviews)
+    // growth > STABILITY_GROWTH when r is low (long gap survived)
+    const spacingBonus = Math.min(2.0, 1 + Math.max(0, -Math.log(rSafe)));
+    p.stability = clamp(
+      p.stability * STABILITY_GROWTH * df * spacingBonus,
+      S0_AGAIN,
+      STABILITY_MAX
+    );
+  }
+
+  p.streak++;
+  p.reps++;
+  p.lastReview = now;
+
+  const intervalDays = p.stability * RETENTION_FACTOR;
+  p.nextReview = now + Math.max(MINUTE, intervalDays * DAY);
+
+  // Leech rehabilitation
+  if (p.status === 'leech' && p.streak >= LEECH_REHAB_STREAK) {
+    p.status = 'learning';
+    p.lapses = Math.max(0, p.lapses - 2);
+  } else if (intervalDays >= MASTERED_INTERVAL_DAYS) {
+    p.status = 'mastered';
+  } else if (p.streak >= 2) {
+    p.status = 'reviewing';
+  } else {
+    p.status = 'learning';
+  }
+}
+
+function onForgotten(p, now, word) {
+  p.stability = Math.max(S0_AGAIN, p.stability * STABILITY_SHRINK);
+  p.difficulty = clamp(p.difficulty + DIFFICULTY_BOOST * (1 - p.difficulty), 0, 1);
+  p.streak = 0;
+  p.reps++;
+  p.lapses++;
+  p.lastReview = now;
+  p.nextReview = now + MINUTE;
+  p.status = p.lapses >= LEECH_THRESHOLD ? 'leech' : 'learning';
+
+  // Re-append to current session for immediate re-practice (with limits)
+  const key = word.korean;
+  sessionRetryCount[key] = (sessionRetryCount[key] || 0) + 1;
+  if (sessionRetryCount[key] <= MAX_RETRIES_PER_WORD && sessionQueue.length < SESSION_CARD_CAP
+      && !sessionQueue.some((w, i) => i > currentIndex && w.korean === word.korean)) {
+    sessionQueue.push(word);
+  }
+}
+
+function formatInterval(days) {
+  if (!days || days <= 0 || isNaN(days)) return '刚学';
+  if (days < 1/24) return Math.round(days * 24 * 60) + '分钟';
+  if (days < 1) return Math.round(days * 24) + '小时';
+  return Math.round(days) + '天';
+}
+
+function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function showChapterComplete() {
+  const isMixed = currentChapter === -1;
+  const isLeech = currentChapter === -2;
+  const s = isMixed || isLeech ? getOverallStats() : getChapterStats(currentChapter);
+  const totalWords = isMixed || isLeech ? CHAPTERS.reduce((sum, c) => sum + c.words.length, 0) : s.total;
+  const title = isLeech ? '困难单词练习完成!'
+    : isMixed ? '今日复习完成!'
+    : `第 ${currentChapter + 1} 章学习完成!`;
+  const subtitle = isLeech
+    ? `剩余困难词: ${s.leech} 个`
+    : isMixed
+    ? `总进度: 已掌握 ${s.mastered}/${totalWords}`
+    : `第 ${currentChapter + 1} 章已掌握 ${s.mastered}/${totalWords} 个单词`;
+  // If chapter is fully mastered, show "返回首页" instead of "继续学习"
+  const chapterDone = !isMixed && !isLeech && s.mastered === s.total;
+  const btnText = isLeech || isMixed || chapterDone ? '返回首页' : '继续学习';
+  const btnAction = isLeech || isMixed || chapterDone ? 'showChapterList()' : `startChapter(${currentChapter})`;
+  const accuracy = sessionTotal > 0 ? Math.round(sessionCorrect / sessionTotal * 100) : 0;
+
+  document.getElementById('app').innerHTML = `
+    <div class="main">
+      <button class="back-btn" onclick="showChapterList()">← 返回首页</button>
+      <div class="session-complete">
+        <h2>${title}</h2>
+        <p>${subtitle}</p>
+        <p style="margin-bottom:12px;">本次正确率: <strong>${accuracy}%</strong> (${sessionCorrect}/${sessionTotal})</p>
+        <p style="margin-bottom:24px;">继续加油!</p>
+        <button class="btn-primary" onclick="${btnAction}">${btnText}</button>
+      </div>
+    </div>
+  `;
+
+  // Save session record
+  const today = new Date().toISOString().slice(0, 10);
+  sessionHistory.push({
+    date: today,
+    chapter: isLeech ? 0 : currentChapter + 1,
+    total: sessionOriginalLength,
+    correct: sessionCorrect,
+    answered: sessionTotal,
+    timestamp: now()
+  });
+  saveHistory();
+}
+
+// ===== History =====
+function openHistory() {
+  const content = document.getElementById('historyContent');
+
+  if (sessionHistory.length === 0) {
+    content.innerHTML = '<div class="no-history">还没有学习记录哦，开始学习吧!</div>';
+  } else {
+    // Aggregate by date + chapter
+    const agg = {};
+    for (const h of sessionHistory) {
+      const key = `${h.date}|${h.chapter}`;
+      if (!agg[key]) {
+        agg[key] = { date: h.date, chapter: h.chapter, sessions: 0, totalWords: 0, correct: 0, answered: 0 };
+      }
+      agg[key].sessions++;
+      agg[key].totalWords += h.total;
+      agg[key].correct += h.correct || 0;
+      agg[key].answered += h.answered || 0;
+    }
+
+    const rows = Object.values(agg).sort((a, b) => b.date.localeCompare(a.date));
+
+    // Chapter accuracy
+    let html = '<table class="history-table"><thead><tr><th>日期</th><th>章节</th><th>学习次数</th><th>复习词数</th><th>正确率</th></tr></thead><tbody>';
+    for (const r of rows) {
+      const acc = r.answered > 0 ? Math.round(r.correct / r.answered * 100) + '%' : '-';
+      html += `<tr><td>${r.date}</td><td>${r.chapter === 0 ? '困难词' : '第' + r.chapter + '章'}</td><td>${r.sessions}</td><td>${r.totalWords}</td><td>${acc}</td></tr>`;
+    }
+    html += '</tbody></table>';
+
+    // Chapter mastery overview
+    html += '<h3 style="margin:24px 0 12px;font-size:16px;">各章掌握率</h3>';
+    html += '<table class="history-table"><thead><tr><th>章节</th><th>总词数</th><th>已掌握</th><th>掌握率</th></tr></thead><tbody>';
+    for (let i = 0; i < CHAPTERS.length; i++) {
+      const s = getChapterStats(i);
+      const pct = s.total > 0 ? Math.round(s.mastered / s.total * 100) : 0;
+      const rateClass = pct >= 80 ? 'rate-good' : pct >= 50 ? 'rate-ok' : 'rate-bad';
+      html += `<tr><td>第${i + 1}章</td><td>${s.total}</td><td>${s.mastered}</td><td class="${rateClass}">${pct}%</td></tr>`;
+    }
+    html += '</tbody></table>';
+    content.innerHTML = html;
+  }
+
+  document.getElementById('historyModal').classList.add('active');
+}
+
+function closeHistory() {
+  document.getElementById('historyModal').classList.remove('active');
+}
+
+// ===== Settings =====
+function openSettings() {
+  document.getElementById('syncTokenInput').value = syncToken;
+  document.getElementById('syncStatus').textContent = syncToken ? '已配置' : '未配置（仅本地存储）';
+  document.getElementById('settingsModal').classList.add('active');
+}
+
+function closeSettings() {
+  saveSettings();
+  const newToken = document.getElementById('syncTokenInput').value.trim();
+  if (newToken && newToken !== syncToken) {
+    syncToken = newToken;
+    localStorage.setItem('korean_vocab_sync_token', syncToken);
+    syncFromCloud().then(() => { showChapterList(); });
+  }
+  document.getElementById('settingsModal').classList.remove('active');
+}
+
+function updateRangeDisplay() {
+  const v = document.getElementById('newWordCount').value;
+  document.getElementById('rangeValue').textContent = v + ' 个';
+}
+
+function exportProgress() {
+  const data = {
+    progress: progress,
+    history: sessionHistory,
+    dailyNewLimit: dailyNewLimit,
+    exportDate: new Date().toISOString()
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'korean-vocab-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importProgress(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!data.progress) { alert('文件格式不正确'); return; }
+      if (!confirm('导入将覆盖当前进度，确定继续？')) return;
+      progress = data.progress;
+      sessionHistory = data.history || [];
+      saveProgress();
+      saveHistory();
+      alert('导入成功！');
+      closeSettings();
+      showChapterList();
+    } catch (err) {
+      alert('文件解析失败: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+function resetProgress() {
+  if (confirm('确定要重置所有学习进度吗？此操作不可恢复！')) {
+    progress = { _resetTs: Date.now() };
+    sessionHistory = [];
+    saveProgress();
+    saveHistory();
+    closeSettings();
+    showChapterList();
+  }
+}
+
+// ===== Keyboard =====
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('settingsModal').classList.contains('active')) return;
+  if (document.getElementById('historyModal').classList.contains('active')) return;
+  if (currentChapter === null) return;
+  if (currentIndex >= sessionQueue.length) return;
+
+  if (e.code === 'Space') {
+    e.preventDefault();
+    if (!isFlipped) flipCard();
+  } else if (e.code === 'ArrowRight' && isFlipped) {
+    answer(true);
+  } else if (e.code === 'ArrowLeft' && isFlipped) {
+    answer(false);
+  }
+});
+
+// ===== Util =====
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function now() { return Date.now(); }
+
+// ===== Start =====
+init();
+</script>
+</body>
+</html>

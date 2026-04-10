@@ -3937,7 +3937,7 @@
       "streak": 1
     },
     "_ch2": {
-      "newIndex": 10
+      "newIndex": 20
     },
     "_ch4": {
       "newIndex": 10
@@ -4400,6 +4400,22 @@
       "correct": 0,
       "answered": 0,
       "timestamp": 1775837770442
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 2,
+      "total": 0,
+      "correct": 0,
+      "answered": 0,
+      "timestamp": 1775837779506
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 2,
+      "total": 0,
+      "correct": 0,
+      "answered": 0,
+      "timestamp": 1775837780839
     }
   ]
 }

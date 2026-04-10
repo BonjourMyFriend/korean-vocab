@@ -1,6 +1,6 @@
 {
   "progress": {
-    "경주": {
+    "ê²½ì£¼": {
       "status": "learning",
       "stability": 0.0012967056929687499,
       "difficulty": 0.44367499999999993,
@@ -10,7 +10,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "경치": {
+    "ê²½ì¹": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -20,7 +20,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "적다": {
+    "ì ë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -30,7 +30,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "피다": {
+    "í¼ë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -40,7 +40,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "칠": {
+    "ì¹ ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -50,7 +50,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "요즘": {
+    "ìì¦": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -60,7 +60,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "어느": {
+    "ì´ë": {
       "status": "learning",
       "stability": 0.0028235643538684764,
       "difficulty": 0.28004999999999997,
@@ -70,7 +70,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "직업": {
+    "ì§ì": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -80,7 +80,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "미국": {
+    "ë¯¸êµ­": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -90,7 +90,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "대학생": {
+    "ëíì": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -100,7 +100,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "은행원": {
+    "ìíì": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -110,7 +110,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "인도 사람": {
+    "ì¸ë ì¬ë": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -120,7 +120,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "회사원": {
+    "íì¬ì": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -130,7 +130,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "영국": {
+    "ìêµ­": {
       "status": "reviewing",
       "stability": 0.017684731079259417,
       "difficulty": 0.15299999999999997,
@@ -140,7 +140,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "저": {
+    "ì ": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -150,7 +150,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "태국": {
+    "íêµ­": {
       "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
@@ -160,7 +160,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "비서": {
+    "ë¹ì": {
       "status": "reviewing",
       "stability": 0.004674424677652448,
       "difficulty": 0.28004999999999997,
@@ -170,7 +170,7 @@
       "lapses": 1,
       "streak": 2
     },
-    "러시아": {
+    "ë¬ìì": {
       "status": "learning",
       "stability": 0.004528627187141754,
       "difficulty": 0.3455,
@@ -180,7 +180,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "에서 왔습니다": {
+    "ìì ììµëë¤": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -190,7 +190,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "그렇습니까?": {
+    "ê·¸ë ìµëê¹?": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -200,7 +200,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "경찰": {
+    "ê²½ì°°": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -210,7 +210,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "반갑다": {
+    "ë°ê°ë¤": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -220,7 +220,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "학생": {
+    "íì": {
       "status": "reviewing",
       "stability": 0.016623989760509415,
       "difficulty": 0.15299999999999997,
@@ -230,7 +230,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "안녕하세요?": {
+    "ìëíì¸ì?": {
       "status": "reviewing",
       "stability": 0.017098817198009417,
       "difficulty": 0.15299999999999997,
@@ -240,7 +240,7 @@
       "lapses": 0,
       "streak": 3
     },
-    "몽골": {
+    "ëª½ê³¨": {
       "status": "reviewing",
       "stability": 0.005725681344986835,
       "difficulty": 0.22999999999999998,
@@ -250,7 +250,7 @@
       "lapses": 0,
       "streak": 2
     },
-    "누구": {
+    "ëêµ¬": {
       "status": "reviewing",
       "stability": 0.017163198341759417,
       "difficulty": 0.15299999999999997,
@@ -259,456 +259,6 @@
       "reps": 3,
       "lapses": 0,
       "streak": 3
-    },
-    "ìë¤": {
-      "status": "reviewing",
-      "stability": 0.20247252231250001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775661052930.9277,
-      "lastReview": 1775643559305,
-      "reps": 4,
-      "lapses": 0,
-      "streak": 4
-    },
-    "ìì²©": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658428272.6821,
-      "lastReview": 1775653481284,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ëì¥ê³ ": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658282663.6821,
-      "lastReview": 1775653335675,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ì¹êµ¬": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658425002.6821,
-      "lastReview": 1775653478014,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ì ë¤": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658304950.6821,
-      "lastReview": 1775653357962,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ì": {
-      "status": "learning",
-      "stability": 0.013585881561425261,
-      "difficulty": 0.3455,
-      "nextReview": 1775654546030.167,
-      "lastReview": 1775653372210,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 1
-    },
-    "í¬ë¤": {
-      "status": "reviewing",
-      "stability": 0.21667497666134417,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775672106543.9836,
-      "lastReview": 1775653385826,
-      "reps": 4,
-      "lapses": 0,
-      "streak": 4
-    },
-    "ì": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658314783.6821,
-      "lastReview": 1775653367795,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ìë¤": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775658408365.6821,
-      "lastReview": 1775653461377,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ìì": {
-      "status": "reviewing",
-      "stability": 0.21693924886134416,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775672132581.1016,
-      "lastReview": 1775653389030,
-      "reps": 4,
-      "lapses": 0,
-      "streak": 4
-    },
-    "ì´ë": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635407149,
-      "lastReview": 1775634807149,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ìë~": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635412460,
-      "lastReview": 1775634812460,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì ": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635410610,
-      "lastReview": 1775634810610,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ìëíì¸ì?": {
-      "status": "reviewing",
-      "stability": 0.07261718748009417,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775649758678.9983,
-      "lastReview": 1775643484554,
-      "reps": 4,
-      "lapses": 0,
-      "streak": 4
-    },
-    "ì ìë": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648393123.6821,
-      "lastReview": 1775643446135,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ìêµ­": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648365613.6821,
-      "lastReview": 1775643418625,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ë¬ìì": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635421483,
-      "lastReview": 1775634821483,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "~ì¨": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648368614.6821,
-      "lastReview": 1775643421626,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ìíì": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648417336.6821,
-      "lastReview": 1775643470348,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "íì": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635419083,
-      "lastReview": 1775634819083,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì¤êµ­": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635776660,
-      "lastReview": 1775635176660,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì¼ë³¸": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643899587.8682,
-      "lastReview": 1775643404889,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì¬ë": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643917506.8682,
-      "lastReview": 1775643422808,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì ": {
-      "status": "reviewing",
-      "stability": 0.024372008841759416,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775646723658.564,
-      "lastReview": 1775644617917,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ì´ë¤/ìëë¤": {
-      "status": "reviewing",
-      "stability": 0.007566520704259415,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775644103254.389,
-      "lastReview": 1775643449507,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ë¯¸êµ­": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634898926,
-      "lastReview": 1775634838926,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ê·¸ë ìµëê¹?": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635136059,
-      "lastReview": 1775635076059,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ìºëë¤": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634913542,
-      "lastReview": 1775634853542,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ì±": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643907450.8682,
-      "lastReview": 1775643412752,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ìì¬": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634920342,
-      "lastReview": 1775634860342,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "íêµ­": {
-      "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648402364.6821,
-      "lastReview": 1775643455376,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ëì¼": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635161852,
-      "lastReview": 1775635101852,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ëêµ¬": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643977223.8682,
-      "lastReview": 1775643482525,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "íêµ­": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634946213,
-      "lastReview": 1775634886213,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ê°ì": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643974672.8682,
-      "lastReview": 1775643479974,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ì²ì ëµê² ìµëë¤": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775645110901.8682,
-      "lastReview": 1775644616203,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ëíì": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635775071,
-      "lastReview": 1775635175071,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "íì¬ì": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643973586.8682,
-      "lastReview": 1775643478888,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ë³í¸ì¬": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635016376,
-      "lastReview": 1775634956376,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ë°ê°ë¤": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643919807.8682,
-      "lastReview": 1775643425109,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ê¸°ì": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643911374.8682,
-      "lastReview": 1775643416676,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ëë¼": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635075309,
-      "lastReview": 1775635015309,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
-    },
-    "ìëíì­ëê¹?": {
-      "status": "reviewing",
-      "stability": 0.008177151429259415,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775644180200.8835,
-      "lastReview": 1775643473695,
-      "reps": 3,
-      "lapses": 0,
-      "streak": 3
-    },
-    "ë¤": {
-      "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643981025.8682,
-      "lastReview": 1775643486327,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "ê²½ì°°": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635203889,
-      "lastReview": 1775635143889,
-      "reps": 1,
-      "lapses": 0,
-      "streak": 1
     },
     "Ã¬ÂÂÃ«ÂÂ¤": {
       "status": "reviewing",
@@ -722,93 +272,93 @@
     },
     "Ã¬ÂÂÃ¬Â²Â©": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634215009,
-      "lastReview": 1775633615009,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775658428272.6821,
+      "lastReview": 1775653481284,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "Ã«ÂÂÃ¬ÂÂ¥ÃªÂ³Â ": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634218720,
-      "lastReview": 1775633618720,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775658282663.6821,
+      "lastReview": 1775653335675,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "Ã¬Â¹ÂÃªÂµÂ¬": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634224313,
-      "lastReview": 1775633624313,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775658425002.6821,
+      "lastReview": 1775653478014,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "Ã¬Â ÂÃ«ÂÂ¤": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634220587,
-      "lastReview": 1775633620587,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775658304950.6821,
+      "lastReview": 1775653357962,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "Ã¬ÂÂ": {
       "status": "learning",
-      "stability": 0.0020833333333333333,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775643611895,
-      "lastReview": 1775643551895,
-      "reps": 2,
+      "stability": 0.013585881561425261,
+      "difficulty": 0.3455,
+      "nextReview": 1775654546030.167,
+      "lastReview": 1775653372210,
+      "reps": 3,
       "lapses": 1,
-      "streak": 0
+      "streak": 1
     },
     "Ã­ÂÂ¬Ã«ÂÂ¤": {
       "status": "reviewing",
-      "stability": 0.05725681344986836,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775648508607.6821,
-      "lastReview": 1775643561619,
-      "reps": 3,
+      "stability": 0.21667497666134417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775672106543.9836,
+      "lastReview": 1775653385826,
+      "reps": 4,
       "lapses": 0,
-      "streak": 3
+      "streak": 4
     },
     "Ã¬ÂÂ": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634225328,
-      "lastReview": 1775633625328,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "Ã¬ÂÂÃ«ÂÂ¤": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634211298,
-      "lastReview": 1775633611298,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "Ã¬ÂÂÃ¬ÂÂ": {
-      "status": "reviewing",
       "stability": 0.05725681344986836,
       "difficulty": 0.22999999999999998,
-      "nextReview": 1775648493795.6821,
-      "lastReview": 1775643546807,
+      "nextReview": 1775658314783.6821,
+      "lastReview": 1775653367795,
       "reps": 3,
       "lapses": 0,
       "streak": 3
+    },
+    "Ã¬ÂÂÃ«ÂÂ¤": {
+      "status": "reviewing",
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775658408365.6821,
+      "lastReview": 1775653461377,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "Ã¬ÂÂÃ¬ÂÂ": {
+      "status": "reviewing",
+      "stability": 0.21693924886134416,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775672132581.1016,
+      "lastReview": 1775653389030,
+      "reps": 4,
+      "lapses": 0,
+      "streak": 4
     },
     "Ã¬ÂÂ´Ã«ÂÂ": {
       "status": "reviewing",
@@ -1160,22 +710,6 @@
       "lapses": 0,
       "streak": 1
     },
-    "_ch0": {
-      "newIndex": 44
-    },
-    "_ch1": {
-      "newIndex": 82
-    },
-    "ì ì": {
-      "status": "learning",
-      "stability": 0.4,
-      "difficulty": 0.3,
-      "nextReview": 1775688177885,
-      "lastReview": 1775653617885,
-      "reps": 1,
-      "lapses": 2,
-      "streak": 1
-    },
     "ÃÂ¬ÃÂÃÂÃÂ«ÃÂÃÂ¤": {
       "status": "reviewing",
       "stability": 0.20247252231250001,
@@ -1408,13 +942,13 @@
     },
     "ÃÂ¬ÃÂ ÃÂ": {
       "status": "reviewing",
-      "stability": 0.005725681344986835,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775643945822.8682,
-      "lastReview": 1775643451124,
-      "reps": 2,
+      "stability": 0.024372008841759416,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775646723658.564,
+      "lastReview": 1775644617917,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂ¬ÃÂÃÂ´ÃÂ«ÃÂÃÂ¤/ÃÂ¬ÃÂÃÂÃÂ«ÃÂÃÂÃÂ«ÃÂÃÂ¤": {
       "status": "reviewing",
@@ -1527,14 +1061,14 @@
       "streak": 2
     },
     "ÃÂ¬ÃÂ²ÃÂÃÂ¬ÃÂÃÂ ÃÂ«ÃÂµÃÂÃÂªÃÂ²ÃÂ ÃÂ¬ÃÂÃÂµÃÂ«ÃÂÃÂÃÂ«ÃÂÃÂ¤": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635216831,
-      "lastReview": 1775635156831,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775645110901.8682,
+      "lastReview": 1775644616203,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂ«ÃÂÃÂÃÂ­ÃÂÃÂÃÂ¬ÃÂÃÂ": {
       "status": "reviewing",
@@ -1626,25 +1160,31 @@
       "lapses": 0,
       "streak": 1
     },
+    "_ch0": {
+      "newIndex": 44
+    },
+    "_ch1": {
+      "newIndex": 88
+    },
     "Ã¬Â ÂÃ¬ÂÂ": {
       "status": "learning",
-      "stability": 0.0006944444444444445,
-      "difficulty": 0.40499999999999997,
-      "nextReview": 1775643617784,
-      "lastReview": 1775643557784,
-      "reps": 0,
-      "lapses": 1,
-      "streak": 0
+      "stability": 0.4,
+      "difficulty": 0.3,
+      "nextReview": 1775688177885,
+      "lastReview": 1775653617885,
+      "reps": 1,
+      "lapses": 2,
+      "streak": 1
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
       "status": "reviewing",
-      "stability": 0.049999999999999996,
-      "difficulty": 0.3,
-      "nextReview": 1775637208114,
-      "lastReview": 1775633608114,
-      "reps": 3,
+      "stability": 0.20247252231250001,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775661052930.9277,
+      "lastReview": 1775643559305,
+      "reps": 4,
       "lapses": 0,
-      "streak": 3
+      "streak": 4
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂ²ÃÂÃÂ©": {
       "status": "reviewing",
@@ -1687,24 +1227,24 @@
       "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
-      "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634222257,
-      "lastReview": 1775633622257,
+      "status": "learning",
+      "stability": 0.0020833333333333333,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775643611895,
+      "lastReview": 1775643551895,
       "reps": 2,
-      "lapses": 0,
-      "streak": 2
+      "lapses": 1,
+      "streak": 0
     },
     "ÃÂÃÂ­ÃÂÃÂÃÂÃÂ¬ÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634216975,
-      "lastReview": 1775633616975,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648508607.6821,
+      "lastReview": 1775643561619,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
@@ -1728,13 +1268,13 @@
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775634223479,
-      "lastReview": 1775633623479,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648493795.6821,
+      "lastReview": 1775643546807,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ´ÃÂÃÂ«ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
@@ -1768,33 +1308,33 @@
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¸ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ?": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635426417,
-      "lastReview": 1775634826417,
-      "reps": 2,
+      "stability": 0.07261718748009417,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775649758678.9983,
+      "lastReview": 1775643484554,
+      "reps": 4,
       "lapses": 0,
-      "streak": 2
+      "streak": 4
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635423210,
-      "lastReview": 1775634823210,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648393123.6821,
+      "lastReview": 1775643446135,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂµÃÂÃÂ­": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635423958,
-      "lastReview": 1775634823958,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648365613.6821,
+      "lastReview": 1775643418625,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ«ÃÂÃÂÃÂÃÂ¬ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
@@ -1808,23 +1348,23 @@
     },
     "~ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¨": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635422209,
-      "lastReview": 1775634822209,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648368614.6821,
+      "lastReview": 1775643421626,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635416687,
-      "lastReview": 1775634816687,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648417336.6821,
+      "lastReview": 1775643470348,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
       "status": "reviewing",
@@ -1847,44 +1387,44 @@
       "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¼ÃÂÃÂ«ÃÂÃÂ³ÃÂÃÂ¸": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634890811,
-      "lastReview": 1775634830811,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643899587.8682,
+      "lastReview": 1775643404889,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬ÃÂÃÂ«ÃÂÃÂÃÂÃÂ": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634892442,
-      "lastReview": 1775634832442,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643917506.8682,
+      "lastReview": 1775643422808,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂ ÃÂÃÂ": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634894968,
-      "lastReview": 1775634834968,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643945822.8682,
+      "lastReview": 1775643451124,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ´ÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤/ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634897403,
-      "lastReview": 1775634837403,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.007566520704259415,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775644103254.389,
+      "lastReview": 1775643449507,
+      "reps": 3,
       "lapses": 0,
-      "streak": 1
+      "streak": 3
     },
     "ÃÂÃÂ«ÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂªÃÂÃÂµÃÂÃÂ­": {
       "status": "learning",
@@ -1917,14 +1457,14 @@
       "streak": 1
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ±": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635142782,
-      "lastReview": 1775635082782,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643907450.8682,
+      "lastReview": 1775643412752,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬": {
       "status": "learning",
@@ -1938,13 +1478,13 @@
     },
     "ÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂµÃÂÃÂ­": {
       "status": "reviewing",
-      "stability": 0.008333333333333333,
-      "difficulty": 0.3,
-      "nextReview": 1775635773272,
-      "lastReview": 1775635173272,
-      "reps": 2,
+      "stability": 0.05725681344986836,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775648402364.6821,
+      "lastReview": 1775643455376,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "ÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¼": {
       "status": "learning",
@@ -1957,14 +1497,14 @@
       "streak": 1
     },
     "ÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂµÃÂÃÂ¬": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775634943959,
-      "lastReview": 1775634883959,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643977223.8682,
+      "lastReview": 1775643482525,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂµÃÂÃÂ­": {
       "status": "learning",
@@ -1977,14 +1517,14 @@
       "streak": 1
     },
     "ÃÂÃÂªÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635207142,
-      "lastReview": 1775635147142,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643974672.8682,
+      "lastReview": 1775643479974,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ¬ÃÂÃÂ²ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂ«ÃÂÃÂµÃÂÃÂÃÂÃÂªÃÂÃÂ²ÃÂÃÂ ÃÂÃÂ¬ÃÂÃÂÃÂÃÂµÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
       "status": "learning",
@@ -2007,14 +1547,14 @@
       "streak": 2
     },
     "ÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635012025,
-      "lastReview": 1775634952025,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643973586.8682,
+      "lastReview": 1775643478888,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ«ÃÂÃÂ³ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂ¸ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬": {
       "status": "learning",
@@ -2027,24 +1567,24 @@
       "streak": 1
     },
     "ÃÂÃÂ«ÃÂÃÂ°ÃÂÃÂÃÂÃÂªÃÂÃÂ°ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635021078,
-      "lastReview": 1775634961078,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643919807.8682,
+      "lastReview": 1775643425109,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂªÃÂÃÂ¸ÃÂÃÂ°ÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635223049,
-      "lastReview": 1775635163049,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643911374.8682,
+      "lastReview": 1775643416676,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¼": {
       "status": "learning",
@@ -2057,24 +1597,24 @@
       "streak": 1
     },
     "ÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ­ÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂ¹ÃÂÃÂ?": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635121340,
-      "lastReview": 1775635061340,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.008177151429259415,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1775644180200.8835,
+      "lastReview": 1775643473695,
+      "reps": 3,
       "lapses": 0,
-      "streak": 1
+      "streak": 3
     },
     "ÃÂÃÂ«ÃÂÃÂÃÂÃÂ¤": {
-      "status": "learning",
-      "stability": 0.0008333333333333334,
-      "difficulty": 0.3,
-      "nextReview": 1775635122890,
-      "lastReview": 1775635062890,
-      "reps": 1,
+      "status": "reviewing",
+      "stability": 0.005725681344986835,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775643981025.8682,
+      "lastReview": 1775643486327,
+      "reps": 2,
       "lapses": 0,
-      "streak": 1
+      "streak": 2
     },
     "ÃÂÃÂªÃÂÃÂ²ÃÂÃÂ½ÃÂÃÂ¬ÃÂÃÂ°ÃÂÃÂ°": {
       "status": "learning",
@@ -2096,7 +1636,467 @@
       "lapses": 1,
       "streak": 0
     },
-    "ííµ": {
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "reviewing",
+      "stability": 0.049999999999999996,
+      "difficulty": 0.3,
+      "nextReview": 1775637208114,
+      "lastReview": 1775633608114,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂ©": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634215009,
+      "lastReview": 1775633615009,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¥ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ³ÃÂÃÂÃÂÃÂ ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634218720,
+      "lastReview": 1775633618720,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ¬": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634224313,
+      "lastReview": 1775633624313,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634220587,
+      "lastReview": 1775633620587,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634222257,
+      "lastReview": 1775633622257,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634216975,
+      "lastReview": 1775633616975,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634225328,
+      "lastReview": 1775633625328,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634211298,
+      "lastReview": 1775633611298,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775634223479,
+      "lastReview": 1775633623479,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635407149,
+      "lastReview": 1775634807149,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ~": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635412460,
+      "lastReview": 1775634812460,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635410610,
+      "lastReview": 1775634810610,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ?": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635426417,
+      "lastReview": 1775634826417,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635423210,
+      "lastReview": 1775634823210,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ­": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635423958,
+      "lastReview": 1775634823958,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635421483,
+      "lastReview": 1775634821483,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "~ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¨": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635422209,
+      "lastReview": 1775634822209,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635416687,
+      "lastReview": 1775634816687,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635419083,
+      "lastReview": 1775634819083,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¤ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ­": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635776660,
+      "lastReview": 1775635176660,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ³ÃÂÃÂÃÂÃÂ¸": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634890811,
+      "lastReview": 1775634830811,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634892442,
+      "lastReview": 1775634832442,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634894968,
+      "lastReview": 1775634834968,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤/ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634897403,
+      "lastReview": 1775634837403,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¯ÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ­": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634898926,
+      "lastReview": 1775634838926,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ?": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635136059,
+      "lastReview": 1775635076059,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂºÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634913542,
+      "lastReview": 1775634853542,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635142782,
+      "lastReview": 1775635082782,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634920342,
+      "lastReview": 1775634860342,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ­": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635773272,
+      "lastReview": 1775635173272,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635161852,
+      "lastReview": 1775635101852,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ¬": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634943959,
+      "lastReview": 1775634883959,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ­": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775634946213,
+      "lastReview": 1775634886213,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635207142,
+      "lastReview": 1775635147142,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635216831,
+      "lastReview": 1775635156831,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "reviewing",
+      "stability": 0.008333333333333333,
+      "difficulty": 0.3,
+      "nextReview": 1775635775071,
+      "lastReview": 1775635175071,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635012025,
+      "lastReview": 1775634952025,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ³ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635016376,
+      "lastReview": 1775634956376,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635021078,
+      "lastReview": 1775634961078,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635223049,
+      "lastReview": 1775635163049,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635075309,
+      "lastReview": 1775635015309,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ?": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635121340,
+      "lastReview": 1775635061340,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635122890,
+      "lastReview": 1775635062890,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂ½ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ°": {
+      "status": "learning",
+      "stability": 0.0008333333333333334,
+      "difficulty": 0.3,
+      "nextReview": 1775635203889,
+      "lastReview": 1775635143889,
+      "reps": 1,
+      "lapses": 0,
+      "streak": 1
+    },
+    "ÃÂÃÂ¬ÃÂÃÂ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ": {
+      "status": "learning",
+      "stability": 0.0006944444444444445,
+      "difficulty": 0.40499999999999997,
+      "nextReview": 1775643617784,
+      "lastReview": 1775643557784,
+      "reps": 0,
+      "lapses": 1,
+      "streak": 0
+    },
+    "Ã­ÂÂÃ­ÂÂµ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2106,7 +2106,7 @@
       "lapses": 3,
       "streak": 1
     },
-    "ê³µì±": {
+    "ÃªÂ³ÂµÃ¬Â±Â": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2116,7 +2116,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "ê±°ì¸": {
+    "ÃªÂ±Â°Ã¬ÂÂ¸": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2126,7 +2126,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "ììê±´": {
+    "Ã¬ÂÂÃ¬ÂÂÃªÂ±Â´": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2136,7 +2136,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "~ì/ë": {
+    "~Ã¬ÂÂ/Ã«ÂÂ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2146,7 +2146,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "í´ì§": {
+    "Ã­ÂÂ´Ã¬Â§Â": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2156,7 +2156,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "ì½ê¸°ì±": {
+    "Ã¬ÂÂ½ÃªÂ¸Â°Ã¬Â±Â": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2166,7 +2166,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "ì ê±´": {
+    "Ã¬Â ÂÃªÂ±Â´": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2176,7 +2176,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "ëª¨ì": {
+    "Ã«ÂªÂ¨Ã¬ÂÂ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2186,7 +2186,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "ê³¼ì": {
+    "ÃªÂ³Â¼Ã¬ÂÂ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2196,7 +2196,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "ì¹´ë": {
+    "Ã¬Â¹Â´Ã«ÂÂ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2206,7 +2206,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "ì ë¶ì¦": {
+    "Ã¬ÂÂ Ã«Â¶ÂÃ¬Â¦Â": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2216,7 +2216,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "ê°ë°©": {
+    "ÃªÂ°ÂÃ«Â°Â©": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2226,7 +2226,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "ì´ì ": {
+    "Ã¬ÂÂ´Ã¬ÂÂ ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2236,7 +2236,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "ì¢ì´": {
+    "Ã¬Â¢ÂÃ¬ÂÂ´": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2246,7 +2246,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "기자": {
+    "ê¸°ì": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2256,7 +2256,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "변호사": {
+    "ë³í¸ì¬": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2266,7 +2266,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "처음 뵙겠습니다": {
+    "ì²ì ëµê² ìµëë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2276,7 +2276,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "밖": {
+    "ë°": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2286,7 +2286,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "하고": {
+    "íê³ ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2296,7 +2296,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "컴퓨터": {
+    "ì»´í¨í°": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2306,7 +2306,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "안": {
+    "ì": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2316,7 +2316,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "옷": {
+    "ì·": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2326,7 +2326,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "우유": {
+    "ì°ì ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2336,7 +2336,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "신문": {
+    "ì ë¬¸": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2346,7 +2346,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "주머니": {
+    "ì£¼ë¨¸ë": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2356,7 +2356,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "컵": {
+    "ì»µ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2366,7 +2366,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "맥주": {
+    "ë§¥ì£¼": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2376,7 +2376,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "집": {
+    "ì§": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2386,7 +2386,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "지하철": {
+    "ì§íì² ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2396,7 +2396,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "우체국": {
+    "ì°ì²´êµ­": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2406,7 +2406,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "백화점": {
+    "ë°±íì ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2416,7 +2416,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "옆": {
+    "ì": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2426,7 +2426,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "근처": {
+    "ê·¼ì²": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2436,7 +2436,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "위": {
+    "ì": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2446,7 +2446,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "뒤": {
+    "ë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2456,7 +2456,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "역": {
+    "ì­": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2466,7 +2466,7 @@
       "lapses": 1,
       "streak": 1
     },
-    "사무실": {
+    "ì¬ë¬´ì¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2476,7 +2476,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "이다/입니다": {
+    "ì´ë¤/ìëë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2486,7 +2486,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "안녕~": {
+    "ìë~": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2496,7 +2496,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "성": {
+    "ì±": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2506,7 +2506,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "중국": {
+    "ì¤êµ­": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2516,7 +2516,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "사람": {
+    "ì¬ë": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2526,7 +2526,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "안녕하십니까?": {
+    "ìëíì­ëê¹?": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2536,7 +2536,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "~씨": {
+    "~ì¨": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2546,7 +2546,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "네": {
+    "ë¤": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2556,7 +2556,7 @@
       "lapses": 0,
       "streak": 1
     },
-    "나라": {
+    "ëë¼": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2566,7 +2566,7 @@
       "lapses": 2,
       "streak": 1
     },
-    "제": {
+    "ì ": {
       "status": "learning",
       "stability": 0.4,
       "difficulty": 0.3,
@@ -2643,6 +2643,66 @@
       "chapter": 0,
       "total": 32,
       "timestamp": 1775749625337
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802735264
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802760840
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802761835
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802762871
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802763327
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802763473
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802763620
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802764278
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802764418
+    },
+    {
+      "date": "2026-04-10",
+      "chapter": 1,
+      "total": 0,
+      "timestamp": 1775802764552
     }
   ]
 }

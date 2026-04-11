@@ -1410,6 +1410,7 @@ function showChapterComplete() {
     answered: sessionTotal,
     timestamp: now()
   });
+  saveProgress(); // sync progress + trigger cloud sync
   saveHistory();
 }
 

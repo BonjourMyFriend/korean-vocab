@@ -3937,7 +3937,7 @@
       "streak": 1
     },
     "_ch2": {
-      "newIndex": 31
+      "newIndex": 51
     },
     "_ch4": {
       "newIndex": 10
@@ -4450,13 +4450,13 @@
     },
     "외할머니": {
       "status": "reviewing",
-      "stability": 0.003874134642750001,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775918475503.2332,
-      "lastReview": 1775918140778,
-      "reps": 3,
+      "stability": 0.009589647805679863,
+      "difficulty": 0.20805499999999993,
+      "nextReview": 1775919437597.5703,
+      "lastReview": 1775918609052,
+      "reps": 4,
       "lapses": 1,
-      "streak": 2
+      "streak": 3
     },
     "외할아버지": {
       "status": "reviewing",
@@ -4510,13 +4510,13 @@
     },
     "할머니": {
       "status": "reviewing",
-      "stability": 0.003874134642750001,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775916640633.2332,
-      "lastReview": 1775916305908,
-      "reps": 3,
+      "stability": 0.009589647805679863,
+      "difficulty": 0.20805499999999993,
+      "nextReview": 1775919442366.5703,
+      "lastReview": 1775918613821,
+      "reps": 4,
       "lapses": 1,
-      "streak": 2
+      "streak": 3
     },
     "아주": {
       "status": "reviewing",
@@ -4597,6 +4597,106 @@
       "reps": 2,
       "lapses": 0,
       "streak": 2
+    },
+    "재미있다": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775918904444.6,
+      "lastReview": 1775918764833,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "형제": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775918920498.6,
+      "lastReview": 1775918780887,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "살다": {
+      "status": "reviewing",
+      "stability": 0.492026132,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775961297112.8047,
+      "lastReview": 1775918786055,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "같이": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775918929253.6,
+      "lastReview": 1775918789642,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "말하다": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775918934654.6,
+      "lastReview": 1775918795043,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "형/오빠": {
+      "status": "reviewing",
+      "stability": 0.4915610657500001,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775961267500.0808,
+      "lastReview": 1775918796624,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "몇": {
+      "status": "reviewing",
+      "stability": 0.49149366093749997,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775961263761.305,
+      "lastReview": 1775918798709,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "명": {
+      "status": "reviewing",
+      "stability": 0.49138619062500005,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775961255745.87,
+      "lastReview": 1775918799979,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "어머니": {
+      "status": "reviewing",
+      "stability": 0.4912883394375,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775961249528.5273,
+      "lastReview": 1775918802216,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "말씀하시다": {
+      "status": "learning",
+      "stability": 0.0014537892718750002,
+      "difficulty": 0.3455,
+      "nextReview": 1775918933162.393,
+      "lastReview": 1775918807555,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
     }
   },
   "history": [
@@ -4981,6 +5081,14 @@
       "correct": 54,
       "answered": 60,
       "timestamp": 1775918583561
+    },
+    {
+      "date": "2026-04-11",
+      "chapter": 3,
+      "total": 12,
+      "correct": 17,
+      "answered": 22,
+      "timestamp": 1775918807556
     }
   ]
 }

@@ -3937,7 +3937,7 @@
       "streak": 1
     },
     "_ch2": {
-      "newIndex": 20
+      "newIndex": 31
     },
     "_ch4": {
       "newIndex": 10
@@ -4447,6 +4447,106 @@
       "reps": 2,
       "lapses": 1,
       "streak": 1
+    },
+    "외할머니": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775887244554.6,
+      "lastReview": 1775887104943,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "외할아버지": {
+      "status": "reviewing",
+      "stability": 0.491782929875,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929605690.141,
+      "lastReview": 1775887115645,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "우리": {
+      "status": "reviewing",
+      "stability": 0.4917541718125001,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929606407.4446,
+      "lastReview": 1775887118847,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "서울": {
+      "status": "reviewing",
+      "stability": 0.4916118995625,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929601214.1223,
+      "lastReview": 1775887125946,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "주부": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775887271297.6,
+      "lastReview": 1775887131686,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "부모": {
+      "status": "reviewing",
+      "stability": 0.49151718381250004,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929601086.6814,
+      "lastReview": 1775887134002,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "할머니": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1775887277278.6,
+      "lastReview": 1775887137667,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "아주": {
+      "status": "learning",
+      "stability": 0.001597252040625,
+      "difficulty": 0.3455,
+      "nextReview": 1775887277514.5764,
+      "lastReview": 1775887139512,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "아버지": {
+      "status": "reviewing",
+      "stability": 0.49113735606250003,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929576182.5637,
+      "lastReview": 1775887141915,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "고등학생": {
+      "status": "reviewing",
+      "stability": 0.490998588125,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1775929566525.014,
+      "lastReview": 1775887144247,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
     }
   },
   "history": [
@@ -4815,6 +4915,14 @@
       "correct": 20,
       "answered": 24,
       "timestamp": 1775886970981
+    },
+    {
+      "date": "2026-04-11",
+      "chapter": 3,
+      "total": 10,
+      "correct": 16,
+      "answered": 20,
+      "timestamp": 1775887144249
     }
   ]
 }

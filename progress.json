@@ -1164,7 +1164,7 @@
       "newIndex": 44
     },
     "_ch1": {
-      "newIndex": 88
+      "newIndex": 52
     },
     "ì ì": {
       "status": "learning",
@@ -4210,13 +4210,13 @@
     },
     "연필": {
       "status": "reviewing",
-      "stability": 0.005500364120008699,
-      "difficulty": 0.2595314249999999,
-      "nextReview": 1776086716329.46,
-      "lastReview": 1776086241098,
-      "reps": 6,
+      "stability": 0.013749131851339769,
+      "difficulty": 0.18548456749999992,
+      "nextReview": 1776088010970.992,
+      "lastReview": 1776086823046,
+      "reps": 7,
       "lapses": 2,
-      "streak": 2
+      "streak": 3
     },
     "자": {
       "status": "learning",
@@ -5009,14 +5009,14 @@
       "streak": 2
     },
     "침대": {
-      "status": "learning",
-      "stability": 0.00079393472490625,
-      "difficulty": 0.52712375,
-      "nextReview": 1776086762106.9602,
-      "lastReview": 1776086693511,
-      "reps": 4,
+      "status": "reviewing",
+      "stability": 0.0017321885103927625,
+      "difficulty": 0.479836125,
+      "nextReview": 1776086969818.0874,
+      "lastReview": 1776086820157,
+      "reps": 5,
       "lapses": 3,
-      "streak": 1
+      "streak": 2
     },
     "어디": {
       "status": "reviewing",
@@ -5029,14 +5029,14 @@
       "streak": 2
     },
     "1층": {
-      "status": "learning",
-      "stability": 0.0016158750000000001,
-      "difficulty": 0.3455,
-      "nextReview": 1776086781288.6,
-      "lastReview": 1776086641677,
-      "reps": 2,
+      "status": "reviewing",
+      "stability": 0.003874134642750001,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776087170942.2332,
+      "lastReview": 1776086836217,
+      "reps": 3,
       "lapses": 1,
-      "streak": 1
+      "streak": 2
     },
     "은행": {
       "status": "reviewing",
@@ -5144,6 +5144,16 @@
       "difficulty": 0.3455,
       "nextReview": 1776086927535.7148,
       "lastReview": 1776086814505,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "시장": {
+      "status": "learning",
+      "stability": 0.000845250746875,
+      "difficulty": 0.3455,
+      "nextReview": 1776086910300.6646,
+      "lastReview": 1776086837271,
       "reps": 2,
       "lapses": 1,
       "streak": 1
@@ -5587,6 +5597,14 @@
       "correct": 21,
       "answered": 23,
       "timestamp": 1776086814507
+    },
+    {
+      "date": "2026-04-13",
+      "chapter": 2,
+      "total": 4,
+      "correct": 4,
+      "answered": 5,
+      "timestamp": 1776086837272
     }
   ]
 }

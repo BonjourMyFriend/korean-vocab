@@ -3943,7 +3943,7 @@
       "newIndex": 10
     },
     "_ch3": {
-      "newIndex": 30
+      "newIndex": 40
     },
     "아니요": {
       "status": "reviewing",
@@ -4897,6 +4897,106 @@
       "reps": 2,
       "lapses": 0,
       "streak": 2
+    },
+    "고추": {
+      "status": "learning",
+      "stability": 0.00154224375,
+      "difficulty": 0.44367499999999993,
+      "nextReview": 1776085596183.86,
+      "lastReview": 1776085462934,
+      "reps": 3,
+      "lapses": 2,
+      "streak": 1
+    },
+    "간장": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085107661.6,
+      "lastReview": 1776084968050,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "싱겁다": {
+      "status": "learning",
+      "stability": 0.0013368811426562501,
+      "difficulty": 0.44367499999999993,
+      "nextReview": 1776085588101.5308,
+      "lastReview": 1776085472595,
+      "reps": 3,
+      "lapses": 2,
+      "streak": 1
+    },
+    "아이스크림": {
+      "status": "reviewing",
+      "stability": 0.5039255145625,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1776128972735.4583,
+      "lastReview": 1776085433571,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "좀": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085576054.6,
+      "lastReview": 1776085436443,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "짜다": {
+      "status": "reviewing",
+      "stability": 0.5038361049375001,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1776128971704.4666,
+      "lastReview": 1776085440265,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "놀다": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085584694.6,
+      "lastReview": 1776085445083,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "만들다": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085587839.6,
+      "lastReview": 1776085448228,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "시다": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085591936.6,
+      "lastReview": 1776085452325,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "크리스마스": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776085593660.6,
+      "lastReview": 1776085454049,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
     }
   },
   "history": [
@@ -5313,6 +5413,14 @@
       "correct": 20,
       "answered": 26,
       "timestamp": 1776084332097
+    },
+    {
+      "date": "2026-04-13",
+      "chapter": 4,
+      "total": 10,
+      "correct": 12,
+      "answered": 22,
+      "timestamp": 1776085472596
     }
   ]
 }

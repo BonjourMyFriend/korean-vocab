@@ -22,13 +22,13 @@
     },
     "적다": {
       "status": "reviewing",
-      "stability": 1.5920471486874999,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964425425.6465,
-      "lastReview": 1775826872552,
-      "reps": 2,
+      "stability": 4.035457430607128,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776434158667.0044,
+      "lastReview": 1776085495145,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "피다": {
       "status": "reviewing",
@@ -1164,7 +1164,7 @@
       "newIndex": 44
     },
     "_ch1": {
-      "newIndex": 52
+      "newIndex": 87
     },
     "ì ì": {
       "status": "learning",
@@ -2278,13 +2278,13 @@
     },
     "밖": {
       "status": "reviewing",
-      "stability": 0.7088058715322892,
-      "difficulty": 0.20805499999999993,
-      "nextReview": 1775977050078.3003,
-      "lastReview": 1775915809251,
-      "reps": 4,
+      "stability": 1.8151318078079077,
+      "difficulty": 0.12886049999999993,
+      "nextReview": 1776242399299.1946,
+      "lastReview": 1776085571911,
+      "reps": 5,
       "lapses": 2,
-      "streak": 3
+      "streak": 4
     },
     "하고": {
       "status": "reviewing",
@@ -2298,183 +2298,183 @@
     },
     "컴퓨터": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921318898,
-      "lastReview": 1775836591602,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300396419.809,
+      "lastReview": 1776085633059,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "안": {
-      "status": "reviewing",
-      "stability": 1.2428837742499999,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775944139382.0952,
-      "lastReview": 1775836754224,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 3
+      "status": "learning",
+      "stability": 0.39182585377494245,
+      "difficulty": 0.20805499999999993,
+      "nextReview": 1776120515968.766,
+      "lastReview": 1776086662215,
+      "reps": 5,
+      "lapses": 2,
+      "streak": 1
     },
     "옷": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921241583,
-      "lastReview": 1775836514287,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300905039.809,
+      "lastReview": 1776086141679,
+      "reps": 3,
       "lapses": 1,
-      "streak": 2
+      "streak": 3
     },
     "우유": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921561900,
-      "lastReview": 1775836834604,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300678185.809,
+      "lastReview": 1776085914825,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "신문": {
       "status": "reviewing",
-      "stability": 1.591385798375,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964359312.9795,
-      "lastReview": 1775826863580,
-      "reps": 2,
+      "stability": 4.0337810662890154,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776434514091.1274,
+      "lastReview": 1776085995407,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
-    },
-    "주머니": {
-      "status": "reviewing",
-      "stability": 0.7078095071252793,
-      "difficulty": 0.20805499999999993,
-      "nextReview": 1775978299940.4155,
-      "lastReview": 1775917145199,
-      "reps": 4,
-      "lapses": 2,
       "streak": 3
     },
+    "주머니": {
+      "status": "learning",
+      "stability": 0.22181095883544252,
+      "difficulty": 0.2595314249999999,
+      "nextReview": 1776105819353.8433,
+      "lastReview": 1776086654887,
+      "reps": 6,
+      "lapses": 3,
+      "streak": 1
+    },
     "컵": {
-      "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921398033,
-      "lastReview": 1775836670737,
-      "reps": 2,
-      "lapses": 1,
-      "streak": 2
+      "status": "learning",
+      "stability": 0.30087452701906253,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776112660192.1345,
+      "lastReview": 1776086664633,
+      "reps": 4,
+      "lapses": 2,
+      "streak": 1
     },
     "맥주": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921461244,
-      "lastReview": 1775836733948,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300726988.809,
+      "lastReview": 1776085963628,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "집": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921225648,
-      "lastReview": 1775836498352,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300366256.809,
+      "lastReview": 1776085602896,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "지하철": {
       "status": "reviewing",
-      "stability": 1.24476617093125,
-      "difficulty": 0.15299999999999997,
-      "nextReview": 1775944331741.1685,
-      "lastReview": 1775836783944,
-      "reps": 3,
+      "stability": 3.2264339150538,
+      "difficulty": 0.1,
+      "nextReview": 1776365171924.2607,
+      "lastReview": 1776086408034,
+      "reps": 4,
       "lapses": 1,
-      "streak": 3
+      "streak": 4
     },
     "우체국": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921527924,
-      "lastReview": 1775836800628,
-      "reps": 2,
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300991269.809,
+      "lastReview": 1776086227909,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "백화점": {
       "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921497132,
-      "lastReview": 1775836769836,
-      "reps": 2,
-      "lapses": 1,
-      "streak": 2
-    },
-    "옆": {
-      "status": "reviewing",
-      "stability": 0.7114726726733173,
-      "difficulty": 0.20805499999999993,
-      "nextReview": 1775979869177.919,
-      "lastReview": 1775918397939,
-      "reps": 4,
-      "lapses": 2,
-      "streak": 3
-    },
-    "근처": {
-      "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921430001,
-      "lastReview": 1775836702705,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "위": {
-      "status": "reviewing",
-      "stability": 0.9806400000000001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775921385973,
-      "lastReview": 1775836658677,
-      "reps": 2,
-      "lapses": 1,
-      "streak": 2
-    },
-    "뒤": {
-      "status": "reviewing",
-      "stability": 1.5891251479375001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964182134.7817,
-      "lastReview": 1775826881722,
-      "reps": 2,
-      "lapses": 1,
-      "streak": 2
-    },
-    "역": {
-      "status": "reviewing",
-      "stability": 1.24329606880625,
+      "stability": 2.4856870464000003,
       "difficulty": 0.15299999999999997,
-      "nextReview": 1775944163628.345,
-      "lastReview": 1775836742848,
+      "nextReview": 1776300944339.809,
+      "lastReview": 1776086180979,
       "reps": 3,
       "lapses": 1,
       "streak": 3
     },
+    "옆": {
+      "status": "reviewing",
+      "stability": 1.8219610339339751,
+      "difficulty": 0.12886049999999993,
+      "nextReview": 1776243408921.3318,
+      "lastReview": 1776085991488,
+      "reps": 5,
+      "lapses": 2,
+      "streak": 4
+    },
+    "근처": {
+      "status": "reviewing",
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300966257.809,
+      "lastReview": 1776086202897,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "위": {
+      "status": "reviewing",
+      "stability": 2.4856870464000003,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776300402930.809,
+      "lastReview": 1776085639570,
+      "reps": 3,
+      "lapses": 1,
+      "streak": 3
+    },
+    "뒤": {
+      "status": "reviewing",
+      "stability": 4.028050859986058,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776433960256.3027,
+      "lastReview": 1776085936662,
+      "reps": 3,
+      "lapses": 1,
+      "streak": 3
+    },
+    "역": {
+      "status": "learning",
+      "stability": 0.39986271022040654,
+      "difficulty": 0.20805499999999993,
+      "nextReview": 1776121174409.163,
+      "lastReview": 1776086626271,
+      "reps": 5,
+      "lapses": 2,
+      "streak": 1
+    },
     "사무실": {
       "status": "reviewing",
-      "stability": 0.08921143408101834,
-      "difficulty": 0.32684674999999996,
-      "nextReview": 1775926180664.9045,
-      "lastReview": 1775918472797,
-      "reps": 5,
+      "stability": 0.21586544775634203,
+      "difficulty": 0.2595314249999999,
+      "nextReview": 1776104279803.686,
+      "lastReview": 1776085629029,
+      "reps": 6,
       "lapses": 4,
-      "streak": 2
+      "streak": 3
     },
     "이다/입니다": {
       "status": "reviewing",
@@ -4110,13 +4110,13 @@
     },
     "책상": {
       "status": "reviewing",
-      "stability": 0.49648519231250005,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929262294.6157,
-      "lastReview": 1775886365974,
-      "reps": 2,
+      "stability": 1.2584708060660328,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776194943404.644,
+      "lastReview": 1776086211527,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "사전": {
       "status": "reviewing",
@@ -4130,323 +4130,323 @@
     },
     "잡지": {
       "status": "reviewing",
-      "stability": 0.0033907764041203204,
-      "difficulty": 0.42781973749999985,
-      "nextReview": 1775916092277.0813,
-      "lastReview": 1775915799314,
-      "reps": 6,
+      "stability": 0.007797938550265104,
+      "difficulty": 0.37060171124999985,
+      "nextReview": 1776086585581.8906,
+      "lastReview": 1776085911840,
+      "reps": 7,
       "lapses": 3,
-      "streak": 2
+      "streak": 3
     },
     "그렇다": {
       "status": "reviewing",
-      "stability": 0.009589647805679863,
-      "difficulty": 0.20805499999999993,
-      "nextReview": 1775919326916.5703,
-      "lastReview": 1775918498371,
-      "reps": 4,
+      "stability": 0.024557464119386717,
+      "difficulty": 0.12886049999999993,
+      "nextReview": 1776088320375.9,
+      "lastReview": 1776086198611,
+      "reps": 5,
       "lapses": 1,
-      "streak": 3
+      "streak": 4
     },
     "손수건": {
       "status": "learning",
-      "stability": 0.0666153821896812,
-      "difficulty": 0.38804249999999996,
-      "nextReview": 1775924281993.0212,
-      "lastReview": 1775918526424,
-      "reps": 5,
-      "lapses": 2,
+      "stability": 0.032351127635941425,
+      "difficulty": 0.4278197374999999,
+      "nextReview": 1776089435090.4277,
+      "lastReview": 1776086639953,
+      "reps": 7,
+      "lapses": 3,
       "streak": 1
     },
     "지우개": {
+      "status": "reviewing",
+      "stability": 0.005500364120008699,
+      "difficulty": 0.2595314249999999,
+      "nextReview": 1776086462847.46,
+      "lastReview": 1776085987616,
+      "reps": 6,
+      "lapses": 2,
+      "streak": 2
+    },
+    "카드": {
+      "status": "reviewing",
+      "stability": 1.2468643161918527,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193646799.919,
+      "lastReview": 1776085917723,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "신분증": {
+      "status": "reviewing",
+      "stability": 1.2466724953772477,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193355706.6006,
+      "lastReview": 1776085643203,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "가방": {
+      "status": "reviewing",
+      "stability": 1.2465620203974077,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193975720.5623,
+      "lastReview": 1776086272762,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "지갑": {
+      "status": "reviewing",
+      "stability": 0.024557464119386717,
+      "difficulty": 0.12886049999999993,
+      "nextReview": 1776087727749.9,
+      "lastReview": 1776085605985,
+      "reps": 5,
+      "lapses": 1,
+      "streak": 4
+    },
+    "연필": {
+      "status": "reviewing",
+      "stability": 0.005500364120008699,
+      "difficulty": 0.2595314249999999,
+      "nextReview": 1776086716329.46,
+      "lastReview": 1776086241098,
+      "reps": 6,
+      "lapses": 2,
+      "streak": 2
+    },
+    "자": {
+      "status": "learning",
+      "stability": 0.15279183167434734,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776099871609.2566,
+      "lastReview": 1776086670395,
+      "reps": 4,
+      "lapses": 1,
+      "streak": 1
+    },
+    "돈": {
+      "status": "reviewing",
+      "stability": 1.2450218797849053,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193814149.4133,
+      "lastReview": 1776086244259,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "볼펜": {
+      "status": "reviewing",
+      "stability": 1.2448978471659375,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193181051.995,
+      "lastReview": 1776085621878,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "읽기책": {
+      "status": "reviewing",
+      "stability": 1.2459023351662275,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193907747.7583,
+      "lastReview": 1776086261786,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "수첩": {
+      "status": "reviewing",
+      "stability": 1.2455175787178852,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193095004.8013,
+      "lastReview": 1776085482286,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "공책": {
+      "status": "reviewing",
+      "stability": 1.2454499343698777,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193798733.3296,
+      "lastReview": 1776086191859,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "과자": {
+      "status": "reviewing",
+      "stability": 1.2453862817936026,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193218191.747,
+      "lastReview": 1776085616817,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "열쇠": {
       "status": "learning",
       "stability": 0.0022731538382540334,
       "difficulty": 0.32684674999999996,
-      "nextReview": 1775918765120.4917,
-      "lastReview": 1775918568720,
+      "nextReview": 1776086848694.4917,
+      "lastReview": 1776086652294,
       "reps": 5,
       "lapses": 2,
       "streak": 1
     },
-    "카드": {
+    "휴지": {
+      "status": "learning",
+      "stability": 0.15337261353234274,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776099919138.809,
+      "lastReview": 1776086667745,
+      "reps": 4,
+      "lapses": 1,
+      "streak": 1
+    },
+    "종이": {
       "status": "reviewing",
-      "stability": 0.4919062618125,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929134938.0205,
-      "lastReview": 1775886634237,
-      "reps": 2,
+      "stability": 1.2445809867989552,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193018625.2595,
+      "lastReview": 1776085486828,
+      "reps": 3,
       "lapses": 0,
+      "streak": 3
+    },
+    "모자": {
+      "status": "reviewing",
+      "stability": 1.2444999646213577,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193112041.9434,
+      "lastReview": 1776085587245,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "필통": {
+      "status": "learning",
+      "stability": 0.15465555333300762,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776100020654.8079,
+      "lastReview": 1776086658415,
+      "reps": 4,
+      "lapses": 1,
+      "streak": 1
+    },
+    "거울": {
+      "status": "learning",
+      "stability": 0.001809714599479992,
+      "difficulty": 0.32684674999999996,
+      "nextReview": 1776086835175.3413,
+      "lastReview": 1776086678816,
+      "reps": 5,
+      "lapses": 2,
+      "streak": 1
+    },
+    "저건": {
+      "status": "reviewing",
+      "stability": 0.11173336790419891,
+      "difficulty": 0.32684674999999996,
+      "nextReview": 1776095599430.9868,
+      "lastReview": 1776085945668,
+      "reps": 6,
+      "lapses": 2,
       "streak": 2
     },
-    "신분증": {
+    "여권": {
       "status": "reviewing",
-      "stability": 0.49183058568750004,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929131529.6035,
-      "lastReview": 1775886637367,
-      "reps": 2,
+      "stability": 1.2457497847546126,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193147899.4028,
+      "lastReview": 1776085515118,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
-    "가방": {
+    "여기": {
       "status": "reviewing",
-      "stability": 0.49178700168750006,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929130806.9458,
-      "lastReview": 1775886640410,
-      "reps": 2,
+      "stability": 1.2457382769442127,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193250201.128,
+      "lastReview": 1776085618414,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
-    "지갑": {
+    "~은/는": {
       "status": "reviewing",
-      "stability": 0.009589647805679863,
+      "stability": 1.2454495028269879,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193751901.0442,
+      "lastReview": 1776086145064,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "그리고": {
+      "status": "reviewing",
+      "stability": 1.2451783500444378,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193208296.4438,
+      "lastReview": 1776085624887,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "있다": {
+      "status": "reviewing",
+      "stability": 1.2450581293876648,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193716474.3792,
+      "lastReview": 1776086143452,
+      "reps": 3,
+      "lapses": 0,
+      "streak": 3
+    },
+    "문": {
+      "status": "reviewing",
+      "stability": 0.009084832762442532,
       "difficulty": 0.20805499999999993,
-      "nextReview": 1775918973295.5703,
-      "lastReview": 1775918144750,
+      "nextReview": 1776086957694.5508,
+      "lastReview": 1776086172765,
       "reps": 4,
       "lapses": 1,
       "streak": 3
     },
-    "연필": {
-      "status": "learning",
-      "stability": 0.0022731538382540334,
-      "difficulty": 0.32684674999999996,
-      "nextReview": 1775918771904.4917,
-      "lastReview": 1775918575504,
-      "reps": 5,
-      "lapses": 2,
-      "streak": 1
-    },
-    "자": {
-      "status": "reviewing",
-      "stability": 0.49123180225000007,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929095766.7144,
-      "lastReview": 1775886653339,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "돈": {
-      "status": "reviewing",
-      "stability": 0.49117939362500007,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929092755.6091,
-      "lastReview": 1775886654856,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "볼펜": {
-      "status": "reviewing",
-      "stability": 0.4911304609375,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929090538.825,
-      "lastReview": 1775886656867,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "읽기책": {
-      "status": "reviewing",
-      "stability": 0.4915267461875,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929241259.8706,
-      "lastReview": 1775886773349,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "수첩": {
-      "status": "reviewing",
-      "stability": 0.491374954125,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929230645.0364,
-      "lastReview": 1775886775849,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "공책": {
-      "status": "reviewing",
-      "stability": 0.4913482674375001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929233066.3066,
-      "lastReview": 1775886780576,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "과자": {
-      "status": "reviewing",
-      "stability": 0.49132315556250006,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929232757.6406,
-      "lastReview": 1775886782437,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "열쇠": {
-      "status": "reviewing",
-      "stability": 0.003874134642750001,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775918412074.2332,
-      "lastReview": 1775918077349,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 2
-    },
-    "휴지": {
-      "status": "reviewing",
-      "stability": 0.49125004737500005,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929237814.0933,
-      "lastReview": 1775886793810,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "종이": {
-      "status": "reviewing",
-      "stability": 0.4910054548750001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929219738.3013,
-      "lastReview": 1775886796867,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "모자": {
-      "status": "reviewing",
-      "stability": 0.4909734904375001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929219714.5737,
-      "lastReview": 1775886799605,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "필통": {
-      "status": "reviewing",
-      "stability": 0.4909427886875,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929219218.9426,
-      "lastReview": 1775886801762,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "거울": {
-      "status": "reviewing",
-      "stability": 0.003084295442459344,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775916189331.1262,
-      "lastReview": 1775915922848,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 2
-    },
-    "저건": {
-      "status": "learning",
-      "stability": 0.04760677698800924,
-      "difficulty": 0.38804249999999996,
-      "nextReview": 1775922679333.5317,
-      "lastReview": 1775918566108,
-      "reps": 5,
-      "lapses": 2,
-      "streak": 1
-    },
-    "여권": {
-      "status": "reviewing",
-      "stability": 0.4914665628125,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929396900.027,
-      "lastReview": 1775886934189,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "여기": {
-      "status": "reviewing",
-      "stability": 0.49146202281250007,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929398719.771,
-      "lastReview": 1775886936401,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "~은/는": {
-      "status": "reviewing",
-      "stability": 0.49134809718750005,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929390920.597,
-      "lastReview": 1775886938445,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "그리고": {
-      "status": "reviewing",
-      "stability": 0.49124112343750004,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929384337.065,
-      "lastReview": 1775886941104,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "있다": {
-      "status": "reviewing",
-      "stability": 0.49119369462499995,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929382133.2156,
-      "lastReview": 1775886942998,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
-    },
-    "문": {
-      "status": "reviewing",
-      "stability": 0.0036701937382645692,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775918698030.739,
-      "lastReview": 1775918380926,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 2
-    },
     "이름": {
-      "status": "reviewing",
-      "stability": 0.0034631858105202947,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775915903214.2542,
-      "lastReview": 1775915603995,
-      "reps": 3,
-      "lapses": 1,
-      "streak": 2
+      "status": "learning",
+      "stability": 0.002032029044861237,
+      "difficulty": 0.32684674999999996,
+      "nextReview": 1776086835930.3096,
+      "lastReview": 1776086660363,
+      "reps": 5,
+      "lapses": 2,
+      "streak": 1
     },
     "친구": {
       "status": "reviewing",
-      "stability": 0.491049436125,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775929382260.2812,
-      "lastReview": 1775886955589,
-      "reps": 2,
+      "stability": 1.244692468712205,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776193854100.2966,
+      "lastReview": 1776086312671,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "옷걸이": {
       "status": "reviewing",
-      "stability": 0.003436066868021044,
-      "difficulty": 0.28004999999999997,
-      "nextReview": 1775916609072.1775,
-      "lastReview": 1775916312196,
-      "reps": 3,
+      "stability": 0.00850529838005261,
+      "difficulty": 0.20805499999999993,
+      "nextReview": 1776086667872.78,
+      "lastReview": 1776085933015,
+      "reps": 4,
       "lapses": 1,
-      "streak": 2
+      "streak": 3
     },
     "외할머니": {
       "status": "reviewing",
@@ -4550,53 +4550,53 @@
     },
     "크다": {
       "status": "reviewing",
-      "stability": 0.5294018664375,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964269821.2603,
-      "lastReview": 1775918529500,
-      "reps": 2,
+      "stability": 1.3419066749711175,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776202249346.7175,
+      "lastReview": 1776086308610,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "의자": {
       "status": "reviewing",
-      "stability": 0.5292064903750001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964254888.7683,
-      "lastReview": 1775918531448,
-      "reps": 2,
+      "stability": 1.3414114435429352,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776202031924.7222,
+      "lastReview": 1776086133976,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "많다": {
       "status": "reviewing",
-      "stability": 0.5290521161875,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964243914.8386,
-      "lastReview": 1775918533812,
-      "reps": 2,
+      "stability": 1.3410201420274277,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776202072936.2712,
+      "lastReview": 1776086208796,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "그럼": {
-      "status": "reviewing",
-      "stability": 0.5275129426875,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775964115232.2483,
-      "lastReview": 1775918538114,
-      "reps": 2,
-      "lapses": 0,
-      "streak": 2
+      "status": "learning",
+      "stability": 0.16705275763920566,
+      "difficulty": 0.28004999999999997,
+      "nextReview": 1776101079378.26,
+      "lastReview": 1776086646020,
+      "reps": 4,
+      "lapses": 1,
+      "streak": 1
     },
     "텔레비전": {
       "status": "reviewing",
-      "stability": 0.5230570036250001,
-      "difficulty": 0.22999999999999998,
-      "nextReview": 1775963733829.1133,
-      "lastReview": 1775918541704,
-      "reps": 2,
+      "stability": 1.325823970508505,
+      "difficulty": 0.15299999999999997,
+      "nextReview": 1776200784837.052,
+      "lastReview": 1776086233646,
+      "reps": 3,
       "lapses": 0,
-      "streak": 2
+      "streak": 3
     },
     "재미있다": {
       "status": "learning",
@@ -4997,6 +4997,56 @@
       "reps": 2,
       "lapses": 1,
       "streak": 1
+    },
+    "냉장고": {
+      "status": "reviewing",
+      "stability": 0.504083265375,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1776130013248.1284,
+      "lastReview": 1776086460454,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "침대": {
+      "status": "learning",
+      "stability": 0.00079393472490625,
+      "difficulty": 0.52712375,
+      "nextReview": 1776086762106.9602,
+      "lastReview": 1776086693511,
+      "reps": 4,
+      "lapses": 3,
+      "streak": 1
+    },
+    "어디": {
+      "status": "reviewing",
+      "stability": 0.50535767175,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1776130297420.839,
+      "lastReview": 1776086634518,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
+    },
+    "1층": {
+      "status": "learning",
+      "stability": 0.0016158750000000001,
+      "difficulty": 0.3455,
+      "nextReview": 1776086781288.6,
+      "lastReview": 1776086641677,
+      "reps": 2,
+      "lapses": 1,
+      "streak": 1
+    },
+    "은행": {
+      "status": "reviewing",
+      "stability": 0.50501388025,
+      "difficulty": 0.22999999999999998,
+      "nextReview": 1776130277255.2537,
+      "lastReview": 1776086644056,
+      "reps": 2,
+      "lapses": 0,
+      "streak": 2
     }
   },
   "history": [
@@ -5421,6 +5471,14 @@
       "correct": 12,
       "answered": 22,
       "timestamp": 1776085472596
+    },
+    {
+      "date": "2026-04-13",
+      "chapter": 2,
+      "total": 63,
+      "correct": 66,
+      "answered": 82,
+      "timestamp": 1776086693512
     }
   ]
 }
